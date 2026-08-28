@@ -61,11 +61,79 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Diagnostico Form Submit Logic
+    // ── Validación de campos: solo letras, números y espacios ──────────────
+    // Regex: letras (incluyendo acentos y ñ), números y espacios
+    const soloLetrasNumeros = /^[a-zA-Z0-9áéíóúÁÉÍÓÚüÜñÑ\s]+$/;
+
+    const camposRestringidos = [
+        { id: 'nombre',   label: 'Nombre completo' },
+        { id: 'empresa',  label: 'Nombre de la empresa' },
+        { id: 'cargo',    label: 'Cargo / Puesto' },
+        { id: 'sector',   label: 'Sector / Industria' },
+        { id: 'telefono', label: 'Teléfono / WhatsApp' },
+        { id: 'codigo',   label: 'Código de referencia' }
+    ];
+
+    camposRestringidos.forEach(({ id }) => {
+        const input = document.getElementById(id);
+        if (!input) return;
+
+        // Bloquea símbolos en tiempo real mientras el usuario escribe
+        input.addEventListener('input', () => {
+            // Reemplaza cualquier carácter que no sea letra, número, espacio o acento
+            const cursor = input.selectionStart;
+            const original = input.value;
+            const limpio = original.replace(/[^a-zA-Z0-9áéíóúÁÉÍÓÚüÜñÑ\s]/g, '');
+            if (original !== limpio) {
+                input.value = limpio;
+                // Restaura la posición del cursor tras limpiar
+                input.setSelectionRange(cursor - (original.length - limpio.length), cursor - (original.length - limpio.length));
+            }
+            // Quita error visual si el campo ya es válido
+            clearFieldError(input);
+        });
+    });
+
+    function showFieldError(input, message) {
+        input.classList.add('input-error');
+        let errorEl = input.parentElement.querySelector('.field-error-msg');
+        if (!errorEl) {
+            errorEl = document.createElement('span');
+            errorEl.className = 'field-error-msg';
+            input.parentElement.appendChild(errorEl);
+        }
+        errorEl.textContent = message;
+    }
+
+    function clearFieldError(input) {
+        input.classList.remove('input-error');
+        const errorEl = input.parentElement.querySelector('.field-error-msg');
+        if (errorEl) errorEl.remove();
+    }
+
+    // ── Lógica de envío del formulario ───────────────────────────────────────
     const diagnosticoForm = document.getElementById('diagnostico-form');
     if (diagnosticoForm) {
         diagnosticoForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+
+            // Validación pre-envío
+            let hayErrores = false;
+            camposRestringidos.forEach(({ id, label }) => {
+                const input = document.getElementById(id);
+                if (!input) return;
+                const valor = input.value.trim();
+                if (!valor) {
+                    showFieldError(input, `${label} es requerido.`);
+                    hayErrores = true;
+                } else if (!soloLetrasNumeros.test(valor)) {
+                    showFieldError(input, `${label} solo admite letras y números, sin símbolos.`);
+                    hayErrores = true;
+                } else {
+                    clearFieldError(input);
+                }
+            });
+            if (hayErrores) return;
 
             const submitBtn = document.getElementById('submit-btn');
             const formMessage = document.getElementById('form-message');

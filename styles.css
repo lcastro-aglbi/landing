@@ -729,6 +729,27 @@ footer {
     color: #ff6b6b;
 }
 
+/* Validación de campos — estado de error */
+.form-group input.input-error {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.2);
+}
+
+.field-error-msg {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.78rem;
+    color: #ff6b6b;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    animation: fadeInError 0.2s ease;
+}
+
+@keyframes fadeInError {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
 /* Responsive */
 @media (max-width: 992px) {
 
