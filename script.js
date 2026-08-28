@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Enviando payload:', JSON.stringify(payload, null, 2));
 
             // New Google Apps Script Webhook URL
-            const APPSHEET_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbxBp0h4DgfMm9MNTBgTsNPQFmEBD5WKqSDatxNzjYjEvZaOqAmnBiupBNVWZFTJfGyH/exec';
+            const APPSHEET_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbwOgSJXFioMA9yx5_ZjxrFFUcD8wkj5imAdGJX_6NzpMANX5l_y-D5ZoYjz-Ca2DpQW/exec';
 
             try {
                 // Content-Type debe ser text/plain para evitar preflight CORS con no-cors
