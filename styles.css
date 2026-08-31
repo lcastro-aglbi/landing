@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ==========================================================================
    AGL Latinoamérica - Design System & Styles
    Includes Dark (Black) and Light (White) Mode Themes
@@ -129,6 +130,30 @@
 /* --------------------------------------------------------------------------
    Reset & Base Styles
    -------------------------------------------------------------------------- */
+=======
+/* Base variables */
+:root {
+    --bg-color: #121212;
+    /* onyx */
+    --bg-alt: #1C2219;
+    /* carbon-black */
+    --text-primary: #f0f4f8;
+    --text-secondary: #81807E;
+    /* grey */
+    --primary-color: #659E50;
+    /* sage-green */
+    --primary-hover: #37522D;
+    /* hunter-green */
+    --accent-color: #37522D;
+    /* hunter-green */
+    --glass-bg: rgba(28, 34, 25, 0.7);
+    /* carbon-black */
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Reset and Base Styles */
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 * {
     margin: 0;
     padding: 0;
@@ -141,16 +166,22 @@ html {
     color: var(--text-primary);
     background-color: var(--bg-color);
     overflow-x: hidden;
+<<<<<<< HEAD
     transition: var(--theme-transition);
+=======
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 body {
     line-height: 1.6;
     overflow-x: hidden;
     position: relative;
+<<<<<<< HEAD
     color: var(--text-primary);
     background-color: var(--bg-color);
     transition: var(--theme-transition);
+=======
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 h1,
@@ -163,7 +194,10 @@ h6 {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
+<<<<<<< HEAD
     color: var(--text-primary);
+=======
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 a {
@@ -183,9 +217,13 @@ ul {
     padding: 0 2rem;
 }
 
+<<<<<<< HEAD
 /* --------------------------------------------------------------------------
    Typography Utility
    -------------------------------------------------------------------------- */
+=======
+/* Typography Utility */
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 .highlight {
     color: var(--primary-color);
 }
@@ -197,9 +235,13 @@ ul {
     background-clip: text;
 }
 
+<<<<<<< HEAD
 /* --------------------------------------------------------------------------
    Buttons
    -------------------------------------------------------------------------- */
+=======
+/* Buttons */
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 .btn {
     display: inline-flex;
     align-items: center;
@@ -213,18 +255,29 @@ ul {
     transition: var(--transition);
     border: none;
     outline: none;
+<<<<<<< HEAD
     text-align: center;
+=======
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .btn-primary {
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+<<<<<<< HEAD
     color: #ffffff !important;
+=======
+    color: white;
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
     box-shadow: 0 4px 15px rgba(101, 158, 80, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
+<<<<<<< HEAD
     box-shadow: 0 6px 22px rgba(101, 158, 80, 0.45);
+=======
+    box-shadow: 0 6px 20px rgba(101, 158, 80, 0.5);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
     background: linear-gradient(135deg, var(--primary-hover), var(--primary-color));
 }
 
@@ -236,9 +289,13 @@ ul {
 
 .btn-outline:hover {
     background: var(--primary-color);
+<<<<<<< HEAD
     color: #ffffff !important;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(101, 158, 80, 0.3);
+=======
+    color: white;
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .btn-large {
@@ -246,6 +303,7 @@ ul {
     font-size: 1.1rem;
 }
 
+<<<<<<< HEAD
 /* --------------------------------------------------------------------------
    Theme Toggle Button (Sun / Moon)
    -------------------------------------------------------------------------- */
@@ -363,6 +421,9 @@ ul {
 /* --------------------------------------------------------------------------
    Navbar
    -------------------------------------------------------------------------- */
+=======
+/* Navbar */
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 .navbar {
     position: fixed;
     top: 0;
@@ -375,12 +436,20 @@ ul {
 }
 
 .navbar.scrolled {
+<<<<<<< HEAD
     background: var(--nav-scrolled-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--glass-border);
     padding: 1rem 0;
     box-shadow: var(--card-shadow);
+=======
+    background: rgba(18, 18, 18, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 1rem 0;
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .nav-container {
@@ -390,14 +459,18 @@ ul {
 }
 
 .logo {
+<<<<<<< HEAD
     display: flex;
     align-items: center;
+=======
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
     font-size: 1.5rem;
     font-weight: 800;
     font-family: 'Outfit', sans-serif;
     letter-spacing: -0.5px;
 }
 
+<<<<<<< HEAD
 .logo-img {
     height: 40px;
     width: auto;
@@ -407,6 +480,8 @@ ul {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+=======
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -419,7 +494,11 @@ ul {
 }
 
 .nav-links a:hover {
+<<<<<<< HEAD
     color: var(--primary-color);
+=======
+    color: var(--text-primary);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .mobile-menu-btn {
@@ -429,7 +508,10 @@ ul {
     color: var(--text-primary);
     font-size: 1.5rem;
     cursor: pointer;
+<<<<<<< HEAD
     transition: var(--transition);
+=======
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .mobile-nav {
@@ -438,6 +520,7 @@ ul {
     right: -100%;
     width: 100%;
     height: 100vh;
+<<<<<<< HEAD
     background: var(--mobile-nav-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -446,12 +529,22 @@ ul {
     flex-direction: column;
     transition: right 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
     overflow: hidden;
+=======
+    background: rgba(18, 18, 18, 0.98);
+    backdrop-filter: blur(15px);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .mobile-nav.active {
     right: 0;
 }
 
+<<<<<<< HEAD
 /* Header: logo + botón X */
 .mobile-nav-header {
     display: flex;
@@ -526,18 +619,62 @@ ul {
 /* --------------------------------------------------------------------------
    Hero Section
    -------------------------------------------------------------------------- */
+=======
+.mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.mobile-nav a {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Hero Section */
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
     position: relative;
     padding-top: 5rem;
+<<<<<<< HEAD
     background: var(--hero-glow);
     transition: background 0.4s ease;
 }
 
 .glow-orb {
     display: none;
+=======
+    overflow: hidden;
+}
+
+.glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.orb-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--primary-color);
+    top: -100px;
+    left: -100px;
+}
+
+.orb-2 {
+    width: 500px;
+    height: 500px;
+    background: var(--accent-color);
+    bottom: -150px;
+    right: -150px;
+    opacity: 0.3;
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .hero-content {
@@ -549,13 +686,21 @@ ul {
 .badge {
     display: inline-block;
     padding: 0.5rem 1rem;
+<<<<<<< HEAD
     background: var(--badge-bg);
+=======
+    background: rgba(101, 158, 80, 0.1);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
     color: var(--primary-color);
     border-radius: 50px;
     font-size: 0.85rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
+<<<<<<< HEAD
     border: 1px solid var(--badge-border);
+=======
+    border: 1px solid rgba(101, 158, 80, 0.2);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .hero h1 {
@@ -572,9 +717,13 @@ ul {
     margin-right: auto;
 }
 
+<<<<<<< HEAD
 /* --------------------------------------------------------------------------
    Sections General
    -------------------------------------------------------------------------- */
+=======
+/* Sections */
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 section {
     padding: 6rem 0;
 }
@@ -598,9 +747,13 @@ section {
     font-weight: 400;
 }
 
+<<<<<<< HEAD
 /* --------------------------------------------------------------------------
    About Section
    -------------------------------------------------------------------------- */
+=======
+/* About Section */
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 .about-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -612,14 +765,19 @@ section {
     padding: 2.5rem;
     border-radius: 20px;
     border: 1px solid var(--glass-border);
+<<<<<<< HEAD
     box-shadow: var(--card-shadow);
     transition: var(--transition);
     display: flex;
     flex-direction: column;
+=======
+    transition: var(--transition);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .about-card:hover {
     transform: translateY(-5px);
+<<<<<<< HEAD
     border-color: var(--card-border-hover);
     box-shadow: 0 16px 35px rgba(0, 0, 0, 0.15);
 }
@@ -627,6 +785,10 @@ section {
 .about-card p {
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
+=======
+    border-color: rgba(101, 158, 80, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .card-icon {
@@ -635,6 +797,7 @@ section {
     margin-bottom: 1.5rem;
 }
 
+<<<<<<< HEAD
 .card-features {
     margin-top: auto;
     display: flex;
@@ -667,6 +830,11 @@ section {
    -------------------------------------------------------------------------- */
 .symptoms {
     background: transparent;
+=======
+/* Symptoms Section */
+.symptoms {
+    background: var(--bg-alt);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
     position: relative;
 }
 
@@ -682,6 +850,7 @@ section {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+<<<<<<< HEAD
     background: var(--bg-alt);
     padding: 1.5rem 2rem;
     border-radius: 15px;
@@ -703,16 +872,32 @@ section {
 .symptom-item:hover {
     transform: translateX(10px);
     border-color: var(--card-border-hover);
+=======
+    background: var(--bg-color);
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    border-left: 4px solid var(--accent-color);
+    transition: var(--transition);
+}
+
+.symptom-item:hover {
+    transform: translateX(10px);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .symptom-icon {
     font-size: 1.5rem;
+<<<<<<< HEAD
     color: var(--primary-color);
+=======
+    color: var(--accent-color);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
     min-width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
     background: var(--symptom-icon-bg);
     border-radius: 50%;
     flex-shrink: 0;
@@ -721,6 +906,13 @@ section {
 /* --------------------------------------------------------------------------
    Diagnostic Section
    -------------------------------------------------------------------------- */
+=======
+    background: rgba(55, 82, 45, 0.1);
+    border-radius: 50%;
+}
+
+/* Diagnostic Section */
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 .diagnostic {
     padding: 8rem 0;
     position: relative;
@@ -733,22 +925,35 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
     background: radial-gradient(var(--glass-border) 1.5px, transparent 1.5px);
     background-size: 24px 24px;
+=======
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CgkJPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA1KSIvPgoJPC9zdmc+') repeat;
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
     z-index: -1;
 }
 
 .diagnostic-content {
     background: var(--glass-bg);
+<<<<<<< HEAD
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+=======
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
     border: 1px solid var(--glass-border);
     padding: 4rem;
     border-radius: 30px;
     text-align: center;
     max-width: 900px;
     margin: 0 auto;
+<<<<<<< HEAD
     box-shadow: var(--form-shadow);
+=======
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .diagnostic-content h2 {
@@ -762,9 +967,13 @@ section {
     margin-bottom: 2.5rem;
 }
 
+<<<<<<< HEAD
 /* --------------------------------------------------------------------------
    Value Prop & Ecosystem Section
    -------------------------------------------------------------------------- */
+=======
+/* Value Prop Section */
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 .value-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -774,6 +983,7 @@ section {
 .value-card {
     text-align: center;
     padding: 2.5rem;
+<<<<<<< HEAD
     background: var(--value-card-bg);
     border-radius: 20px;
     border: 1px solid var(--glass-border);
@@ -788,6 +998,11 @@ section {
 
 .value-card p {
     color: var(--text-secondary);
+=======
+    background: linear-gradient(180deg, rgba(28, 34, 25, 0) 0%, rgba(28, 34, 25, 0.5) 100%);
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .icon-wrapper {
@@ -800,12 +1015,22 @@ section {
     font-size: 2rem;
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     border-radius: 20px;
+<<<<<<< HEAD
     color: #ffffff;
     box-shadow: 0 10px 20px rgba(101, 158, 80, 0.25);
 }
 
 .cta {
     background: transparent;
+=======
+    color: white;
+    box-shadow: 0 10px 20px rgba(101, 158, 80, 0.2);
+}
+
+.cta {
+    background: linear-gradient(135deg, #121212, #1C2219);
+    border-top: 1px solid var(--glass-border);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .cta-container {
@@ -824,9 +1049,57 @@ section {
     font-size: 1.1rem;
 }
 
+<<<<<<< HEAD
 /* --------------------------------------------------------------------------
    Animations
    -------------------------------------------------------------------------- */
+=======
+/* Footer */
+footer {
+    background: #0f0f0f;
+    padding: 4rem 0 2rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-logo p {
+    color: var(--text-secondary);
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    max-width: 300px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.footer-copy {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+/* Animations */
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 .fade-in-up {
     opacity: 0;
     transform: translateY(30px);
@@ -861,6 +1134,7 @@ section {
     transition-delay: 0.3s;
 }
 
+<<<<<<< HEAD
 /* --------------------------------------------------------------------------
    Contact Form Styles
    -------------------------------------------------------------------------- */
@@ -878,6 +1152,22 @@ section {
     margin: 0 auto;
     box-shadow: var(--form-shadow);
     transition: var(--theme-transition);
+=======
+/* Form Styles */
+.form-section {
+    padding: 6rem 0;
+    background: #141712;
+}
+
+.form-wrapper {
+    background: rgba(28, 34, 25, 0.8);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .form-header {
@@ -924,27 +1214,44 @@ section {
 .form-group label {
     font-size: 0.85rem;
     font-weight: 700;
+<<<<<<< HEAD
     color: var(--text-primary);
+=======
+    color: #ffffff;
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .required {
+<<<<<<< HEAD
     color: var(--primary-color);
+=======
+    color: var(--text-secondary);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .form-group input[type="text"],
 .form-group input[type="tel"] {
+<<<<<<< HEAD
     background: var(--input-bg);
     border: 1px solid var(--input-border);
     border-radius: 8px;
     padding: 0.9rem 1rem;
     color: var(--input-text);
+=======
+    background: rgba(40, 45, 38, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+    color: white;
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
     font-family: inherit;
     font-size: 1rem;
     transition: var(--transition);
 }
 
+<<<<<<< HEAD
 .form-group input::placeholder {
     color: var(--input-placeholder);
 }
@@ -953,6 +1260,12 @@ section {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(101, 158, 80, 0.25);
+=======
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(101, 158, 80, 0.2);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .radio-group {
@@ -962,8 +1275,13 @@ section {
 }
 
 .radio-card {
+<<<<<<< HEAD
     background: var(--radio-card-bg);
     border: 1px solid var(--radio-card-border);
+=======
+    background: rgba(40, 45, 38, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
     border-radius: 8px;
     padding: 1rem;
     display: flex;
@@ -971,17 +1289,25 @@ section {
     gap: 0.75rem;
     cursor: pointer;
     transition: var(--transition);
+<<<<<<< HEAD
     color: var(--text-primary);
 }
 
 .radio-card:hover {
     border-color: var(--primary-color);
+=======
+}
+
+.radio-card:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .radio-card input[type="radio"] {
     display: none;
 }
 
+<<<<<<< HEAD
 .radio-card:has(input[type="radio"]:checked) {
     border-color: var(--primary-color);
     background: rgba(101, 158, 80, 0.12);
@@ -991,6 +1317,20 @@ section {
 .radio-card input[type="radio"]:checked ~ .radio-content .radio-badge {
     background: var(--primary-color);
     color: #ffffff;
+=======
+/* Fallback border color when checked if :has isn't supported */
+.radio-card input[type="radio"]:checked + .radio-content {
+    color: white;
+}
+
+.radio-card input[type="radio"]:checked ~ .radio-content .radio-badge {
+    background: white;
+    color: black;
+}
+
+.radio-card:has(input[type="radio"]:checked) {
+    border-color: var(--text-secondary);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .radio-content {
@@ -998,7 +1338,10 @@ section {
     gap: 0.75rem;
     font-size: 0.95rem;
     font-weight: 600;
+<<<<<<< HEAD
     color: var(--text-primary);
+=======
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .radio-content small {
@@ -1011,6 +1354,7 @@ section {
 }
 
 .radio-badge {
+<<<<<<< HEAD
     background: var(--radio-badge-bg);
     color: var(--radio-badge-color);
     font-size: 0.7rem;
@@ -1019,6 +1363,15 @@ section {
     border-radius: 4px;
     height: fit-content;
     transition: var(--transition);
+=======
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    height: fit-content;
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .form-footer {
@@ -1029,6 +1382,7 @@ section {
 
 .btn-submit {
     background: var(--primary-color);
+<<<<<<< HEAD
     color: var(--btn-submit-color);
     padding: 0.85rem 2.2rem;
     border-radius: 8px;
@@ -1046,10 +1400,25 @@ section {
     background: var(--primary-hover);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(101, 158, 80, 0.45);
+=======
+    color: #121212;
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.btn-submit:hover {
+    background: #75b35c;
+    transform: translateY(-2px);
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }
 
 .form-message {
     margin-top: 1rem;
+<<<<<<< HEAD
     font-size: 0.95rem;
     text-align: center;
     font-weight: 500;
@@ -1184,24 +1553,66 @@ footer {
    Responsive Media Queries
    -------------------------------------------------------------------------- */
 @media (max-width: 992px) {
+=======
+    font-size: 0.9rem;
+    text-align: center;
+}
+.form-message.success {
+    color: var(--primary-color);
+}
+.form-message.error {
+    color: #ff6b6b;
+}
+
+/* Validación de campos — estado de error */
+.form-group input.input-error {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.2);
+}
+
+.field-error-msg {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.78rem;
+    color: #ff6b6b;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    animation: fadeInError 0.2s ease;
+}
+
+@keyframes fadeInError {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
     .nav-links,
     .nav-btn {
         display: none;
     }
 
+<<<<<<< HEAD
     /* Ocultar el toggle de tema del navbar en móvil — vive en el menú hamburguesa */
     .theme-toggle-btn {
         display: none;
     }
 
+=======
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
     .mobile-menu-btn {
         display: block;
     }
 
+<<<<<<< HEAD
     .mobile-nav {
         display: flex;
     }
 
+=======
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
     .hero h1 {
         font-size: 3rem;
     }
@@ -1216,6 +1627,7 @@ footer {
         font-size: 2.5rem;
     }
 
+<<<<<<< HEAD
     .form-row {
         grid-template-columns: 1fr;
     }
@@ -1247,4 +1659,9 @@ footer {
         align-items: center;
         text-align: center;
     }
+=======
+    section {
+        padding: 4rem 0;
+    }
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 }

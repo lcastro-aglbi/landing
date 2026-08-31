@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+<<<<<<< HEAD
 
     // =========================================================
     // THEME TOGGLE (Dark ↔ Light Mode)
@@ -77,6 +78,48 @@ document.addEventListener('DOMContentLoaded', () => {
         navbar.classList.toggle('scrolled', window.scrollY > 50);
     });
 
+=======
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    if (mobileMenuBtn && mobileNav) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mobileNav.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+    }
+
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
     // Scroll Animations using Intersection Observer
     const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in-left');
 
@@ -99,12 +142,87 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+<<<<<<< HEAD
     // Diagnostico Form Submit Logic
+=======
+    // ── Validación de campos: solo letras, números y espacios ──────────────
+    // Regex: letras (incluyendo acentos y ñ), números y espacios
+    const soloLetrasNumeros = /^[a-zA-Z0-9áéíóúÁÉÍÓÚüÜñÑ\s]+$/;
+
+    const camposRestringidos = [
+        { id: 'nombre',   label: 'Nombre completo' },
+        { id: 'empresa',  label: 'Nombre de la empresa' },
+        { id: 'cargo',    label: 'Cargo / Puesto' },
+        { id: 'sector',   label: 'Sector / Industria' },
+        { id: 'telefono', label: 'Teléfono / WhatsApp' },
+        { id: 'codigo',   label: 'Código de referencia' }
+    ];
+
+    camposRestringidos.forEach(({ id }) => {
+        const input = document.getElementById(id);
+        if (!input) return;
+
+        // Bloquea símbolos en tiempo real mientras el usuario escribe
+        input.addEventListener('input', () => {
+            // Reemplaza cualquier carácter que no sea letra, número, espacio o acento
+            const cursor = input.selectionStart;
+            const original = input.value;
+            const limpio = original.replace(/[^a-zA-Z0-9áéíóúÁÉÍÓÚüÜñÑ\s]/g, '');
+            if (original !== limpio) {
+                input.value = limpio;
+                // Restaura la posición del cursor tras limpiar
+                input.setSelectionRange(cursor - (original.length - limpio.length), cursor - (original.length - limpio.length));
+            }
+            // Quita error visual si el campo ya es válido
+            clearFieldError(input);
+        });
+    });
+
+    function showFieldError(input, message) {
+        input.classList.add('input-error');
+        let errorEl = input.parentElement.querySelector('.field-error-msg');
+        if (!errorEl) {
+            errorEl = document.createElement('span');
+            errorEl.className = 'field-error-msg';
+            input.parentElement.appendChild(errorEl);
+        }
+        errorEl.textContent = message;
+    }
+
+    function clearFieldError(input) {
+        input.classList.remove('input-error');
+        const errorEl = input.parentElement.querySelector('.field-error-msg');
+        if (errorEl) errorEl.remove();
+    }
+
+    // ── Lógica de envío del formulario ───────────────────────────────────────
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
     const diagnosticoForm = document.getElementById('diagnostico-form');
     if (diagnosticoForm) {
         diagnosticoForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
+<<<<<<< HEAD
+=======
+            // Validación pre-envío
+            let hayErrores = false;
+            camposRestringidos.forEach(({ id, label }) => {
+                const input = document.getElementById(id);
+                if (!input) return;
+                const valor = input.value.trim();
+                if (!valor) {
+                    showFieldError(input, `${label} es requerido.`);
+                    hayErrores = true;
+                } else if (!soloLetrasNumeros.test(valor)) {
+                    showFieldError(input, `${label} solo admite letras y números, sin símbolos.`);
+                    hayErrores = true;
+                } else {
+                    clearFieldError(input);
+                }
+            });
+            if (hayErrores) return;
+
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
             const submitBtn = document.getElementById('submit-btn');
             const formMessage = document.getElementById('form-message');
 
@@ -133,7 +251,11 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Enviando payload:', JSON.stringify(payload, null, 2));
 
             // New Google Apps Script Webhook URL
+<<<<<<< HEAD
             const APPSHEET_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbxBp0h4DgfMm9MNTBgTsNPQFmEBD5WKqSDatxNzjYjEvZaOqAmnBiupBNVWZFTJfGyH/exec';
+=======
+            const APPSHEET_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbwOgSJXFioMA9yx5_ZjxrFFUcD8wkj5imAdGJX_6NzpMANX5l_y-D5ZoYjz-Ca2DpQW/exec';
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 
             try {
                 // Content-Type debe ser text/plain para evitar preflight CORS con no-cors
@@ -161,6 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+<<<<<<< HEAD
 
     // Back to Top Scroll Logic
     const footerBackToTop = document.getElementById('back-to-top-footer');
@@ -173,4 +296,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+=======
+>>>>>>> ad6247f6ba2d45971a5715899f0f799ed84c6dcd
 });
