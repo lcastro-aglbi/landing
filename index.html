@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGL Latinoamérica | Business Intelligence</title>
+    <meta name="description"
+        content="Evoluciona tu operación sin detener tu negocio. Consultoría y Tecnología en Business Intelligence por AGL Latinoamérica.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">¿Qué hacemos?</a></li>
+                <li><a href="#diagnostico">Diagnóstico</a></li>
+                <li><a href="#industrias">Industrias</a></li>
+                <li><a href="#ecosistema">Ecosistema</a></li>
+                <li><a href="#integracion">Integración</a></li>
+                <li><a href="#valor">Propuesta de Valor</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Cambiar tema claro/oscuro" title="Cambiar tema">
+                    <i class="fas fa-sun theme-icon theme-icon-sun"></i>
+                    <i class="fas fa-moon theme-icon theme-icon-moon"></i>
+                </button>
+                <a href="https://wa.me/526182922284?text=Hola,%20quisiera%20más%20información" target="_blank"
+                    class="btn btn-primary nav-btn">Contacto</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menú de navegación"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-nav" id="mobile-nav">
+        <!-- Header del menú móvil -->
+        <div class="mobile-nav-header">
+            <a href="#" class="logo">
+                <img src="Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="mobile-nav-logo">
+            </a>
+            <button class="mobile-close-btn" id="mobile-close-btn" aria-label="Cerrar menú">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <!-- Links -->
+        <ul class="mobile-nav-links">
+            <li><a href="#about" class="mobile-link">¿Qué hacemos?</a></li>
+            <li><a href="#diagnostico" class="mobile-link">Diagnóstico</a></li>
+            <li><a href="#industrias" class="mobile-link">Industrias</a></li>
+            <li><a href="#ecosistema" class="mobile-link">Ecosistema</a></li>
+            <li><a href="#integracion" class="mobile-link">Integración</a></li>
+            <li><a href="#valor" class="mobile-link">Propuesta de Valor</a></li>
+        </ul>
+        <!-- Footer del menú móvil -->
+        <div class="mobile-nav-footer">
+            <a href="https://wa.me/526182922284?text=Hola,%20quisiera%20más%20información" target="_blank"
+                class="btn btn-primary mobile-link">Contacto</a>
+            <button class="mobile-theme-toggle" id="mobile-theme-toggle" aria-label="Cambiar tema">
+                <span class="theme-toggle-btn-inner">
+                    <i class="fas fa-sun theme-icon theme-icon-sun"></i>
+                    <i class="fas fa-moon theme-icon theme-icon-moon"></i>
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content fade-in-up">
+                <h1>Evoluciona tu operación <br><span class="gradient-text">sin detener tu negocio</span></h1>
+                <p>Transformamos datos operativos en indicadores (KPIs) en el tiempo justo para accionar y proteger la
+                    rentabilidad de tu negocio.</p>
+                <div class="hero-actions">
+                    <a href="https://wa.me/526182922284?text=Hola,%20quisiera%20más%20información" target="_blank"
+                        class="btn btn-primary btn-large">
+                        Inicia tu evolución <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>¿Qué hacemos en AGL Latinoamérica?</h2>
+                <h3 class="subtitle">"Nacidos en la operación directa en campo, no en un laboratorio de software."</h3>
+            </div>
+            <div class="about-grid">
+                <div class="about-card fade-in-up delay-1">
+                    <i class="fas fa-crosshairs card-icon"></i>
+                    <h4>Transformación Operacional</h4>
+                    <p>Unificamos consultoría estratégica, reingeniería de procesos y software a medida para transformar la ejecución de tu empresa.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check-circle"></i> Optimización de la estructura operativa</li>
+                        <li><i class="fas fa-check-circle"></i> Servicios clave o SaaS por sector</li>
+                        <li><i class="fas fa-check-circle"></i> Analítica operativa e indicadores de impacto</li>
+                    </ul>
+                </div>
+                <div class="about-card fade-in-up delay-2">
+                    <i class="fas fa-book-open card-icon"></i>
+                    <h4>Transferencia de Conocimiento</h4>
+                    <p>Llevamos la experiencia real de campo a tu organización, codificando años de conocimiento operativo en tecnología ágil y medible.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check-circle"></i> Metodologías operativas probadas en campo</li>
+                        <li><i class="fas fa-check-circle"></i> Simplificación de procesos industriales complejos</li>
+                        <li><i class="fas fa-check-circle"></i> Capacitación y adopción tecnológica acelerada</li>
+                    </ul>
+                </div>
+                <div class="about-card fade-in-up delay-3">
+                    <i class="fas fa-star card-icon"></i>
+                    <h4>Nuestro Propósito</h4>
+                    <p>Empoderar a tu dirección con visibilidad operativa continua y capacidad de anticipación para llevar a tu empresa a la excelencia.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check-circle"></i> Visibilidad operativa integral en tiempo real</li>
+                        <li><i class="fas fa-check-circle"></i> Toma de decisiones ágil basada en datos</li>
+                        <li><i class="fas fa-check-circle"></i> Protección y crecimiento de la rentabilidad</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Symptoms Section -->
+    <section id="sintomas" class="symptoms">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Síntomas comunes de una operación que necesita evolucionar</h2>
+            </div>
+            <div class="symptoms-list">
+                <div class="symptom-item fade-in-left">
+                    <div class="symptom-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <p>Decisiones basadas en intuición por falta de datos confiables y en tiempo real.</p>
+                </div>
+                <div class="symptom-item fade-in-left delay-1">
+                    <div class="symptom-icon"><i class="fas fa-file-excel"></i></div>
+                    <p>Exceso de hojas de cálculo desconectadas y elaboración de reportes manuales que toman horas.</p>
+                </div>
+                <div class="symptom-item fade-in-left delay-2">
+                    <div class="symptom-icon"><i class="fas fa-clock"></i></div>
+                    <p>Información que llega tarde, cuando el problema ya ocurrió y es imposible reaccionar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diagnostic Section -->
+    <section id="diagnostico" class="diagnostic glass-section">
+        <div class="container">
+            <div class="diagnostic-content fade-in-up">
+                <h2>Diagnóstico Operacional AGL®</h2>
+                <p>Toda gran transformación comienza con una radiografía clara. A través de una sesión estratégica de
+                    solo 45 minutos, evaluamos el Índice de Preparación Operacional (IPO) de tu empresa para identificar
+                    fugas de eficiencia y definir los pasos clave contemplando tu industria.</p>
+                <a href="https://wa.me/526182922284?text=Hola,%20quisiera%20más%20información%20del%20Diagnóstico%20Operacional"
+                    target="_blank" class="btn btn-outline">Solicitar Diagnóstico</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industrias Section -->
+    <section id="industrias" class="industries">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Industrias que impulsamos hacia la excelencia</h2>
+                <p>Nuestra experiencia abarca diversos sectores clave adaptando las soluciones a tu operación.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card fade-in-up delay-1">
+                    <i class="fas fa-industry card-icon"></i>
+                    <h4>Manufactura</h4>
+                    <p>Optimización de líneas de producción, control de calidad y visibilidad en tiempo real.</p>
+                </div>
+                <div class="about-card fade-in-up delay-2">
+                    <i class="fas fa-truck card-icon"></i>
+                    <h4>Logística y Distribución</h4>
+                    <p>Monitoreo de flotas, rutas estratégicas y gestión eficiente de inventarios.</p>
+                </div>
+                <div class="about-card fade-in-up delay-3">
+                    <i class="fas fa-shopping-cart card-icon"></i>
+                    <h4>Retail y Comercial</h4>
+                    <p>Análisis de rentabilidad, comportamiento de clientes y rotación de inventarios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ecosistema Section -->
+    <section id="ecosistema" class="ecosystem glass-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Ecosistema de Soluciones AGL</h2>
+                <h3 class="subtitle">Diseñadas desde la operación</h3>
+            </div>
+            <div class="value-grid">
+                <div class="value-card fade-in-up">
+                    <div class="icon-wrapper"><i class="fas fa-tachometer-alt"></i></div>
+                    <h3>Tableros de Control</h3>
+                    <p>Visualización de datos clave (KPIs) en tiempo real para toma de decisiones ágiles.</p>
+                </div>
+                <div class="value-card fade-in-up delay-1">
+                    <div class="icon-wrapper"><i class="fas fa-cogs"></i></div>
+                    <h3>Digitalización</h3>
+                    <p>Eliminación de papel y procesos manuales mediante herramientas a medida.</p>
+                </div>
+                <div class="value-card fade-in-up delay-2">
+                    <div class="icon-wrapper"><i class="fas fa-database"></i></div>
+                    <h3>Integración de Sistemas</h3>
+                    <p>Conectamos diferentes fuentes de datos para una única fuente de la verdad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integracion Section -->
+    <section id="integracion" class="integration">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>¿Cómo nos integramos con tu empresa sin paralizar tu operación?</h2>
+            </div>
+            <div class="symptoms-list">
+                <div class="symptom-item fade-in-left">
+                    <div class="symptom-icon"><i class="fas fa-search"></i></div>
+                    <p><strong>1. Análisis y Entendimiento:</strong> Nos sumergimos en tu proceso actual para construir
+                        sobre él, sin romper la inercia del día a día.</p>
+                </div>
+                <div class="symptom-item fade-in-left delay-1">
+                    <div class="symptom-icon"><i class="fas fa-code"></i></div>
+                    <p><strong>2. Desarrollo Paralelo:</strong> Creamos y probamos el ecosistema en un ambiente seguro
+                        que no afecta la operación viva.</p>
+                </div>
+                <div class="symptom-item fade-in-left delay-2">
+                    <div class="symptom-icon"><i class="fas fa-rocket"></i></div>
+                    <p><strong>3. Despliegue y Acompañamiento:</strong> Lanzamos de forma gradual y brindamos
+                        capacitación para una transición orgánica y exitosa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Prop Section -->
+    <section id="valor" class="value-prop">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Nuestra propuesta de valor</h2>
+                <p>Ecosistema de Soluciones AGL - Diseñadas desde la operación</p>
+            </div>
+            <div class="value-grid">
+                <div class="value-card fade-in-up">
+                    <div class="icon-wrapper"><i class="fas fa-robot"></i></div>
+                    <h3>Automatización Escalable</h3>
+                    <p>Convertimos las tareas manuales, repetitivas y en papel en flujos digitales automáticos y libres
+                        de error humano.</p>
+                </div>
+                <div class="value-card fade-in-up delay-1">
+                    <div class="icon-wrapper"><i class="fas fa-eye"></i></div>
+                    <h3>Visibilidad e Impacto</h3>
+                    <p>Transformamos datos operativos en indicadores (KPIs) en el tiempo justo para accionar y para
+                        proteger la rentabilidad.</p>
+                </div>
+                <div class="value-card fade-in-up delay-2">
+                    <div class="icon-wrapper"><i class="fas fa-project-diagram"></i></div>
+                    <h3>Integración Sin Pausas</h3>
+                    <p>Nos integramos con tu empresa de forma progresiva, sin paralizar tu operación actual ni
+                        interrumpir tu negocio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto" class="cta form-section">
+        <div class="container form-container fade-in-up">
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <h2>Agenda tu <span class="highlight-green">Diagnóstico</span></h2>
+                    <p>Completa tus datos para personalizar la sesión de análisis operativo.</p>
+                </div>
+
+                <form id="diagnostico-form" class="custom-form">
+                    <div class="form-group full-width">
+                        <label for="nombre">NOMBRE COMPLETO <span class="required">*</span></label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefono">TELÉFONO / WHATSAPP <span class="required">*</span></label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="+52 55 1234 5678" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="empresa">NOMBRE DE LA EMPRESA <span class="required">*</span></label>
+                            <input type="text" id="empresa" name="empresa" placeholder="Ej. Logística Global" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cargo">CARGO / PUESTO <span class="required">*</span></label>
+                            <input type="text" id="cargo" name="cargo" placeholder="Ej. Director de Operaciones"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sector">SECTOR / INDUSTRIA <span class="required">*</span></label>
+                            <input type="text" id="sector" name="sector" placeholder="Ej. Manufactura / Retail"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="codigo">CÓDIGO DE REFERENCIA <span class="required">*</span></label>
+                        <input type="text" id="codigo" name="codigo" placeholder="Ej. VEND-123" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>¿Qué área necesitas reforzar primero? <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-card">
+                                <input type="radio" name="area" value="OperativaBusiness Operations, MasterMend, Risk" required>
+                                <div class="radio-content">
+                                    <span class="radio-badge">A</span>
+                                    <span>Operativa<br><small>Business Operations, MasterMend, Risk</small></span>
+                                </div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="area" value="AdministrativaWorkForce, Supply, ProFinance">
+                                <div class="radio-content">
+                                    <span class="radio-badge">B</span>
+                                    <span>Administrativa<br><small>WorkForce, Supply, ProFinance</small></span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-footer">
+                        <button type="submit" class="btn btn-submit" id="submit-btn">
+                            Enviar <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <div id="form-message" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="Logos/logo blanco.png" alt="AGL" class="logo-img footer-logo-img theme-logo" id="footer-logo">
+                    <p>Nacidos en la operación directa en campo, impulsando la excelencia.</p>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/people/AGL-Business-Intelligence/61572439661784/?locale=es_LA" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/aglbi.es/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/aglbi" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <button id="back-to-top-footer" class="btn-back-to-top" title="Volver al inicio" aria-label="Volver arriba">
+                    <span>Volver arriba</span>
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+                <div class="footer-copy">
+                    &copy; 2026 AGL Latinoamérica. Todos los derechos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
