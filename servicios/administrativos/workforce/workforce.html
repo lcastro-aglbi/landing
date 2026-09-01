@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkForce | AGL Latinoamérica</title>
+    <meta name="description" content="Gestión de personal optimizada. De la solicitud a la nómina con AGL WorkForce.">
+    <!-- Google Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Asumiendo que nombrarás tu archivo CSS como styles_wf.css -->
+    <link rel="stylesheet" href="styles_wf.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../../../index.html" class="logo">
+                <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../../index.html#about">¿Qué hacemos?</a></li>
+                <li><a href="../../../index.html#diagnostico">Diagnóstico</a></li>
+                <li><a href="../../../index.html#industrias">Industrias</a></li>
+                <li><a href="../../../index.html#ecosistema">Ecosistema</a></li>
+                <li><a href="../../../index.html#integracion">Integración</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-sun theme-icon theme-icon-sun"></i>
+                    <i class="fas fa-moon theme-icon theme-icon-moon"></i>
+                </button>
+                <a href="#contacto" class="btn btn-primary nav-btn">Contacto</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menú Móvil -->
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-header">
+            <a href="../../../index.html" class="logo">
+                <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="mobile-nav-logo">
+            </a>
+            <button class="mobile-close-btn" id="mobile-close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="../../../index.html#about" class="mobile-link">¿Qué hacemos?</a></li>
+            <li><a href="../../../index.html#ecosistema" class="mobile-link">Ecosistema</a></li>
+            <li><a href="../../../index.html#integracion" class="mobile-link">Integración</a></li>
+        </ul>
+        <div class="mobile-nav-footer">
+            <a href="#contacto" class="btn btn-primary mobile-link">Contacto</a>
+            <button class="mobile-theme-toggle" id="mobile-theme-toggle">
+                <span class="theme-toggle-btn-inner">
+                    <i class="fas fa-sun theme-icon theme-icon-sun"></i>
+                    <i class="fas fa-moon theme-icon theme-icon-moon"></i>
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section: ¿Qué es WorkForce? -->
+    <section class="hero detail-hero">
+        <div class="container">
+            <a href="../../../index.html#ecosistema" class="back-link"><i class="fas fa-arrow-left"></i> Volver al
+                Ecosistema</a>
+
+            <div class="section-title-large fade-in-up">
+                <h1>¿Qué es WorkForce?</h1>
+            </div>
+
+            <div class="mining-intro-grid fade-in-up delay-1">
+                <div class="mining-intro-text">
+                    <p class="intro-lead">
+                        <strong class="highlight-green-text">AGL WorkForce</strong> es una solución tecnológica diseñada
+                        para transformar y optimizar la gestión del talento humano.
+                    </p>
+                    <p class="intro-sub">
+                        Automatiza y centraliza todo el ciclo de recursos humanos, desde las solicitudes de personal
+                        hasta el procesamiento de nóminas, en una única plataforma cohesiva.
+                    </p>
+                </div>
+
+                <!-- Mockup de Laptop (Animación UI para RRHH) -->
+                <div class="mining-mockup-wrapper">
+                    <div class="laptop-container">
+                        <div class="laptop-glow"></div>
+                        <div class="laptop-screen">
+                            <div class="screen-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="screen-title"><i class="fas fa-users"></i> AGL WorkForce</span>
+                            </div>
+                            <div class="screen-body">
+                                <div class="app-sidebar">
+                                    <div class="app-logo-small"><i class="fas fa-user-tie"></i> AGL</div>
+                                    <div class="app-nav-item active"><i class="fas fa-user-plus"></i> Reclutamiento
+                                    </div>
+                                    <div class="app-nav-item"><i class="fas fa-users-cog"></i> Personal</div>
+                                    <div class="app-nav-item"><i class="fas fa-file-invoice-dollar"></i> Nómina</div>
+                                </div>
+                                <div class="app-content">
+                                    <div class="app-section-title">Estatus de Requisiciones</div>
+                                    <div class="app-cards-grid">
+                                        <div class="app-card"><i class="fas fa-check-circle"></i> Aprobadas (4)</div>
+                                        <div class="app-card"><i class="fas fa-clock"></i> Pendientes (2)</div>
+                                        <div class="app-card"><i class="fas fa-user-check"></i> Entrevistas (8)</div>
+                                        <div class="app-card"><i class="fas fa-file-signature"></i> Ofertas (3)</div>
+                                    </div>
+                                    <div class="app-section-title">Alertas de Personal</div>
+                                    <div class="app-cards-grid">
+                                        <div class="app-card small"><i class="fas fa-exclamation-triangle"
+                                                style="color: #f59e0b;"></i> Fin Contrato (5)</div>
+                                        <div class="app-card small"><i class="fas fa-graduation-cap"
+                                                style="color: #22c55e;"></i> Cursos Pend.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="laptop-base"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <hr class="section-divider">
+    </div>
+
+    <!-- Módulos del Sistema en filas alternadas -->
+    <section class="modules-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="modules-main-title">Módulos del sistema</h2>
+            </div>
+
+            <!-- Módulo 1: Requisición de personal -->
+            <div class="module-block fade-in-up">
+                <h3 class="module-title">Requisición de personal</h3>
+                <div class="module-grid">
+                    <div class="module-icon-card">
+                        <i class="fas fa-user-plus module-card-icon"></i>
+                    </div>
+                    <div class="module-info">
+                        <ul class="module-bullets">
+                            <li>
+                                <strong>Autorización Transparente:</strong> Mejora la gestión de vacantes mediante un
+                                proceso de autorización claro y eficiente que garantiza el cumplimiento de las políticas
+                                internas de la empresa.
+                            </li>
+                            <li>
+                                <strong>Flujos de Trabajo Jerárquicos:</strong> Optimiza las aprobaciones con flujos
+                                personalizables por departamento o jerarquía, asegurando una validación rápida adaptada
+                                a su estructura.
+                            </li>
+                            <li>
+                                <strong>Inicio de Reclutamiento Automatizado:</strong> Las requisiciones aprobadas se
+                                transforman automáticamente en vacantes activas, eliminando la carga manual de datos y
+                                acelerando la búsqueda de talento.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 2: Reclutamiento y Contratación (Alternado) -->
+            <div class="module-block fade-in-up delay-1">
+                <h3 class="module-title">Reclutamiento y Contratación</h3>
+                <div class="module-grid">
+                    <div class="module-info">
+                        <ul class="module-bullets">
+                            <li>
+                                <strong>Base de Datos de Candidatos Centralizada:</strong> Simplifica la adquisición de
+                                talento al centralizar a todos los aspirantes (internos y externos) y sus currículos en
+                                una sola base de datos accesible.
+                            </li>
+                            <li>
+                                <strong>Supervisión Integral (End-to-End):</strong> Proporciona un control meticuloso
+                                del proceso de selección mediante el monitoreo de cada entrevista, evaluación y oferta
+                                de trabajo.
+                            </li>
+                            <li>
+                                <strong>Onboarding Fluido:</strong> Automatiza la transición de los candidatos
+                                seleccionados al sistema como nuevos empleados, minimizando el esfuerzo manual y
+                                garantizando una experiencia profesional.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="module-icon-card">
+                        <i class="fas fa-handshake module-card-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 3: Gestión de personal -->
+            <div class="module-block fade-in-up delay-2">
+                <h3 class="module-title">Gestión de personal</h3>
+                <div class="module-grid">
+                    <div class="module-icon-card">
+                        <i class="fas fa-users-cog module-card-icon"></i>
+                    </div>
+                    <div class="module-info">
+                        <ul class="module-bullets">
+                            <li>
+                                <strong>Institucionalización de Movimientos:</strong> Agiliza la gestión de altas,
+                                bajas, reingresos y cambios de puesto para garantizar un registro confiable y
+                                actualizado.
+                            </li>
+                            <li>
+                                <strong>Control Inteligente de Ausentismos:</strong> Optimiza la disponibilidad del
+                                personal mediante la programación y supervisión eficiente de vacaciones, permisos e
+                                incapacidades.
+                            </li>
+                            <li>
+                                <strong>Control de Contratos Centralizado:</strong> Institucionaliza el monitoreo y
+                                análisis del ciclo de vida del colaborador, proporcionando una supervisión integral de
+                                todos los contratos internos y asegurando actualizaciones precisas.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 4: Capacitación y Desarrollo (Alternado) -->
+            <div class="module-block fade-in-up delay-1">
+                <h3 class="module-title">Capacitación y Desarrollo</h3>
+                <div class="module-grid">
+                    <div class="module-info">
+                        <ul class="module-bullets">
+                            <li>
+                                <strong>Inversión Inteligente:</strong> Asigna con precisión a los colaboradores los
+                                cursos más relevantes según sus roles, perfiles específicos o necesidades de desarrollo.
+                            </li>
+                            <li>
+                                <strong>Alineación Estratégica de Habilidades:</strong> Alinea las iniciativas de
+                                capacitación directamente con los objetivos esenciales del negocio para fomentar el
+                                crecimiento profesional y la competencia organizacional.
+                            </li>
+                            <li>
+                                <strong>Monitoreo de Cumplimientos:</strong> Genera reportes detallados por departamento
+                                o empleado para monitorear el progreso, identificar brechas de habilidades y asegurar
+                                una mejora continua.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="module-icon-card">
+                        <i class="fas fa-chalkboard-teacher module-card-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 5: Gestión de nómina -->
+            <div class="module-block fade-in-up delay-2">
+                <h3 class="module-title">Gestión de nómina</h3>
+                <div class="module-grid">
+                    <div class="module-icon-card">
+                        <i class="fas fa-money-check-alt module-card-icon"></i>
+                    </div>
+                    <div class="module-info">
+                        <ul class="module-bullets">
+                            <li>
+                                <strong>Optimización de Destajos Operativos:</strong> Mejora el cálculo de pagos por
+                                destajo mediante la integración fluida con el ecosistema AGL, asegurando que la gestión
+                                de salarios y beneficios se alinee directamente con los datos de productividad y
+                                eficiencia en campo.
+                            </li>
+                            <li>
+                                <strong>Ciclos de Pago Flexibles:</strong> Adapta la gestión a diversas necesidades con
+                                un control automatizado sobre esquemas de pago semanales, quincenales o mensuales.
+                            </li>
+                            <li>
+                                <strong>Precisión y Velocidad:</strong> Elimina errores manuales mediante el cálculo
+                                automatizado de percepciones y deducciones, garantizando registros financieros exactos y
+                                la satisfacción del colaborador.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Nueva Sección de Contacto Simplificada -->
+    <section id="contacto" class="supply-cta">
+        <div class="container fade-in-up">
+            <h2>Contáctanos</h2>
+            <a href="https://wa.me/526182922284?text=Hola,%20quisiera%20solicitar%20una%20Demo%20de%20WorkForce"
+                target="_blank" class="btn-demo">
+                Solicita una Demo
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img footer-logo-img theme-logo"
+                        id="footer-logo">
+                    <p>Nacidos en la operación directa en campo, impulsando la excelencia.</p>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/people/AGL-Business-Intelligence/61572439661784/?locale=es_LA"
+                        target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/aglbi.es/" target="_blank" rel="noopener noreferrer"
+                        class="social-icon-btn" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/aglbi" target="_blank" rel="noopener noreferrer"
+                        class="social-icon-btn" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <button id="back-to-top-footer" class="btn-back-to-top" title="Volver al inicio"
+                    aria-label="Volver arriba">
+                    <span>Volver arriba</span>
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+                <div class="footer-copy">
+                    &copy; 2026 AGL Latinoamérica. Todos los derechos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script_wf.js"></script>
+    <!-- Script Integrado a prueba de fallos -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. FUNCIONAMIENTO DEL MENÚ MÓVIL
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileCloseBtn = document.getElementById('mobile-close-btn');
+            const mobileNav = document.getElementById('mobile-nav');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if (mobileMenuBtn && mobileNav) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileNav.classList.add('active');
+                    mobileNav.style.display = 'flex';
+                    document.body.style.overflow = 'hidden'; // Evita que el fondo haga scroll
+                });
+            }
+
+            if (mobileCloseBtn && mobileNav) {
+                mobileCloseBtn.addEventListener('click', () => {
+                    mobileNav.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileNav) mobileNav.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // 2. CAMBIO DE TEMA (CLARO/OSCURO)
+            const htmlEl = document.documentElement;
+            const themeToggle = document.getElementById('theme-toggle');
+            const mobileToggle = document.getElementById('mobile-theme-toggle');
+            const themeLogos = document.querySelectorAll('.theme-logo');
+
+            const DARK_LOGO = '../../../Logos/logo blanco.png';
+            const LIGHT_LOGO = '../../../Logos/logo negro.png';
+
+            function applyTheme(theme) {
+                if (theme === 'light') {
+                    htmlEl.setAttribute('data-theme', 'light');
+                    themeLogos.forEach(img => img.src = LIGHT_LOGO);
+                } else {
+                    htmlEl.removeAttribute('data-theme');
+                    themeLogos.forEach(img => img.src = DARK_LOGO);
+                }
+                localStorage.setItem('agl-theme', theme);
+            }
+
+            const savedTheme = localStorage.getItem('agl-theme') || 'dark';
+            applyTheme(savedTheme);
+
+            const toggleTheme = () => applyTheme(htmlEl.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
+            if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+            if (mobileToggle) mobileToggle.addEventListener('click', toggleTheme);
+
+            // 3. EFECTO SCROLL EN NAVBAR
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', () => {
+                if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 50);
+            });
+
+            // 4. BOTÓN VOLVER ARRIBA
+            const footerBackToTop = document.getElementById('back-to-top-footer');
+            if (footerBackToTop) {
+                footerBackToTop.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>

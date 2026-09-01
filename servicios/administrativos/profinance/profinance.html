@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProFinance | AGL Latinoamérica</title>
+    <meta name="description"
+        content="Supervisión financiera estratégica para un crecimiento sostenible. De las cuentas por pagar al análisis de costos.">
+    <!-- Google Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Enlazado al CSS de esta sección -->
+    <link rel="stylesheet" href="styles_pf.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../../../index.html" class="logo">
+                <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../../index.html#about">¿Qué hacemos?</a></li>
+                <li><a href="../../../index.html#diagnostico">Diagnóstico</a></li>
+                <li><a href="../../../index.html#industrias">Industrias</a></li>
+                <li><a href="../../../index.html#ecosistema">Ecosistema</a></li>
+                <li><a href="../../../index.html#integracion">Integración</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-sun theme-icon theme-icon-sun"></i>
+                    <i class="fas fa-moon theme-icon theme-icon-moon"></i>
+                </button>
+                <a href="#contacto" class="btn btn-primary nav-btn">Contacto</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menú Móvil -->
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-header">
+            <a href="../../../index.html" class="logo">
+                <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="mobile-nav-logo">
+            </a>
+            <button class="mobile-close-btn" id="mobile-close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="../../../index.html#about" class="mobile-link">¿Qué hacemos?</a></li>
+            <li><a href="../../../index.html#ecosistema" class="mobile-link">Ecosistema</a></li>
+            <li><a href="../../../index.html#integracion" class="mobile-link">Integración</a></li>
+        </ul>
+        <div class="mobile-nav-footer">
+            <a href="#contacto" class="btn btn-primary mobile-link">Contacto</a>
+            <button class="mobile-theme-toggle" id="mobile-theme-toggle">
+                <span class="theme-toggle-btn-inner">
+                    <i class="fas fa-sun theme-icon theme-icon-sun"></i>
+                    <i class="fas fa-moon theme-icon theme-icon-moon"></i>
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section: ¿Qué es ProFinance? -->
+    <section class="hero detail-hero">
+        <div class="container">
+            <a href="../../../index.html#ecosistema" class="back-link"><i class="fas fa-arrow-left"></i> Volver al
+                Ecosistema</a>
+
+            <div class="section-title-large fade-in-up">
+                <h1>Supervisión financiera estratégica <br><span class="gradient-text">para un crecimiento
+                        sostenible</span></h1>
+                <p class="intro-sub" style="margin-top: -1rem; margin-bottom: 2.5rem;">De las cuentas por pagar al
+                    análisis de costos</p>
+            </div>
+
+            <div class="mining-intro-grid fade-in-up delay-1">
+                <div class="mining-intro-text">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">¿Qué es ProFinance?</h3>
+                    <p class="intro-lead">
+                        <strong class="highlight-green-text">AGL ProFinance</strong> es una solución de gestión
+                        financiera integrada diseñada para transformar el control económico de su organización.
+                    </p>
+                    <p class="intro-sub">
+                        Centraliza y automatiza todo el ciclo de vida financiero, desde la gestión de las obligaciones
+                        de los proveedores hasta el cumplimiento fiscal y la optimización del flujo de caja.
+                    </p>
+                </div>
+
+                <!-- Mockup de Laptop (Animación UI para Finanzas) -->
+                <div class="mining-mockup-wrapper">
+                    <div class="laptop-container">
+                        <div class="laptop-glow"></div>
+                        <div class="laptop-screen">
+                            <div class="screen-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="screen-title"><i class="fas fa-chart-line"></i> AGL ProFinance</span>
+                            </div>
+                            <div class="screen-body">
+                                <div class="app-sidebar">
+                                    <div class="app-logo-small"><i class="fas fa-wallet"></i> AGL</div>
+                                    <div class="app-nav-item active"><i class="fas fa-file-invoice-dollar"></i> CxP /
+                                        CxC</div>
+                                    <div class="app-nav-item"><i class="fas fa-piggy-bank"></i> Tesorería</div>
+                                    <div class="app-nav-item"><i class="fas fa-chart-pie"></i> Costos</div>
+                                </div>
+                                <div class="app-content">
+                                    <div class="app-section-title">Flujo de Caja (Tiempo Real)</div>
+                                    <div class="app-cards-grid">
+                                        <div class="app-card"><i class="fas fa-arrow-up" style="color: #22c55e;"></i>
+                                            Ingresos: +$142K</div>
+                                        <div class="app-card"><i class="fas fa-arrow-down" style="color: #ef4444;"></i>
+                                            Egresos: -$38K</div>
+                                        <div class="app-card"><i class="fas fa-clock" style="color: #f59e0b;"></i> Por
+                                            Pagar: $12K</div>
+                                        <div class="app-card"><i class="fas fa-check-circle"
+                                                style="color: #22c55e;"></i> Conciliado</div>
+                                    </div>
+                                    <div class="app-section-title">Alertas Estratégicas</div>
+                                    <div class="app-cards-grid">
+                                        <div class="app-card small"><i class="fas fa-landmark"
+                                                style="color: #3b82f6;"></i> Cierre Fiscal</div>
+                                        <div class="app-card small"><i class="fas fa-file-signature"
+                                                style="color: #f59e0b;"></i> Auditar</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="laptop-base"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <hr class="section-divider">
+    </div>
+
+    <!-- Módulos del Sistema en filas alternadas -->
+    <section class="modules-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="modules-main-title">Módulos del sistema</h2>
+            </div>
+
+            <!-- Módulo 1: Cuentas por pagar -->
+            <div class="module-block fade-in-up">
+                <h3 class="module-title">Cuentas por pagar</h3>
+                <div class="module-grid">
+                    <div class="module-icon-card">
+                        <i class="fas fa-file-invoice-dollar module-card-icon"></i>
+                    </div>
+                    <div class="module-info">
+                        <ul class="module-bullets">
+                            <li>
+                                <strong>Conciliación Automatizada:</strong> Se vincula directamente con la Gestión de
+                                Suministros de AGL para cotejar órdenes de compra y notas de entrega con las facturas,
+                                reduciendo errores de captura manual.
+                            </li>
+                            <li>
+                                <strong>Tiempos de Respuesta Optimizados:</strong> Mejora los ciclos de aprobación y la
+                                programación de pagos mediante flujos de trabajo personalizables, garantizando
+                                liquidaciones oportunas y mejores relaciones con proveedores.
+                            </li>
+                            <li>
+                                <strong>Control Preciso de Obligaciones:</strong> Monitorea cada obligación
+                                individualmente a través de un sistema de folios distintivos, proporcionando
+                                trazabilidad completa desde la compra inicial hasta el pago final.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 2: Cuentas por cobrar - ventas (Alternado) -->
+            <div class="module-block fade-in-up delay-1">
+                <h3 class="module-title">Cuentas por cobrar - ventas</h3>
+                <div class="module-grid">
+                    <div class="module-info">
+                        <ul class="module-bullets">
+                            <li>
+                                <strong>Integración Fluida con ProFinance:</strong> Conecta directamente los folios de
+                                venta seleccionados con el módulo ProFinance, automatizando la transferencia de
+                                información y minimizando el esfuerzo manual.
+                            </li>
+                            <li>
+                                <strong>Precisión en Facturación Automatizada:</strong> Elimina los errores manuales
+                                mediante el cálculo automatizado de percepciones y deducciones, garantizando registros
+                                financieros exactos y la satisfacción del cliente.
+                            </li>
+                            <li>
+                                <strong>Perspectiva 360° de los Ingresos:</strong> Ofrece una visibilidad inigualable de
+                                la productividad y eficiencia comercial al integrarse con todo el ecosistema AGL.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="module-icon-card">
+                        <i class="fas fa-hand-holding-usd module-card-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 3: Tesorería -->
+            <div class="module-block fade-in-up delay-2">
+                <h3 class="module-title">Tesorería</h3>
+                <div class="module-grid">
+                    <div class="module-icon-card">
+                        <i class="fas fa-piggy-bank module-card-icon"></i>
+                    </div>
+                    <div class="module-info">
+                        <ul class="module-bullets">
+                            <li>
+                                <strong>Visibilidad de Efectivo en Tiempo Real:</strong> Integra datos de todo el
+                                ecosistema AGL para proporcionar una visión precisa del capital disponible y los
+                                próximos gastos.
+                            </li>
+                            <li>
+                                <strong>Asignación Estratégica de Recursos:</strong> Empodera a los líderes para tomar
+                                decisiones informadas sobre la distribución de fondos mediante el análisis del
+                                rendimiento histórico y los costos operativos.
+                            </li>
+                            <li>
+                                <strong>Mitigación de Riesgos:</strong> Configura alertas inteligentes para parámetros
+                                financieros esenciales, permitiendo respuestas rápidas ante las tendencias de liquidez.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 4: Impuestos (Alternado) -->
+            <div class="module-block fade-in-up delay-1">
+                <h3 class="module-title">Impuestos</h3>
+                <div class="module-grid">
+                    <div class="module-info">
+                        <ul class="module-bullets">
+                            <li>
+                                <strong>Reportes Fiscales Estandarizados:</strong> Elimina tareas redundantes mediante
+                                la estandarización de la recolección de datos fiscales, de acuerdo con sus reglas de
+                                negocio específicas y las regulaciones locales.
+                            </li>
+                            <li>
+                                <strong>Pista de Auditoría Integral:</strong> Mantiene un historial detallado de todas
+                                las transacciones financieras, proporcionando un registro auditable que garantiza el
+                                cumplimiento continuo.
+                            </li>
+                            <li>
+                                <strong>Precisión en Cálculos Automatizados:</strong> Minimiza errores logísticos y
+                                fiscales mediante el cómputo automatizado de percepciones, deducciones y obligaciones
+                                tributarias basado en datos operativos integrados.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="module-icon-card">
+                        <i class="fas fa-landmark module-card-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 5: Gestión de costos -->
+            <div class="module-block fade-in-up delay-2">
+                <h3 class="module-title">Gestión de costos</h3>
+                <div class="module-grid">
+                    <div class="module-icon-card">
+                        <i class="fas fa-calculator module-card-icon"></i>
+                    </div>
+                    <div class="module-info">
+                        <ul class="module-bullets">
+                            <li>
+                                <strong>Redirección de Costos Precisa:</strong> Permite la asignación estratégica de
+                                gastos a proyectos o activos específicos mediante el referenciamiento de las
+                                herramientas operativas de AGL, garantizando que los costos se atribuyan con exactitud.
+                            </li>
+                            <li>
+                                <strong>Análisis de Rentabilidad en Tiempo Real:</strong> Integra cada sistema para
+                                extraer métricas esenciales, visualizándolas en un tablero inteligente que permite a la
+                                dirección supervisar el rendimiento financiero desde un solo lugar.
+                            </li>
+                            <li>
+                                <strong>Exactitud Logística y Fiscal:</strong> Minimiza errores al automatizar el
+                                vínculo entre las salidas de almacén y los reportes financieros, proporcionando una
+                                pista de auditoría confiable para cada recurso invertido.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección de Contacto Simplificada -->
+    <section id="contacto" class="supply-cta">
+        <div class="container fade-in-up">
+            <h2>Contáctanos</h2>
+            <a href="https://wa.me/526182922284?text=Hola,%20quisiera%20solicitar%20una%20Demo%20de%20ProFinance"
+                target="_blank" class="btn-demo">
+                Solicita una Demo
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img footer-logo-img theme-logo"
+                        id="footer-logo">
+                    <p>Nacidos en la operación directa en campo, impulsando la excelencia.</p>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/people/AGL-Business-Intelligence/61572439661784/?locale=es_LA"
+                        target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/aglbi.es/" target="_blank" rel="noopener noreferrer"
+                        class="social-icon-btn" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/aglbi" target="_blank" rel="noopener noreferrer"
+                        class="social-icon-btn" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <button id="back-to-top-footer" class="btn-back-to-top" title="Volver al inicio"
+                    aria-label="Volver arriba">
+                    <span>Volver arriba</span>
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+                <div class="footer-copy">
+                    &copy; 2026 AGL Latinoamérica. Todos los derechos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script__pf.js"></script>
+    <!-- Script Integrado a prueba de fallos -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. FUNCIONAMIENTO DEL MENÚ MÓVIL
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileCloseBtn = document.getElementById('mobile-close-btn');
+            const mobileNav = document.getElementById('mobile-nav');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if (mobileMenuBtn && mobileNav) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileNav.classList.add('active');
+                    mobileNav.style.display = 'flex';
+                    document.body.style.overflow = 'hidden'; // Evita que el fondo haga scroll
+                });
+            }
+
+            if (mobileCloseBtn && mobileNav) {
+                mobileCloseBtn.addEventListener('click', () => {
+                    mobileNav.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileNav) mobileNav.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // 2. CAMBIO DE TEMA (CLARO/OSCURO)
+            const htmlEl = document.documentElement;
+            const themeToggle = document.getElementById('theme-toggle');
+            const mobileToggle = document.getElementById('mobile-theme-toggle');
+            const themeLogos = document.querySelectorAll('.theme-logo');
+
+            const DARK_LOGO = '../../../Logos/logo blanco.png';
+            const LIGHT_LOGO = '../../../Logos/logo negro.png';
+
+            function applyTheme(theme) {
+                if (theme === 'light') {
+                    htmlEl.setAttribute('data-theme', 'light');
+                    themeLogos.forEach(img => img.src = LIGHT_LOGO);
+                } else {
+                    htmlEl.removeAttribute('data-theme');
+                    themeLogos.forEach(img => img.src = DARK_LOGO);
+                }
+                localStorage.setItem('agl-theme', theme);
+            }
+
+            const savedTheme = localStorage.getItem('agl-theme') || 'dark';
+            applyTheme(savedTheme);
+
+            const toggleTheme = () => applyTheme(htmlEl.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
+            if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+            if (mobileToggle) mobileToggle.addEventListener('click', toggleTheme);
+
+            // 3. EFECTO SCROLL EN NAVBAR
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', () => {
+                if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 50);
+            });
+
+            // 4. BOTÓN VOLVER ARRIBA
+            const footerBackToTop = document.getElementById('back-to-top-footer');
+            if (footerBackToTop) {
+                footerBackToTop.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>
