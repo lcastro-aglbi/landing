@@ -3,9 +3,6 @@
    Includes Dark (Black) and Light (White) Mode Themes
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   Root Variables (Default: Dark / Black Mode)
-   -------------------------------------------------------------------------- */
 :root {
     /* Colors */
     --bg-color: #121212;
@@ -73,10 +70,6 @@
     --theme-transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* --------------------------------------------------------------------------
-   Light (White) Mode Theme
-   Carefully calibrated to retain the high-end, organic identity of AGL
-   -------------------------------------------------------------------------- */
 [data-theme="light"] {
     /* Colors */
     --bg-color: #f7faf7;
@@ -140,9 +133,6 @@
     --theme-toggle-hover: rgba(67, 136, 48, 0.15);
 }
 
-/* --------------------------------------------------------------------------
-   Reset & Base Styles
-   -------------------------------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -197,9 +187,6 @@ ul {
     padding: 0 2rem;
 }
 
-/* --------------------------------------------------------------------------
-   Typography Utility
-   -------------------------------------------------------------------------- */
 .highlight {
     color: var(--primary-color);
 }
@@ -211,9 +198,6 @@ ul {
     background-clip: text;
 }
 
-/* --------------------------------------------------------------------------
-   Buttons
-   -------------------------------------------------------------------------- */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -260,9 +244,6 @@ ul {
     font-size: 1.1rem;
 }
 
-/* --------------------------------------------------------------------------
-   Theme Toggle Button (Sun / Moon)
-   -------------------------------------------------------------------------- */
 .nav-actions {
     display: flex;
     align-items: center;
@@ -300,7 +281,6 @@ ul {
     transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.35s ease, color 0.35s ease, filter 0.35s ease;
 }
 
-/* Dark Mode (Default): Show Sun (click to make it bright) */
 :root .theme-icon-sun {
     opacity: 1;
     transform: rotate(0deg) scale(1);
@@ -314,7 +294,6 @@ ul {
     color: #6366f1;
 }
 
-/* Light Mode: Show Moon (click to go dark) */
 [data-theme="light"] .theme-icon-sun {
     opacity: 0;
     transform: rotate(-90deg) scale(0.3);
@@ -327,7 +306,6 @@ ul {
     filter: drop-shadow(0 0 4px rgba(51, 65, 85, 0.3));
 }
 
-/* Mobile Theme Toggle Item */
 .mobile-theme-item {
     margin-top: 1rem;
     display: flex;
@@ -368,15 +346,11 @@ ul {
     justify-content: center;
 }
 
-/* Los íconos del toggle móvil también se apilan para animarse */
 .theme-toggle-btn-inner .theme-icon {
     position: absolute;
     transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.35s ease, color 0.35s ease, filter 0.35s ease;
 }
 
-/* --------------------------------------------------------------------------
-   Navbar
-   -------------------------------------------------------------------------- */
 .navbar {
     position: fixed;
     top: 0;
@@ -466,7 +440,6 @@ ul {
     right: 0;
 }
 
-/* Header: logo + botón X */
 .mobile-nav-header {
     display: flex;
     align-items: center;
@@ -494,7 +467,6 @@ ul {
     color: var(--primary-color);
 }
 
-/* Links: zona central con scroll si es necesario */
 .mobile-nav-links {
     flex: 1;
     display: flex;
@@ -526,7 +498,6 @@ ul {
     background: rgba(101, 158, 80, 0.08);
 }
 
-/* Footer: Contacto + toggle de tema */
 .mobile-nav-footer {
     display: flex;
     align-items: center;
@@ -537,9 +508,6 @@ ul {
     flex-shrink: 0;
 }
 
-/* --------------------------------------------------------------------------
-   Hero Section
-   -------------------------------------------------------------------------- */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -586,9 +554,6 @@ ul {
     margin-right: auto;
 }
 
-/* --------------------------------------------------------------------------
-   Sections General
-   -------------------------------------------------------------------------- */
 section {
     padding: 6rem 0;
 }
@@ -612,9 +577,6 @@ section {
     font-weight: 400;
 }
 
-/* --------------------------------------------------------------------------
-   About Section
-   -------------------------------------------------------------------------- */
 .about-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -676,9 +638,6 @@ section {
     flex-shrink: 0;
 }
 
-/* --------------------------------------------------------------------------
-   Symptoms Section
-   -------------------------------------------------------------------------- */
 .symptoms {
     background: transparent;
     position: relative;
@@ -734,9 +693,6 @@ section {
 
 /* --------------------------------------------------------------------------
    Diagnostic Section
-   -------------------------------------------------------------------------- */
-/* --------------------------------------------------------------------------
-   Diagnostic Section (Actualizado)
    -------------------------------------------------------------------------- */
 .diagnostic {
     padding: 8rem 0;
@@ -803,32 +759,7 @@ section {
 
 .diagnostic-text p {
     color: var(--text-secondary);
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.diagnostic-text ul {
-    margin-top: 0.75rem;
-    padding-left: 1.5rem;
-    list-style-type: disc;
-    color: var(--primary-color);
-    /* Hace las viñetas color verde */
-}
-
-.diagnostic-text ul li {
-    margin-bottom: 0.5rem;
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-}
-
-.diagnostic-text ul li strong {
-    color: var(--text-primary);
-    font-weight: 600;
-}
-
-.diagnostic-cta {
-    text-align: center;
-    margin-top: 3.5rem;
+    margin-bottom: 2.5rem;
 }
 
 /* --------------------------------------------------------------------------
@@ -894,9 +825,6 @@ section {
     font-size: 1.1rem;
 }
 
-/* --------------------------------------------------------------------------
-   Animations
-   -------------------------------------------------------------------------- */
 .fade-in-up {
     opacity: 0;
     transform: translateY(30px);
@@ -931,9 +859,6 @@ section {
     transition-delay: 0.3s;
 }
 
-/* --------------------------------------------------------------------------
-   Contact Form Styles
-   -------------------------------------------------------------------------- */
 .form-section {
     padding: 6rem 0;
     background: transparent;
@@ -1058,11 +983,6 @@ section {
     box-shadow: 0 0 0 1px var(--primary-color);
 }
 
-/* Fallback border color when checked if :has isn't supported */
-.radio-card input[type="radio"]:checked+.radio-content {
-    color: #ffffff;
-}
-
 .radio-card input[type="radio"]:checked~.radio-content .radio-badge {
     background: var(--primary-color);
     color: #ffffff;
@@ -1138,7 +1058,6 @@ section {
     color: #ef4444;
 }
 
-/* Validación de campos — estado de error */
 .form-group input.input-error {
     border-color: #ef4444 !important;
     box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.25) !important;
@@ -1166,9 +1085,6 @@ section {
     }
 }
 
-/* --------------------------------------------------------------------------
-   Footer Styles
-   -------------------------------------------------------------------------- */
 footer {
     background: transparent;
     border-top: 1px solid var(--glass-border);
@@ -1250,7 +1166,6 @@ footer {
     font-size: 0.85rem;
 }
 
-/* Footer Back to Top Button */
 .btn-back-to-top {
     background: var(--back-to-top-bg);
     border: 1px solid var(--back-to-top-border);
@@ -1283,9 +1198,60 @@ footer {
     transform: translateY(-4px);
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Media Queries
-   -------------------------------------------------------------------------- */
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 100%;
+}
+
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    padding: 1.5rem 0.5rem;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-slide {
+    flex: 0 0 calc(33.333% - 1.33rem);
+    scroll-snap-align: start;
+    height: auto;
+}
+
+.carousel-btn {
+    background: var(--bg-alt);
+    border: 1px solid var(--glass-border);
+    color: var(--primary-color);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    flex-shrink: 0;
+    z-index: 2;
+    box-shadow: var(--card-shadow);
+}
+
+.carousel-btn:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(101, 158, 80, 0.4);
+}
+
 @media (max-width: 992px) {
 
     .nav-links,
@@ -1293,7 +1259,6 @@ footer {
         display: none;
     }
 
-    /* Ocultar el toggle de tema del navbar en móvil — vive en el menú hamburguesa */
     .theme-toggle-btn {
         display: none;
     }
@@ -1308,6 +1273,10 @@ footer {
 
     .hero h1 {
         font-size: 3rem;
+    }
+
+    .carousel-slide {
+        flex: 0 0 calc(50% - 1rem);
     }
 }
 
@@ -1350,6 +1319,18 @@ footer {
     .footer-bottom {
         align-items: center;
         text-align: center;
+    }
+
+    .carousel-slide {
+        flex: 0 0 100%;
+    }
+
+    .carousel-btn {
+        display: none;
+    }
+
+    .carousel-wrapper {
+        gap: 0;
     }
 }
 
