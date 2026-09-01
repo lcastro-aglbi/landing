@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // =========================================================
+    // FAVICON
+    // =========================================================
     let favicon = document.querySelector("link[rel*='icon']");
     if (!favicon) {
         favicon = document.createElement('link');
@@ -9,6 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
     favicon.type = 'image/png';
     favicon.href = 'Logos/favicon.png';
 
+    // =========================================================
+    // THEME TOGGLE (Dark ↔ Light Mode)
+    // =========================================================
     const htmlEl = document.documentElement;
     const themeToggle = document.getElementById('theme-toggle');
     const mobileToggle = document.getElementById('mobile-theme-toggle');
@@ -39,6 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
     if (mobileToggle) mobileToggle.addEventListener('click', toggleTheme);
 
+    // =========================================================
+    // MOBILE MENU TOGGLE
+    // =========================================================
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileCloseBtn = document.getElementById('mobile-close-btn');
     const mobileNav = document.getElementById('mobile-nav');
@@ -68,6 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.innerWidth > 992) closeMobileMenu();
     });
 
+    // =========================================================
+    // NAVBAR SCROLL EFFECT
+    // =========================================================
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         if (navbar) {
@@ -75,6 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // =========================================================
+    // SCROLL ANIMATIONS (Intersection Observer)
+    // =========================================================
     const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in-left');
 
     const observerOptions = {
@@ -96,6 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    // =========================================================
+    // FORM VALIDATION & SANITIZATION
+    // =========================================================
     const soloLetrasNumeros = /^[a-zA-Z0-9áéíóúÁÉÍÓÚüÜñÑ\s]+$/;
 
     const camposRestringidos = [
@@ -140,6 +158,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // =========================================================
+    // FORM SUBMISSION (Google Apps Script Webhook)
+    // =========================================================
     const diagnosticoForm = document.getElementById('diagnostico-form');
     if (diagnosticoForm) {
         diagnosticoForm.addEventListener('submit', async (e) => {
@@ -202,6 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 diagnosticoForm.reset();
 
             } catch (error) {
+                console.error('Error submitting form:', error);
                 formMessage.textContent = 'Hubo un error al enviar el formulario. Por favor, intenta de nuevo o contáctanos por WhatsApp.';
                 formMessage.classList.add('error');
             } finally {
@@ -211,6 +233,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // =========================================================
+    // BACK TO TOP SCROLL LOGIC
+    // =========================================================
     const footerBackToTop = document.getElementById('back-to-top-footer');
     if (footerBackToTop) {
         footerBackToTop.addEventListener('click', () => {
@@ -221,19 +246,68 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // =========================================================
+    // CAROUSEL LOGIC (AUTO-SCROLL & ILUMINACIÓN)
+    // =========================================================
     const carousel = document.getElementById('industries-carousel');
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
+    const slides = document.querySelectorAll('.carousel-slide');
 
-    if (carousel && prevBtn && nextBtn) {
-        nextBtn.addEventListener('click', () => {
-            const scrollAmount = carousel.clientWidth;
-            carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    if (carousel && slides.length > 0) {
+        // 1. Iluminación: Observer para detectar cuáles están visibles
+        const carouselObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active-slide');
+                } else {
+                    entry.target.classList.remove('active-slide');
+                }
+            });
+        }, {
+            root: carousel,
+            threshold: 0.75
         });
 
-        prevBtn.addEventListener('click', () => {
-            const scrollAmount = carousel.clientWidth;
-            carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        });
+        slides.forEach(slide => carouselObserver.observe(slide));
+
+        // 2. Movimiento automático (poco a poco)
+        let autoScrollInterval;
+
+        const startAutoScroll = () => {
+            autoScrollInterval = setInterval(() => {
+                const scrollAmount = slides[0].clientWidth + 32;
+                if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 10) {
+                    carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                }
+            }, 5000);
+        };
+
+        const stopAutoScroll = () => {
+            clearInterval(autoScrollInterval);
+        };
+
+        startAutoScroll();
+
+        // Pausa automática si el usuario interactúa
+        carousel.addEventListener('mouseenter', stopAutoScroll);
+        carousel.addEventListener('mouseleave', startAutoScroll);
+        carousel.addEventListener('touchstart', stopAutoScroll);
+        carousel.addEventListener('touchend', startAutoScroll);
+
+        // 3. Botones manuales
+        if (prevBtn && nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                const scrollAmount = slides[0].clientWidth + 32;
+                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+
+            prevBtn.addEventListener('click', () => {
+                const scrollAmount = slides[0].clientWidth + 32;
+                carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+        }
     }
 });
