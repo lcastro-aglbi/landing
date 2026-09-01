@@ -1,14 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // =========================================================
+    // FAVICON
+    // =========================================================
+    let favicon = document.querySelector("link[rel*='icon']");
+    if (!favicon) {
+        favicon = document.createElement('link');
+        favicon.rel = 'icon';
+        document.head.appendChild(favicon);
+    }
+    favicon.type = 'image/png';
+    favicon.href = 'Logos/favicon.png';
+
+    // =========================================================
     // THEME TOGGLE (Dark ↔ Light Mode)
     // =========================================================
-    const htmlEl        = document.documentElement;
-    const themeToggle   = document.getElementById('theme-toggle');
-    const mobileToggle  = document.getElementById('mobile-theme-toggle');
-    const themeLogos    = document.querySelectorAll('.theme-logo');
+    const htmlEl = document.documentElement;
+    const themeToggle = document.getElementById('theme-toggle');
+    const mobileToggle = document.getElementById('mobile-theme-toggle');
+    const themeLogos = document.querySelectorAll('.theme-logo');
 
-    const DARK_LOGO  = 'Logos/logo blanco.png';
+    const DARK_LOGO = 'Logos/logo blanco.png';
     const LIGHT_LOGO = 'Logos/logo negro.png';
 
     // Apply theme and update logos
@@ -32,16 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('agl-theme') || 'dark';
     applyTheme(savedTheme);
 
-    if (themeToggle)  themeToggle.addEventListener('click', toggleTheme);
+    if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
     if (mobileToggle) mobileToggle.addEventListener('click', toggleTheme);
 
     // =========================================================
     // MOBILE MENU TOGGLE
     // =========================================================
-    const mobileMenuBtn  = document.getElementById('mobile-menu-btn');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileCloseBtn = document.getElementById('mobile-close-btn');
-    const mobileNav      = document.getElementById('mobile-nav');
-    const mobileLinks    = document.querySelectorAll('.mobile-link');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
 
     function openMobileMenu() {
         if (!mobileNav) return;
@@ -56,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     }
 
-    if (mobileMenuBtn)  mobileMenuBtn.addEventListener('click', openMobileMenu);
+    if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileMenu);
     if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileMenu);
 
     // Cerrar al hacer click en un link
