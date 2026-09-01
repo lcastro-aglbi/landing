@@ -4,45 +4,32 @@
    ========================================================================== */
 
 :root {
-    /* Colors */
     --bg-color: #121212;
-    /* onyx deep black */
     --bg-alt: #1C2219;
-    /* carbon-black with organic dark sage tint */
     --text-primary: #f0f4f8;
-    /* soft clean white */
     --text-secondary: #94a3b8;
-    /* slate secondary */
     --text-muted: #81807E;
-    /* grey muted */
     --primary-color: #659E50;
-    /* sage-green signature AGL */
     --primary-hover: #75b35c;
     --accent-color: #37522D;
-    /* hunter-green */
 
-    /* Glass & Borders */
     --glass-bg: rgba(28, 34, 25, 0.75);
     --glass-border: rgba(255, 255, 255, 0.08);
     --card-border-hover: rgba(101, 158, 80, 0.35);
     --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 
-    /* Navigation */
     --nav-scrolled-bg: rgba(18, 18, 18, 0.92);
     --mobile-nav-bg: rgba(18, 18, 18, 0.98);
 
-    /* Hero & Glows */
     --hero-glow: radial-gradient(ellipse 65% 55% at 85% 70%, rgba(55, 82, 45, 0.28) 0%, rgba(18, 18, 18, 0) 70%),
         radial-gradient(ellipse 55% 45% at 15% 30%, rgba(101, 158, 80, 0.18) 0%, rgba(18, 18, 18, 0) 70%);
 
-    /* Components */
     --badge-bg: rgba(101, 158, 80, 0.12);
     --badge-border: rgba(101, 158, 80, 0.25);
     --symptom-icon-bg: rgba(101, 158, 80, 0.12);
     --divider-color: rgba(255, 255, 255, 0.07);
     --value-card-bg: linear-gradient(180deg, rgba(28, 34, 25, 0.4) 0%, rgba(28, 34, 25, 0.8) 100%);
 
-    /* Forms */
     --form-wrapper-bg: rgba(28, 34, 25, 0.85);
     --form-shadow: 0 15px 40px rgba(0, 0, 0, 0.55);
     --input-bg: rgba(40, 45, 38, 0.7);
@@ -55,7 +42,6 @@
     --radio-badge-color: #ffffff;
     --btn-submit-color: #121212;
 
-    /* Buttons & Interactive */
     --social-btn-bg: rgba(255, 255, 255, 0.04);
     --social-btn-border: rgba(255, 255, 255, 0.1);
     --social-btn-color: #f0f4f8;
@@ -65,51 +51,37 @@
     --theme-toggle-border: rgba(255, 255, 255, 0.12);
     --theme-toggle-hover: rgba(101, 158, 80, 0.2);
 
-    /* Transitions */
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     --theme-transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 [data-theme="light"] {
-    /* Colors */
     --bg-color: #f7faf7;
-    /* refined soft sage-white, not harsh glare */
     --bg-alt: #ffffff;
-    /* pure clean card background */
     --text-primary: #151d16;
-    /* deep charcoal black with rich contrast */
     --text-secondary: #4d5e50;
-    /* balanced legible slate-sage */
     --text-muted: #748577;
-    /* soft muted green-grey */
     --primary-color: #438830;
-    /* vibrant deep sage green (AAA accessibility) */
     --primary-hover: #346d25;
     --accent-color: #254a1a;
-    /* deep forest green */
 
-    /* Glass & Borders */
     --glass-bg: rgba(255, 255, 255, 0.88);
     --glass-border: rgba(35, 55, 30, 0.1);
     --card-border-hover: rgba(67, 136, 48, 0.45);
     --card-shadow: 0 12px 35px rgba(25, 45, 20, 0.07);
 
-    /* Navigation */
     --nav-scrolled-bg: rgba(247, 250, 247, 0.94);
     --mobile-nav-bg: rgba(247, 250, 247, 0.98);
 
-    /* Hero & Glows */
     --hero-glow: radial-gradient(ellipse 65% 55% at 85% 70%, rgba(67, 136, 48, 0.14) 0%, rgba(247, 250, 247, 0) 70%),
         radial-gradient(ellipse 55% 45% at 15% 30%, rgba(101, 158, 80, 0.12) 0%, rgba(247, 250, 247, 0) 70%);
 
-    /* Components */
     --badge-bg: rgba(67, 136, 48, 0.1);
     --badge-border: rgba(67, 136, 48, 0.25);
     --symptom-icon-bg: rgba(67, 136, 48, 0.12);
     --divider-color: rgba(35, 55, 30, 0.08);
     --value-card-bg: linear-gradient(180deg, #ffffff 0%, #edf4ec 100%);
 
-    /* Forms */
     --form-wrapper-bg: #ffffff;
     --form-shadow: 0 20px 45px rgba(25, 45, 20, 0.09);
     --input-bg: #f2f6f1;
@@ -122,7 +94,6 @@
     --radio-badge-color: var(--primary-color);
     --btn-submit-color: #ffffff;
 
-    /* Buttons & Interactive */
     --social-btn-bg: rgba(35, 55, 30, 0.05);
     --social-btn-border: rgba(35, 55, 30, 0.12);
     --social-btn-color: #151d16;
@@ -518,10 +489,6 @@ ul {
     transition: background 0.4s ease;
 }
 
-.glow-orb {
-    display: none;
-}
-
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
@@ -691,9 +658,6 @@ section {
     flex-shrink: 0;
 }
 
-/* --------------------------------------------------------------------------
-   Diagnostic Section
-   -------------------------------------------------------------------------- */
 .diagnostic {
     padding: 8rem 0;
     position: relative;
@@ -759,16 +723,199 @@ section {
 
 .diagnostic-text p {
     color: var(--text-secondary);
-    margin-bottom: 2.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
-/* --------------------------------------------------------------------------
-   Value Prop & Ecosystem Section
-   -------------------------------------------------------------------------- */
+.diagnostic-text ul {
+    margin-top: 0.75rem;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+    color: var(--primary-color);
+}
+
+.diagnostic-text ul li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.diagnostic-text ul li strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Carrusel de Industrias */
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 100%;
+}
+
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    padding: 1.5rem 0.5rem;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-slide {
+    flex: 0 0 calc(33.333% - 1.33rem);
+    scroll-snap-align: start;
+    height: auto;
+    opacity: 0.4;
+    transform: scale(0.98);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.6s ease, border-color 0.6s ease;
+}
+
+.carousel-slide.active-slide {
+    opacity: 1;
+    transform: scale(1);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 25px rgba(101, 158, 80, 0.25);
+}
+
+.carousel-btn {
+    background: var(--bg-alt);
+    border: 1px solid var(--glass-border);
+    color: var(--primary-color);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    flex-shrink: 0;
+    z-index: 2;
+    box-shadow: var(--card-shadow);
+}
+
+.carousel-btn:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(101, 158, 80, 0.4);
+}
+
+/* Ecosistema Section Styles */
+.ecosystem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.ecosystem-card {
+    background: var(--bg-alt);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    position: relative;
+}
+
+.ecosystem-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--card-border-hover);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.2);
+}
+
+.card-badge {
+    background: var(--badge-bg);
+    color: var(--primary-color);
+    border: 1px solid var(--badge-border);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 0.35rem 0.85rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.ecosystem-card .icon-wrapper {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    margin-bottom: 1.25rem;
+    background: rgba(101, 158, 80, 0.12);
+    color: var(--primary-color);
+    border: 1px solid var(--badge-border);
+    box-shadow: none;
+}
+
+.ecosystem-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.ecosystem-card .card-description {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin-bottom: 1.75rem;
+}
+
+.card-problems {
+    margin-top: auto;
+    width: 100%;
+    text-align: left;
+    border-top: 1px solid var(--divider-color);
+    padding-top: 1.25rem;
+}
+
+.card-problems h5 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: 0.5px;
+    margin-bottom: 0.85rem;
+}
+
+.card-problems ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.card-problems li {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.55rem;
+}
+
+.card-problems li i {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
 .value-grid {
     display: grid;
-    /* Forzamos 2 columnas exactamente iguales */
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
@@ -807,22 +954,6 @@ section {
 
 .cta {
     background: transparent;
-}
-
-.cta-container {
-    text-align: center;
-    max-width: 800px;
-}
-
-.cta h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.cta p {
-    color: var(--text-secondary);
-    margin-bottom: 2.5rem;
-    font-size: 1.1rem;
 }
 
 .fade-in-up {
@@ -981,6 +1112,10 @@ section {
     border-color: var(--primary-color);
     background: rgba(101, 158, 80, 0.12);
     box-shadow: 0 0 0 1px var(--primary-color);
+}
+
+.radio-card input[type="radio"]:checked+.radio-content {
+    color: #ffffff;
 }
 
 .radio-card input[type="radio"]:checked~.radio-content .radio-badge {
@@ -1198,77 +1333,7 @@ footer {
     transform: translateY(-4px);
 }
 
-.carousel-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    max-width: 100%;
-}
-
-.carousel-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 2rem;
-    padding: 1.5rem 0.5rem;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.carousel-container::-webkit-scrollbar {
-    display: none;
-}
-
-.carousel-slide {
-    flex: 0 0 calc(33.333% - 1.33rem);
-    scroll-snap-align: start;
-    height: auto;
-}
-
-.carousel-btn {
-    background: var(--bg-alt);
-    border: 1px solid var(--glass-border);
-    color: var(--primary-color);
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: var(--transition);
-    flex-shrink: 0;
-    z-index: 2;
-    box-shadow: var(--card-shadow);
-}
-
-.carousel-btn:hover {
-    background: var(--primary-color);
-    color: #ffffff;
-    border-color: var(--primary-color);
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(101, 158, 80, 0.4);
-}
-
-.btn-back-to-top:hover i {
-    transform: translateY(-4px);
-}
-
-.carousel-slide {
-    opacity: 0.4;
-    transform: scale(0.98);
-    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.6s ease, border-color 0.6s ease;
-}
-
-.carousel-slide.active-slide {
-    opacity: 1;
-    transform: scale(1);
-    border-color: var(--primary-color);
-    box-shadow: 0 0 25px rgba(101, 158, 80, 0.25);
-}
-
+/* Media Queries */
 @media (max-width: 992px) {
 
     .nav-links,
@@ -1294,6 +1359,10 @@ footer {
 
     .carousel-slide {
         flex: 0 0 calc(50% - 1rem);
+    }
+
+    .ecosystem-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -1349,16 +1418,12 @@ footer {
     .carousel-wrapper {
         gap: 0;
     }
-}
 
-@media (max-width: 768px) {
-    .value-grid {
+    .ecosystem-grid {
         grid-template-columns: 1fr;
     }
-}
 
-.diagnostic-card {
-    flex-direction: column;
-    gap: 1.2rem;
-    padding: 1.5rem;
+    .ecosystem-card {
+        padding: 2rem 1.5rem;
+    }
 }
