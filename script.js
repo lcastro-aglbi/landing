@@ -1,8 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // =========================================================
-    // FAVICON
-    // =========================================================
     let favicon = document.querySelector("link[rel*='icon']");
     if (!favicon) {
         favicon = document.createElement('link');
@@ -12,9 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     favicon.type = 'image/png';
     favicon.href = 'Logos/favicon.png';
 
-    // =========================================================
-    // THEME TOGGLE (Dark ↔ Light Mode)
-    // =========================================================
     const htmlEl = document.documentElement;
     const themeToggle = document.getElementById('theme-toggle');
     const mobileToggle = document.getElementById('mobile-theme-toggle');
@@ -23,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const DARK_LOGO = 'Logos/logo blanco.png';
     const LIGHT_LOGO = 'Logos/logo negro.png';
 
-    // Apply theme and update logos
     function applyTheme(theme) {
         if (theme === 'light') {
             htmlEl.setAttribute('data-theme', 'light');
@@ -40,16 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
         applyTheme(current === 'light' ? 'dark' : 'light');
     }
 
-    // Load saved preference on page load
     const savedTheme = localStorage.getItem('agl-theme') || 'dark';
     applyTheme(savedTheme);
 
     if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
     if (mobileToggle) mobileToggle.addEventListener('click', toggleTheme);
 
-    // =========================================================
-    // MOBILE MENU TOGGLE
-    // =========================================================
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileCloseBtn = document.getElementById('mobile-close-btn');
     const mobileNav = document.getElementById('mobile-nav');
@@ -71,19 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileMenu);
     if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileMenu);
 
-    // Cerrar al hacer click en un link
     mobileLinks.forEach(link => {
         link.addEventListener('click', closeMobileMenu);
     });
 
-    // Cerrar si se amplía la pantalla a desktop
     window.addEventListener('resize', () => {
         if (window.innerWidth > 992) closeMobileMenu();
     });
 
-    // =========================================================
-    // NAVBAR SCROLL EFFECT
-    // =========================================================
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         if (navbar) {
@@ -91,9 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // =========================================================
-    // SCROLL ANIMATIONS (Intersection Observer)
-    // =========================================================
     const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in-left');
 
     const observerOptions = {
@@ -115,9 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // =========================================================
-    // FORM VALIDATION & SANITIZATION
-    // =========================================================
     const soloLetrasNumeros = /^[a-zA-Z0-9áéíóúÁÉÍÓÚüÜñÑ\s]+$/;
 
     const camposRestringidos = [
@@ -150,7 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const input = document.getElementById(id);
         if (!input) return;
 
-        // Bloquea caracteres inválidos en tiempo real
         input.addEventListener('input', () => {
             const cursor = input.selectionStart;
             const original = input.value;
@@ -163,15 +140,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // =========================================================
-    // FORM SUBMISSION (Google Apps Script Webhook)
-    // =========================================================
     const diagnosticoForm = document.getElementById('diagnostico-form');
     if (diagnosticoForm) {
         diagnosticoForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            // Validación pre-envío
             let hayErrores = false;
             camposRestringidos.forEach(({ id, label }) => {
                 const input = document.getElementById(id);
@@ -198,7 +171,6 @@ document.addEventListener('DOMContentLoaded', () => {
             formMessage.textContent = '';
             formMessage.className = 'form-message';
 
-            // Recopilar datos del formulario
             const formData = new FormData(diagnosticoForm);
             const rawData = Object.fromEntries(formData.entries());
 
@@ -212,8 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 "codigo_referencia": rawData.codigo,
                 "area_reforzar": rawData.area
             };
-
-            console.log('Enviando payload:', JSON.stringify(payload, null, 2));
 
             const APPSHEET_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbwOgSJXFioMA9yx5_ZjxrFFUcD8wkj5imAdGJX_6NzpMANX5l_y-D5ZoYjz-Ca2DpQW/exec';
 
@@ -232,7 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 diagnosticoForm.reset();
 
             } catch (error) {
-                console.error('Error submitting form:', error);
                 formMessage.textContent = 'Hubo un error al enviar el formulario. Por favor, intenta de nuevo o contáctanos por WhatsApp.';
                 formMessage.classList.add('error');
             } finally {
@@ -242,9 +211,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // =========================================================
-    // BACK TO TOP SCROLL LOGIC
-    // =========================================================
     const footerBackToTop = document.getElementById('back-to-top-footer');
     if (footerBackToTop) {
         footerBackToTop.addEventListener('click', () => {
@@ -252,6 +218,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 top: 0,
                 behavior: 'smooth'
             });
+        });
+    }
+
+    const carousel = document.getElementById('industries-carousel');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    if (carousel && prevBtn && nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            const scrollAmount = carousel.clientWidth;
+            carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            const scrollAmount = carousel.clientWidth;
+            carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
         });
     }
 });
