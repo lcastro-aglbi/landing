@@ -8,36 +8,43 @@
    -------------------------------------------------------------------------- */
 :root {
     /* Colors */
-    --bg-color: #121212;               /* onyx deep black */
-    --bg-alt: #1C2219;                 /* carbon-black with organic dark sage tint */
-    --text-primary: #f0f4f8;           /* soft clean white */
-    --text-secondary: #94a3b8;         /* slate secondary */
-    --text-muted: #81807E;             /* grey muted */
-    --primary-color: #659E50;          /* sage-green signature AGL */
+    --bg-color: #121212;
+    /* onyx deep black */
+    --bg-alt: #1C2219;
+    /* carbon-black with organic dark sage tint */
+    --text-primary: #f0f4f8;
+    /* soft clean white */
+    --text-secondary: #94a3b8;
+    /* slate secondary */
+    --text-muted: #81807E;
+    /* grey muted */
+    --primary-color: #659E50;
+    /* sage-green signature AGL */
     --primary-hover: #75b35c;
-    --accent-color: #37522D;          /* hunter-green */
-    
+    --accent-color: #37522D;
+    /* hunter-green */
+
     /* Glass & Borders */
     --glass-bg: rgba(28, 34, 25, 0.75);
     --glass-border: rgba(255, 255, 255, 0.08);
     --card-border-hover: rgba(101, 158, 80, 0.35);
     --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    
+
     /* Navigation */
     --nav-scrolled-bg: rgba(18, 18, 18, 0.92);
     --mobile-nav-bg: rgba(18, 18, 18, 0.98);
-    
+
     /* Hero & Glows */
     --hero-glow: radial-gradient(ellipse 65% 55% at 85% 70%, rgba(55, 82, 45, 0.28) 0%, rgba(18, 18, 18, 0) 70%),
-                 radial-gradient(ellipse 55% 45% at 15% 30%, rgba(101, 158, 80, 0.18) 0%, rgba(18, 18, 18, 0) 70%);
-    
+        radial-gradient(ellipse 55% 45% at 15% 30%, rgba(101, 158, 80, 0.18) 0%, rgba(18, 18, 18, 0) 70%);
+
     /* Components */
     --badge-bg: rgba(101, 158, 80, 0.12);
     --badge-border: rgba(101, 158, 80, 0.25);
     --symptom-icon-bg: rgba(101, 158, 80, 0.12);
     --divider-color: rgba(255, 255, 255, 0.07);
     --value-card-bg: linear-gradient(180deg, rgba(28, 34, 25, 0.4) 0%, rgba(28, 34, 25, 0.8) 100%);
-    
+
     /* Forms */
     --form-wrapper-bg: rgba(28, 34, 25, 0.85);
     --form-shadow: 0 15px 40px rgba(0, 0, 0, 0.55);
@@ -50,7 +57,7 @@
     --radio-badge-bg: rgba(255, 255, 255, 0.2);
     --radio-badge-color: #ffffff;
     --btn-submit-color: #121212;
-    
+
     /* Buttons & Interactive */
     --social-btn-bg: rgba(255, 255, 255, 0.04);
     --social-btn-border: rgba(255, 255, 255, 0.1);
@@ -60,7 +67,7 @@
     --theme-toggle-bg: rgba(255, 255, 255, 0.06);
     --theme-toggle-border: rgba(255, 255, 255, 0.12);
     --theme-toggle-hover: rgba(101, 158, 80, 0.2);
-    
+
     /* Transitions */
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     --theme-transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
@@ -72,36 +79,43 @@
    -------------------------------------------------------------------------- */
 [data-theme="light"] {
     /* Colors */
-    --bg-color: #f7faf7;               /* refined soft sage-white, not harsh glare */
-    --bg-alt: #ffffff;                 /* pure clean card background */
-    --text-primary: #151d16;           /* deep charcoal black with rich contrast */
-    --text-secondary: #4d5e50;         /* balanced legible slate-sage */
-    --text-muted: #748577;             /* soft muted green-grey */
-    --primary-color: #438830;          /* vibrant deep sage green (AAA accessibility) */
+    --bg-color: #f7faf7;
+    /* refined soft sage-white, not harsh glare */
+    --bg-alt: #ffffff;
+    /* pure clean card background */
+    --text-primary: #151d16;
+    /* deep charcoal black with rich contrast */
+    --text-secondary: #4d5e50;
+    /* balanced legible slate-sage */
+    --text-muted: #748577;
+    /* soft muted green-grey */
+    --primary-color: #438830;
+    /* vibrant deep sage green (AAA accessibility) */
     --primary-hover: #346d25;
-    --accent-color: #254a1a;          /* deep forest green */
-    
+    --accent-color: #254a1a;
+    /* deep forest green */
+
     /* Glass & Borders */
     --glass-bg: rgba(255, 255, 255, 0.88);
     --glass-border: rgba(35, 55, 30, 0.1);
     --card-border-hover: rgba(67, 136, 48, 0.45);
     --card-shadow: 0 12px 35px rgba(25, 45, 20, 0.07);
-    
+
     /* Navigation */
     --nav-scrolled-bg: rgba(247, 250, 247, 0.94);
     --mobile-nav-bg: rgba(247, 250, 247, 0.98);
-    
+
     /* Hero & Glows */
     --hero-glow: radial-gradient(ellipse 65% 55% at 85% 70%, rgba(67, 136, 48, 0.14) 0%, rgba(247, 250, 247, 0) 70%),
-                 radial-gradient(ellipse 55% 45% at 15% 30%, rgba(101, 158, 80, 0.12) 0%, rgba(247, 250, 247, 0) 70%);
-    
+        radial-gradient(ellipse 55% 45% at 15% 30%, rgba(101, 158, 80, 0.12) 0%, rgba(247, 250, 247, 0) 70%);
+
     /* Components */
     --badge-bg: rgba(67, 136, 48, 0.1);
     --badge-border: rgba(67, 136, 48, 0.25);
     --symptom-icon-bg: rgba(67, 136, 48, 0.12);
     --divider-color: rgba(35, 55, 30, 0.08);
     --value-card-bg: linear-gradient(180deg, #ffffff 0%, #edf4ec 100%);
-    
+
     /* Forms */
     --form-wrapper-bg: #ffffff;
     --form-shadow: 0 20px 45px rgba(25, 45, 20, 0.09);
@@ -114,7 +128,7 @@
     --radio-badge-bg: rgba(67, 136, 48, 0.15);
     --radio-badge-color: var(--primary-color);
     --btn-submit-color: #ffffff;
-    
+
     /* Buttons & Interactive */
     --social-btn-bg: rgba(35, 55, 30, 0.05);
     --social-btn-border: rgba(35, 55, 30, 0.12);
@@ -721,6 +735,9 @@ section {
 /* --------------------------------------------------------------------------
    Diagnostic Section
    -------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+   Diagnostic Section (Actualizado)
+   -------------------------------------------------------------------------- */
 .diagnostic {
     padding: 8rem 0;
     position: relative;
@@ -738,28 +755,80 @@ section {
     z-index: -1;
 }
 
-.diagnostic-content {
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--glass-border);
-    padding: 4rem;
-    border-radius: 30px;
-    text-align: center;
+.diagnostic-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     max-width: 900px;
     margin: 0 auto;
-    box-shadow: var(--form-shadow);
 }
 
-.diagnostic-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+.diagnostic-card {
+    background: var(--bg-alt);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
 }
 
-.diagnostic-content p {
-    font-size: 1.1rem;
+.diagnostic-card:hover {
+    border-color: var(--card-border-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(101, 158, 80, 0.15);
+}
+
+.diagnostic-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    background: rgba(101, 158, 80, 0.05);
+}
+
+.diagnostic-text h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.diagnostic-text p {
     color: var(--text-secondary);
-    margin-bottom: 2.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.diagnostic-text ul {
+    margin-top: 0.75rem;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+    color: var(--primary-color);
+    /* Hace las viñetas color verde */
+}
+
+.diagnostic-text ul li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.diagnostic-text ul li strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.diagnostic-cta {
+    text-align: center;
+    margin-top: 3.5rem;
 }
 
 /* --------------------------------------------------------------------------
@@ -988,7 +1057,12 @@ section {
     box-shadow: 0 0 0 1px var(--primary-color);
 }
 
-.radio-card input[type="radio"]:checked ~ .radio-content .radio-badge {
+/* Fallback border color when checked if :has isn't supported */
+.radio-card input[type="radio"]:checked+.radio-content {
+    color: #ffffff;
+}
+
+.radio-card input[type="radio"]:checked~.radio-content .radio-badge {
     background: var(--primary-color);
     color: #ffffff;
 }
@@ -1080,8 +1154,15 @@ section {
 }
 
 @keyframes fadeInError {
-    from { opacity: 0; transform: translateY(-4px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* --------------------------------------------------------------------------
@@ -1205,6 +1286,7 @@ footer {
    Responsive Media Queries
    -------------------------------------------------------------------------- */
 @media (max-width: 992px) {
+
     .nav-links,
     .nav-btn {
         display: none;

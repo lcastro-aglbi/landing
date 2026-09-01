@@ -109,12 +109,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const soloLetrasNumeros = /^[a-zA-Z0-9áéíóúÁÉÍÓÚüÜñÑ\s]+$/;
 
     const camposRestringidos = [
-        { id: 'nombre',   label: 'Nombre completo' },
-        { id: 'empresa',  label: 'Nombre de la empresa' },
-        { id: 'cargo',    label: 'Cargo / Puesto' },
-        { id: 'sector',   label: 'Sector / Industria' },
+        { id: 'nombre', label: 'Nombre completo' },
+        { id: 'empresa', label: 'Nombre de la empresa' },
+        { id: 'cargo', label: 'Cargo / Puesto' },
+        { id: 'sector', label: 'Sector / Industria' },
         { id: 'telefono', label: 'Teléfono / WhatsApp' },
-        { id: 'codigo',   label: 'Código de referencia' }
+        { id: 'codigo', label: 'Código de referencia' }
     ];
 
     function showFieldError(input, message) {
