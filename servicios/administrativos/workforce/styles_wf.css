@@ -1,5 +1,5 @@
 /* ==========================================================================
-   AGL Latinoamérica - Supply Management Styles (styles_sup.css)
+   AGL Latinoamérica - Service Module Styles (WorkForce / ProFinance)
    ========================================================================== */
 
 :root {
@@ -7,17 +7,13 @@
     --bg-alt: #1C2219;
     --text-primary: #f0f4f8;
     --text-secondary: #94a3b8;
-    --text-muted: #81807E;
     --primary-color: #659E50;
     --primary-hover: #75b35c;
     --accent-color: #37522D;
 
-    --glass-bg: rgba(28, 34, 25, 0.75);
     --glass-border: rgba(255, 255, 255, 0.08);
-    --card-border-hover: rgba(101, 158, 80, 0.35);
     --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-
-    --nav-scrolled-bg: rgba(18, 18, 18, 0.92);
+    --nav-scrolled-bg: rgba(18, 18, 18, 0.98);
     --mobile-nav-bg: rgba(18, 18, 18, 0.98);
 
     --hero-glow: radial-gradient(ellipse 65% 55% at 85% 70%, rgba(55, 82, 45, 0.28) 0%, rgba(18, 18, 18, 0) 70%),
@@ -27,17 +23,11 @@
     --badge-border: rgba(101, 158, 80, 0.25);
     --divider-color: rgba(255, 255, 255, 0.07);
 
-    --social-btn-bg: rgba(255, 255, 255, 0.04);
-    --social-btn-border: rgba(255, 255, 255, 0.1);
-    --social-btn-color: #f0f4f8;
-    --back-to-top-bg: rgba(255, 255, 255, 0.05);
-    --back-to-top-border: rgba(255, 255, 255, 0.1);
     --theme-toggle-bg: rgba(255, 255, 255, 0.06);
     --theme-toggle-border: rgba(255, 255, 255, 0.12);
     --theme-toggle-hover: rgba(101, 158, 80, 0.2);
 
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    --theme-transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 [data-theme="light"] {
@@ -45,17 +35,12 @@
     --bg-alt: #ffffff;
     --text-primary: #151d16;
     --text-secondary: #4d5e50;
-    --text-muted: #748577;
     --primary-color: #438830;
     --primary-hover: #346d25;
-    --accent-color: #254a1a;
 
-    --glass-bg: rgba(255, 255, 255, 0.88);
     --glass-border: rgba(35, 55, 30, 0.1);
-    --card-border-hover: rgba(67, 136, 48, 0.45);
     --card-shadow: 0 12px 35px rgba(25, 45, 20, 0.07);
-
-    --nav-scrolled-bg: rgba(247, 250, 247, 0.94);
+    --nav-scrolled-bg: rgba(247, 250, 247, 0.98);
     --mobile-nav-bg: rgba(247, 250, 247, 0.98);
 
     --hero-glow: radial-gradient(ellipse 65% 55% at 85% 70%, rgba(67, 136, 48, 0.14) 0%, rgba(247, 250, 247, 0) 70%),
@@ -65,19 +50,12 @@
     --badge-border: rgba(67, 136, 48, 0.25);
     --divider-color: rgba(35, 55, 30, 0.08);
 
-    --social-btn-bg: rgba(35, 55, 30, 0.05);
-    --social-btn-border: rgba(35, 55, 30, 0.12);
-    --social-btn-color: #151d16;
-    --back-to-top-bg: rgba(35, 55, 30, 0.05);
-    --back-to-top-border: rgba(35, 55, 30, 0.12);
     --theme-toggle-bg: rgba(35, 55, 30, 0.06);
     --theme-toggle-border: rgba(35, 55, 30, 0.12);
     --theme-toggle-hover: rgba(67, 136, 48, 0.15);
 }
 
-/* ==========================================================================
-   RESET Y BASE
-   ========================================================================== */
+/* Base */
 * {
     margin: 0;
     padding: 0;
@@ -90,7 +68,6 @@ html {
     color: var(--text-primary);
     background-color: var(--bg-color);
     overflow-x: hidden;
-    transition: var(--theme-transition);
 }
 
 body {
@@ -99,7 +76,6 @@ body {
     position: relative;
     color: var(--text-primary);
     background-color: var(--bg-color);
-    transition: var(--theme-transition);
 }
 
 h1,
@@ -152,8 +128,6 @@ ul {
     cursor: pointer;
     transition: var(--transition);
     border: none;
-    outline: none;
-    text-align: center;
 }
 
 .btn-primary {
@@ -173,9 +147,7 @@ ul {
     font-size: 1.1rem;
 }
 
-/* ==========================================================================
-   NAVBAR
-   ========================================================================== */
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -190,7 +162,6 @@ ul {
 .navbar.scrolled {
     background: var(--nav-scrolled-bg);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--glass-border);
     padding: 1rem 0;
     box-shadow: var(--card-shadow);
@@ -208,16 +179,14 @@ ul {
     font-size: 1.5rem;
     font-weight: 800;
     font-family: 'Outfit', sans-serif;
-    letter-spacing: -0.5px;
 }
 
 .logo-img {
     height: 40px;
     width: auto;
     max-height: 44px;
-    object-fit: contain;
     display: block;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
 .nav-links {
@@ -241,7 +210,7 @@ ul {
     gap: 1rem;
 }
 
-/* Tema */
+/* Theme Toggle */
 .theme-toggle-btn,
 .mobile-theme-toggle {
     position: relative;
@@ -257,8 +226,6 @@ ul {
     justify-content: center;
     font-size: 1.2rem;
     transition: all 0.35s ease;
-    outline: none;
-    overflow: hidden;
     flex-shrink: 0;
 }
 
@@ -266,27 +233,23 @@ ul {
 .mobile-theme-toggle:hover {
     background: var(--theme-toggle-hover);
     border-color: var(--primary-color);
-    transform: translateY(-2px) scale(1.06);
-    box-shadow: 0 6px 18px rgba(101, 158, 80, 0.25);
+    transform: translateY(-2px);
 }
 
-.theme-toggle-btn .theme-icon,
-.mobile-theme-toggle .theme-icon {
-    position: absolute;
-    transition: transform 0.45s ease, opacity 0.35s ease, color 0.35s ease, filter 0.35s ease;
-}
-
-:root .theme-icon-sun {
+.theme-icon-sun {
     opacity: 1;
     transform: rotate(0deg) scale(1);
     color: #f59e0b;
-    filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.6));
+    position: absolute;
+    transition: all 0.35s ease;
 }
 
-:root .theme-icon-moon {
+.theme-icon-moon {
     opacity: 0;
     transform: rotate(90deg) scale(0.3);
     color: #6366f1;
+    position: absolute;
+    transition: all 0.35s ease;
 }
 
 [data-theme="light"] .theme-icon-sun {
@@ -298,10 +261,9 @@ ul {
     opacity: 1;
     transform: rotate(0deg) scale(1);
     color: #334155;
-    filter: drop-shadow(0 0 4px rgba(51, 65, 85, 0.3));
 }
 
-/* Menu Movil */
+/* Menú Móvil */
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -319,7 +281,6 @@ ul {
     width: 100%;
     height: 100vh;
     background: var(--mobile-nav-bg);
-    backdrop-filter: blur(20px);
     z-index: 1001;
     display: none;
     flex-direction: column;
@@ -337,7 +298,6 @@ ul {
     justify-content: space-between;
     padding: 1.4rem 1.8rem;
     border-bottom: 1px solid var(--glass-border);
-    flex-shrink: 0;
 }
 
 .mobile-close-btn {
@@ -348,10 +308,6 @@ ul {
     cursor: pointer;
     padding: 0.4rem;
     border-radius: 8px;
-    transition: var(--transition);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .mobile-close-btn:hover {
@@ -366,12 +322,6 @@ ul {
     justify-content: center;
     gap: 0.5rem;
     padding: 2rem 1.5rem;
-    list-style: none;
-}
-
-.mobile-nav-links li {
-    width: 100%;
-    text-align: center;
 }
 
 .mobile-nav-links a {
@@ -381,7 +331,6 @@ ul {
     color: var(--text-secondary);
     padding: 0.7rem 1rem;
     border-radius: 12px;
-    transition: var(--transition);
 }
 
 .mobile-nav-links a:hover {
@@ -396,14 +345,10 @@ ul {
     gap: 1.2rem;
     padding: 1.5rem 1.8rem 2.5rem;
     border-top: 1px solid var(--glass-border);
-    flex-shrink: 0;
 }
 
-/* ==========================================================================
-   HERO DETAIL & MOCKUP
-   ========================================================================== */
+/* Hero y Laptop */
 .detail-hero {
-    min-height: auto;
     padding-top: 8rem;
     padding-bottom: 4rem;
     background: var(--hero-glow);
@@ -417,7 +362,6 @@ ul {
     font-size: 0.95rem;
     font-weight: 600;
     margin-bottom: 2rem;
-    transition: var(--transition);
 }
 
 .back-link:hover {
@@ -428,18 +372,6 @@ ul {
 .section-title-large h1 {
     font-size: clamp(2.8rem, 5vw, 4.2rem);
     margin-bottom: 2.5rem;
-}
-
-.badge {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: var(--badge-bg);
-    color: var(--primary-color);
-    border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    border: 1px solid var(--badge-border);
 }
 
 .mining-intro-grid {
@@ -467,17 +399,11 @@ ul {
     color: var(--text-secondary);
 }
 
-/* Mockup de Laptop */
-.mining-mockup-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
 .laptop-container {
     position: relative;
     width: 100%;
     max-width: 520px;
+    margin: 0 auto;
 }
 
 .laptop-glow {
@@ -603,11 +529,6 @@ ul {
     gap: 0.3rem;
 }
 
-.app-card i {
-    color: #22c55e;
-    font-size: 0.65rem;
-}
-
 .laptop-base {
     position: relative;
     z-index: 1;
@@ -627,9 +548,7 @@ ul {
     opacity: 0.5;
 }
 
-/* ==========================================================================
-   MÓDULOS EN FILAS ALTERNADAS
-   ========================================================================== */
+/* Módulos Alternados */
 .modules-section {
     padding: 2rem 0 6rem;
 }
@@ -640,16 +559,6 @@ ul {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.section-header h2 {
-    font-size: 2.5rem;
-}
-
-.section-header p {
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-    font-weight: 400;
 }
 
 .modules-main-title {
@@ -675,7 +584,37 @@ ul {
     align-items: center;
 }
 
-/* Listas con viñetas cuadradas */
+.module-icon-card {
+    width: 100%;
+    height: 320px;
+    border-radius: 12px;
+    background: var(--bg-alt);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--card-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.module-card-icon {
+    font-size: 8rem;
+    color: var(--primary-color);
+    opacity: 0.8;
+    filter: drop-shadow(0 10px 20px rgba(101, 158, 80, 0.3));
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.module-icon-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-color);
+}
+
+.module-icon-card:hover .module-card-icon {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
 .module-bullets {
     display: flex;
     flex-direction: column;
@@ -704,41 +643,7 @@ ul {
     font-weight: 700;
 }
 
-/* Íconos Gigantes en Tarjetas */
-.module-icon-card {
-    width: 100%;
-    height: 320px;
-    border-radius: 12px;
-    background: var(--bg-alt);
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--card-shadow);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.4s ease, border-color 0.4s ease;
-}
-
-.module-icon-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--primary-color);
-}
-
-.module-card-icon {
-    font-size: 8rem;
-    color: var(--primary-color);
-    opacity: 0.8;
-    filter: drop-shadow(0 10px 20px rgba(101, 158, 80, 0.3));
-    transition: transform 0.4s ease, opacity 0.4s ease;
-}
-
-.module-icon-card:hover .module-card-icon {
-    transform: scale(1.1);
-    opacity: 1;
-}
-
-/* ==========================================================================
-   CTA CONTACTO (Fondo Negro y Botón Verde)
-   ========================================================================== */
+/* CTA */
 .supply-cta {
     padding: 8rem 0;
     text-align: center;
@@ -763,10 +668,7 @@ ul {
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    text-transform: none;
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .btn-demo:hover {
@@ -775,15 +677,11 @@ ul {
     box-shadow: 0 6px 20px rgba(0, 255, 0, 0.2);
 }
 
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
+/* Footer */
 footer {
     background: transparent;
     border-top: 1px solid var(--glass-border);
     padding: 4.5rem 0 2.5rem;
-    position: relative;
-    transition: var(--theme-transition);
 }
 
 .footer-container {
@@ -812,7 +710,6 @@ footer {
 .footer-logo p {
     color: var(--text-secondary);
     font-size: 0.95rem;
-    line-height: 1.5;
 }
 
 .footer-socials {
@@ -825,9 +722,9 @@ footer {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: var(--social-btn-bg);
-    border: 1px solid var(--social-btn-border);
-    color: var(--social-btn-color);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -840,17 +737,15 @@ footer {
     border-color: var(--primary-color);
     color: var(--primary-color);
     transform: translateY(-4px);
-    box-shadow: 0 6px 20px rgba(101, 158, 80, 0.3);
 }
 
 .footer-bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 1.5rem;
     padding-top: 2.5rem;
     border-top: 1px solid var(--divider-color);
-    gap: 1.5rem;
     text-align: center;
 }
 
@@ -860,8 +755,8 @@ footer {
 }
 
 .btn-back-to-top {
-    background: var(--back-to-top-bg);
-    border: 1px solid var(--back-to-top-border);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
     color: var(--text-primary);
     padding: 0.75rem 1.8rem;
     border-radius: 50px;
@@ -880,40 +775,20 @@ footer {
 }
 
 .btn-back-to-top:hover {
-    background: rgba(101, 158, 80, 0.15);
     border-color: var(--primary-color);
     color: var(--primary-color);
     transform: translateY(-4px);
-    box-shadow: 0 6px 20px rgba(101, 158, 80, 0.25);
 }
 
 .btn-back-to-top:hover i {
     transform: translateY(-4px);
 }
 
-/* ==========================================================================
-   ANIMACIONES
-   ========================================================================== */
+/* Animaciones */
 .fade-in-up {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-in-up.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-.fade-in-left {
-    opacity: 0;
-    transform: translateX(-30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-in-left.visible {
-    opacity: 1;
-    transform: translateX(0);
 }
 
 .delay-1 {
@@ -925,7 +800,7 @@ footer {
 }
 
 /* ==========================================================================
-   MEDIA QUERIES (RESPONSIVE)
+   MEDIA QUERIES (RESPONSIVE FIJO)
    ========================================================================== */
 @media (max-width: 992px) {
 
@@ -948,11 +823,32 @@ footer {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+
+    /* Fuerza el orden para que la imagen siempre esté arriba del texto en móviles */
+    .module-icon-card {
+        order: 1;
+    }
+
+    .module-info {
+        order: 2;
+    }
 }
 
 @media (max-width: 768px) {
     section {
         padding: 4rem 0;
+    }
+
+    /* Corrige el encabezado que se escondía detrás del Navbar */
+    .detail-hero {
+        padding-top: 7rem !important;
+    }
+
+    /* Fondo sólido para el navbar en celular */
+    .navbar {
+        background: var(--nav-scrolled-bg) !important;
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--glass-border);
     }
 
     .footer-top {
@@ -970,61 +866,42 @@ footer {
         justify-content: center;
     }
 
-    .footer-bottom {
-        align-items: center;
-        text-align: center;
-    }
-
     .supply-cta h2 {
         font-size: 2.5rem;
     }
-}
 
-@media (max-width: 768px) {
-    /* ... tus otras reglas móviles ... */
-
-    /* Reducir la caja y el ícono en vista móvil */
+    /* Ajuste de tamaño de íconos en celular */
     .module-icon-card {
         height: 180px;
-        /* Reducido de 320px */
     }
 
     .module-card-icon {
         font-size: 4.5rem;
-        /* Reducido de 8rem */
     }
 }
 
-@media (max-width: 992px) {
+/* ==========================================================================
+   CORRECCIÓN DE NAVBAR Y ESPACIADO SUPERIOR
+   ========================================================================== */
 
-    .nav-links,
-    .nav-btn,
-    .theme-toggle-btn {
-        display: none;
-    }
+/* 1. Forzar el fondo oscuro en la barra desde el inicio */
+.navbar {
+    background: var(--nav-scrolled-bg) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+}
 
-    .mobile-menu-btn {
-        display: block;
-    }
+/* 2. Empujar el contenido principal hacia abajo de forma segura */
+.detail-hero {
+    padding-top: 11rem !important;
+    /* Aumenta el espacio superior en escritorio */
+}
 
-    .mobile-nav {
-        display: flex;
-    }
-
-    .mining-intro-grid,
-    .module-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    /* Fuerza a que la caja del ícono siempre aparezca primero en móviles */
-    .module-icon-card {
-        order: 1;
-    }
-
-    /* Fuerza a que el texto (viñetas) siempre aparezca debajo de la imagen */
-    .module-info {
-        order: 2;
+/* 3. Ajuste proporcional para celulares */
+@media (max-width: 768px) {
+    .detail-hero {
+        padding-top: 8rem !important;
     }
 }
 

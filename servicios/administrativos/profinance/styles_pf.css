@@ -1,5 +1,5 @@
 /* ==========================================================================
-   AGL Latinoamérica - Supply Management Styles (styles_sup.css)
+   AGL Latinoamérica - WorkForce Styles (styles_wf.css)
    ========================================================================== */
 
 :root {
@@ -174,7 +174,7 @@ ul {
 }
 
 /* ==========================================================================
-   NAVBAR
+   NAVBAR Y MENÚ
    ========================================================================== */
 .navbar {
     position: fixed;
@@ -241,7 +241,7 @@ ul {
     gap: 1rem;
 }
 
-/* Tema */
+/* Botones de Tema */
 .theme-toggle-btn,
 .mobile-theme-toggle {
     position: relative;
@@ -301,7 +301,7 @@ ul {
     filter: drop-shadow(0 0 4px rgba(51, 65, 85, 0.3));
 }
 
-/* Menu Movil */
+/* Menú Móvil */
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -400,8 +400,18 @@ ul {
 }
 
 /* ==========================================================================
-   HERO DETAIL & MOCKUP
+   HERO DETAIL Y LAPTOP MOCKUP
    ========================================================================== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 5rem;
+    background: var(--hero-glow);
+    transition: background 0.4s ease;
+}
+
 .detail-hero {
     min-height: auto;
     padding-top: 8rem;
@@ -467,7 +477,7 @@ ul {
     color: var(--text-secondary);
 }
 
-/* Mockup de Laptop */
+/* Laptop Mockup */
 .mining-mockup-wrapper {
     position: relative;
     display: flex;
@@ -628,7 +638,7 @@ ul {
 }
 
 /* ==========================================================================
-   MÓDULOS EN FILAS ALTERNADAS
+   MÓDULOS DEL SISTEMA (Filas Alternadas)
    ========================================================================== */
 .modules-section {
     padding: 2rem 0 6rem;
@@ -644,12 +654,6 @@ ul {
 
 .section-header h2 {
     font-size: 2.5rem;
-}
-
-.section-header p {
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-    font-weight: 400;
 }
 
 .modules-main-title {
@@ -673,35 +677,6 @@ ul {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
-}
-
-/* Listas con viñetas cuadradas */
-.module-bullets {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.module-bullets li {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: var(--text-secondary);
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-.module-bullets li::before {
-    content: "■";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #22c55e;
-    font-size: 0.9rem;
-}
-
-.module-bullets strong {
-    color: #22c55e;
-    font-weight: 700;
 }
 
 /* Íconos Gigantes en Tarjetas */
@@ -736,8 +711,37 @@ ul {
     opacity: 1;
 }
 
+/* Viñetas */
+.module-bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.module-bullets li {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.module-bullets li::before {
+    content: "■";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #22c55e;
+    font-size: 0.9rem;
+}
+
+.module-bullets strong {
+    color: #22c55e;
+    font-weight: 700;
+}
+
 /* ==========================================================================
-   CTA CONTACTO (Fondo Negro y Botón Verde)
+   CTA CONTACTO
    ========================================================================== */
 .supply-cta {
     padding: 8rem 0;
@@ -892,28 +896,19 @@ footer {
 }
 
 /* ==========================================================================
-   ANIMACIONES
+   ANIMACIONES Y RESPONSIVE
    ========================================================================== */
 .fade-in-up {
-    opacity: 0;
-    transform: translateY(30px);
+    opacity: 1;
+    /* Forzamos a que sea visible siempre */
+    transform: translateY(0);
+    /* Quitamos el desplazamiento inicial */
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .fade-in-up.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-.fade-in-left {
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-in-left.visible {
-    opacity: 1;
-    transform: translateX(0);
 }
 
 .delay-1 {
@@ -924,9 +919,6 @@ footer {
     transition-delay: 0.2s;
 }
 
-/* ==========================================================================
-   MEDIA QUERIES (RESPONSIVE)
-   ========================================================================== */
 @media (max-width: 992px) {
 
     .nav-links,
@@ -947,6 +939,14 @@ footer {
     .module-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    .module-icon-card {
+        order: 1;
+    }
+
+    .module-info {
+        order: 2;
     }
 }
 
@@ -978,53 +978,55 @@ footer {
     .supply-cta h2 {
         font-size: 2.5rem;
     }
-}
 
-@media (max-width: 768px) {
-    /* ... tus otras reglas móviles ... */
-
-    /* Reducir la caja y el ícono en vista móvil */
     .module-icon-card {
         height: 180px;
-        /* Reducido de 320px */
     }
 
     .module-card-icon {
         font-size: 4.5rem;
-        /* Reducido de 8rem */
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
 
-    .nav-links,
-    .nav-btn,
-    .theme-toggle-btn {
-        display: none;
+    /* Evita que el texto de la cabecera se esconda detrás del menú */
+    .detail-hero {
+        padding-top: 7rem !important;
     }
 
-    .mobile-menu-btn {
-        display: block;
+    /* Fuerza a que el menú superior siempre tenga fondo oscuro en celular */
+    .navbar {
+        background: var(--nav-scrolled-bg) !important;
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--glass-border);
     }
 
-    .mobile-nav {
-        display: flex;
-    }
+    /* ... resto de tus reglas móviles ... */
+}
 
-    .mining-intro-grid,
-    .module-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
+/* ==========================================================================
+   CORRECCIÓN DE NAVBAR Y ESPACIADO SUPERIOR
+   ========================================================================== */
 
-    /* Fuerza a que la caja del ícono siempre aparezca primero en móviles */
-    .module-icon-card {
-        order: 1;
-    }
+/* 1. Forzar el fondo oscuro en la barra desde el inicio */
+.navbar {
+    background: var(--nav-scrolled-bg) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+}
 
-    /* Fuerza a que el texto (viñetas) siempre aparezca debajo de la imagen */
-    .module-info {
-        order: 2;
+/* 2. Empujar el contenido principal hacia abajo de forma segura */
+.detail-hero {
+    padding-top: 11rem !important;
+    /* Aumenta el espacio superior en escritorio */
+}
+
+/* 3. Ajuste proporcional para celulares */
+@media (max-width: 768px) {
+    .detail-hero {
+        padding-top: 8rem !important;
     }
 }
 
