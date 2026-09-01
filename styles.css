@@ -1364,3 +1364,28 @@ footer {
     gap: 1.2rem;
     padding: 1.5rem;
 }
+
+@media (max-width: 768px) {
+    /* ... tus otras reglas móviles ... */
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    /* Agrega esto para centrar el logo en móvil */
+    .footer-logo-img {
+        margin: 0 auto 1rem auto;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        align-items: center;
+        text-align: center;
+    }
+}
