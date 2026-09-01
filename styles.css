@@ -1352,3 +1352,15 @@ footer {
         text-align: center;
     }
 }
+
+@media (max-width: 768px) {
+    .value-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.diagnostic-card {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.5rem;
+}
