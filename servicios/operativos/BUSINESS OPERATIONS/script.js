@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // FAVICON
+    // FAVICON (Sube 3 niveles a la carpeta Logos)
     let favicon = document.querySelector("link[rel*='icon']");
     if (!favicon) {
         favicon = document.createElement('link');
@@ -8,15 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.head.appendChild(favicon);
     }
     favicon.type = 'image/png';
-    favicon.href = '../Logos/favicon.png';
+    favicon.href = '../../../Logos/favicon.png';
 
-    // THEME TOGGLE
+    // THEME TOGGLE (Ajuste de rutas a 3 niveles)
     const htmlEl = document.documentElement;
     const themeToggle = document.getElementById('theme-toggle');
     const themeLogos = document.querySelectorAll('.theme-logo');
 
-    const DARK_LOGO = '../Logos/logo blanco.png';
-    const LIGHT_LOGO = '../Logos/logo negro.png';
+    const DARK_LOGO = '../../../Logos/logo blanco.png';
+    const LIGHT_LOGO = '../../../Logos/logo negro.png';
 
     function applyTheme(theme) {
         if (theme === 'light') {
@@ -59,12 +59,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { root: null, rootMargin: '0px', threshold: 0.15 });
 
     animatedElements.forEach(el => observer.observe(el));
-
-    // BACK TO TOP
-    const footerBackToTop = document.getElementById('back-to-top-footer');
-    if (footerBackToTop) {
-        footerBackToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
 });
