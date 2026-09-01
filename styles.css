@@ -821,7 +821,7 @@ section {
     background: var(--bg-alt);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 2rem 2rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -876,11 +876,11 @@ section {
 }
 
 .card-problems {
-    margin-top: auto;
     width: 100%;
     text-align: left;
     border-top: 1px solid var(--divider-color);
     padding-top: 1.25rem;
+    margin-bottom: 1.5rem;
 }
 
 .card-problems h5 {
@@ -911,6 +911,39 @@ section {
     font-size: 0.8rem;
     margin-top: 0.25rem;
     flex-shrink: 0;
+}
+
+/* Botón Pequeño de Más Información */
+.card-btn {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    padding: 0.35rem 0.9rem;
+    border-radius: 50px;
+    transition: var(--transition);
+}
+
+.card-btn i {
+    font-size: 0.7rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.card-btn:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(101, 158, 80, 0.3);
+}
+
+.card-btn:hover i {
+    color: #ffffff;
+    transform: translateX(3px);
 }
 
 .value-grid {
@@ -1424,6 +1457,6 @@ footer {
     }
 
     .ecosystem-card {
-        padding: 2rem 1.5rem;
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
     }
 }
