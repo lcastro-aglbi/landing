@@ -1,5 +1,5 @@
 /* ==========================================================================
-   AGL Latinoamérica - Operativos Module Styles (stylesop.css)
+   AGL Latinoamérica - Risk Module Styles (risk_style.css)
    ========================================================================== */
 
 :root {
@@ -492,9 +492,9 @@ ul {
     opacity: 0.5;
 }
 
-/* Módulos del Sistema */
+/* Módulos del Sistema (Alineación con Ícono Grande al lado) */
 .modules-section {
-    padding: 2rem 0 6rem;
+    padding: 2rem 0 4rem;
 }
 
 .modules-main-title {
@@ -520,33 +520,46 @@ ul {
     align-items: center;
 }
 
-/* Tarjetas de íconos para Módulos */
-.module-icon-card {
+/* Caja de Ícono Grande */
+.module-icon-large-container {
     width: 100%;
-    height: 280px;
+    height: 320px;
+    border-radius: 16px;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    border-radius: 16px;
+    box-shadow: var(--card-shadow);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--card-shadow);
     transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 }
 
-.module-icon-card:hover {
+.module-icon-large-container::before {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(101, 158, 80, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.module-icon-large-container:hover {
     border-color: var(--card-border-hover);
     transform: translateY(-4px);
 }
 
-.module-card-icon {
-    font-size: 5.5rem;
+.module-large-icon {
+    font-size: 6.5rem;
     color: var(--primary-color);
-    filter: drop-shadow(0 4px 12px rgba(101, 158, 80, 0.25));
+    filter: drop-shadow(0 4px 15px rgba(101, 158, 80, 0.3));
     transition: var(--transition);
+    z-index: 1;
 }
 
-.module-icon-card:hover .module-card-icon {
+.module-icon-large-container:hover .module-large-icon {
     transform: scale(1.1);
     color: var(--primary-hover);
 }
@@ -579,99 +592,38 @@ ul {
     font-weight: 700;
 }
 
-/* CTA & Footer */
+/* CTA / Form Section */
 .form-section {
     padding: 6rem 0;
     background: transparent;
     text-align: center;
 }
 
-.cta-container h2 {
-    font-size: clamp(2rem, 3.5vw, 2.8rem);
-    margin-bottom: 1rem;
+.contact-title {
+    font-size: clamp(2.5rem, 5vw, 4rem) !important;
+    font-weight: 800;
+    margin-bottom: 2rem !important;
 }
 
-.cta-container p {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-    margin-bottom: 2rem;
-}
-
-footer {
-    background: transparent;
+/* Footer Centrado Simplificado */
+.simple-footer {
     border-top: 1px solid var(--glass-border);
-    padding: 4.5rem 0 2.5rem;
-    position: relative;
-    transition: var(--theme-transition);
+    padding: 2.5rem 0;
+    background: transparent;
 }
 
-.footer-container {
+.footer-centered {
     display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
-
-.footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.footer-logo {
-    max-width: 380px;
-}
-
-.footer-logo-img {
-    height: 38px;
-    margin-bottom: 1rem;
-}
-
-.footer-socials {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.social-icon-btn {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: var(--social-btn-bg);
-    border: 1px solid var(--social-btn-border);
-    color: var(--social-btn-color);
-    display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 1.15rem;
-    transition: var(--transition);
-}
-
-.footer-bottom {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding-top: 2.5rem;
-    border-top: 1px solid var(--divider-color);
-    gap: 1.5rem;
     text-align: center;
 }
 
-.btn-back-to-top {
-    background: var(--back-to-top-bg);
-    border: 1px solid var(--back-to-top-border);
-    color: var(--text-primary);
-    padding: 0.75rem 1.8rem;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    cursor: pointer;
-    transition: var(--transition);
+.footer-copy-centered {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    letter-spacing: 0.3px;
 }
 
 /* Animations */
@@ -709,11 +661,11 @@ footer {
         padding: 4rem 0;
     }
 
-    .module-icon-card {
-        height: 200px;
+    .module-icon-large-container {
+        height: 220px;
     }
 
-    .module-card-icon {
-        font-size: 4rem;
+    .module-large-icon {
+        font-size: 4.5rem;
     }
 }
