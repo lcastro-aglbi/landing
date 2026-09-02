@@ -7,6 +7,8 @@
     <title>Supply Management | AGL Latinoamérica</title>
     <meta name="description"
         content="Gestión integral de su cadena de suministro. De las requisiciones a los almacenes con AGL Supply Management.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../../Logos/favicon.png">
     <!-- Google Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,59 +16,20 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Usaremos el mismo archivo CSS que acabas de enviar, modificado al final de este bloque -->
-    <link rel="stylesheet" href="styles_sup.css">
+
+    <!-- Enlazado al CSS maestro de Risk Management -->
+    <link rel="stylesheet" href="risk_style.css">
 </head>
 
 <body>
-    <!-- Navbar -->
+    <!-- Navbar Simplificado -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="../../../index.html" class="logo">
                 <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="nav-logo">
             </a>
-            <ul class="nav-links">
-                <li><a href="../../../index.html#about">¿Qué hacemos?</a></li>
-                <li><a href="../../../index.html#diagnostico">Diagnóstico</a></li>
-                <li><a href="../../../index.html#industrias">Industrias</a></li>
-                <li><a href="../../../index.html#ecosistema">Ecosistema</a></li>
-                <li><a href="../../../index.html#integracion">Integración</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Cambiar tema">
-                    <i class="fas fa-sun theme-icon theme-icon-sun"></i>
-                    <i class="fas fa-moon theme-icon theme-icon-moon"></i>
-                </button>
-                <a href="#contacto" class="btn btn-primary nav-btn">Contacto</a>
-                <button class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
-            </div>
         </div>
     </nav>
-
-    <!-- Menú Móvil -->
-    <div class="mobile-nav" id="mobile-nav">
-        <div class="mobile-nav-header">
-            <a href="../../../index.html" class="logo">
-                <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="mobile-nav-logo">
-            </a>
-            <button class="mobile-close-btn" id="mobile-close-btn"><i class="fas fa-times"></i></button>
-        </div>
-        <ul class="mobile-nav-links">
-            <li><a href="../../../index.html#about" class="mobile-link">¿Qué hacemos?</a></li>
-            <li><a href="../../../index.html#ecosistema" class="mobile-link">Ecosistema</a></li>
-            <li><a href="../../../index.html#integracion" class="mobile-link">Integración</a></li>
-        </ul>
-        <div class="mobile-nav-footer">
-            <a href="#contacto" class="btn btn-primary mobile-link">Contacto</a>
-            <button class="mobile-theme-toggle" id="mobile-theme-toggle">
-                <span class="theme-toggle-btn-inner">
-                    <i class="fas fa-sun theme-icon theme-icon-sun"></i>
-                    <i class="fas fa-moon theme-icon theme-icon-moon"></i>
-                </span>
-            </button>
-        </div>
-    </div>
 
     <!-- Hero Section: ¿Qué es Supply Management? -->
     <section class="hero detail-hero">
@@ -83,8 +46,7 @@
                     <p class="intro-lead">
                         <strong class="highlight-green-text">AGL Supply Management</strong> es una solución tecnológica
                         integrada diseñada para supervisar eficazmente todos los procesos operativos y estratégicos
-                        dentro
-                        de tu cadena de suministro.
+                        dentro de tu cadena de suministro.
                     </p>
                     <p class="intro-sub">
                         De las requisiciones a los almacenes. Consolida y automatiza cada fase en una plataforma
@@ -141,202 +103,148 @@
         <hr class="section-divider">
     </div>
 
-    <!-- Módulos del Sistema en filas alternadas -->
+    <!-- Módulos del Sistema -->
     <section class="modules-section">
         <div class="container">
             <div class="section-header fade-in-up">
                 <h2 class="modules-main-title">Módulos del sistema</h2>
             </div>
 
-            <!-- Módulo 1: Pre-requisiciones -->
+            <!-- Módulo 1 -->
             <div class="module-block fade-in-up">
                 <h3 class="module-title">Pre-requisiciones operativas</h3>
                 <div class="module-grid">
-                    <div class="module-icon-card">
-                        <i class="fas fa-clipboard-check module-card-icon"></i>
+                    <div class="module-icon-large-container">
+                        <i class="fas fa-clipboard-check module-large-icon"></i>
                     </div>
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
-                                <strong>Cumplimiento Operativo Basado en Políticas:</strong> Garantiza que cada
-                                pre-requisición operativa se adhiera a los estándares internos de la empresa mediante un
-                                robusto sistema de autorización que valida la necesidad antes de que llegue al almacén.
-                            </li>
-                            <li>
-                                <strong>Asignación Estratégica de Inventario:</strong> Ofrece verificaciones de estado
-                                granulares por proyecto o perfil, permitiendo a la operación priorizar eficazmente.
-                            </li>
-                            <li>
-                                <strong>Trazabilidad Logística Integrada:</strong> Logra una visibilidad total desde el
-                                folio operativo inicial hasta la nota de entrega final.
-                            </li>
+                            <li><strong>Cumplimiento Operativo Basado en Políticas:</strong> Garantiza que cada
+                                pre-requisición operativa se adhiera a los estándares internos mediante un robusto
+                                sistema de autorización.</li>
+                            <li><strong>Asignación Estratégica de Inventario:</strong> Ofrece verificaciones de estado
+                                granulares por proyecto o perfil, permitiendo a la operación priorizar eficazmente.</li>
+                            <li><strong>Trazabilidad Logística Integrada:</strong> Logra una visibilidad total desde el
+                                folio operativo inicial hasta la nota de entrega final.</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Módulo 2: Requisiciones de almacén (Alternado) -->
+            <!-- Módulo 2 -->
             <div class="module-block fade-in-up delay-1">
                 <h3 class="module-title">Requisiciones de almacén</h3>
                 <div class="module-grid">
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
-                                <strong>Cumplimiento de Políticas:</strong> Cada solicitud se apega a las normas
-                                internas
-                                de la empresa mediante un sistema de autorización robusto y personalizable.
+                            <li><strong>Cumplimiento de Políticas:</strong> Cada solicitud se apega a las normas
+                                internas de la empresa mediante un sistema de autorización robusto y personalizable.
                             </li>
-                            <li>
-                                <strong>Seguimiento de Estatus Granular:</strong> Incluye revisiones detalladas por
+                            <li><strong>Seguimiento de Estatus Granular:</strong> Incluye revisiones detalladas por
                                 perfil o proyecto, garantizando un control preciso de cada material o servicio
-                                solicitado.
-                            </li>
-                            <li>
-                                <strong>Trazabilidad Total:</strong> Logra una trazabilidad continua desde el folio de
+                                solicitado.</li>
+                            <li><strong>Trazabilidad Total:</strong> Logra una trazabilidad continua desde el folio de
                                 solicitud inicial hasta la nota de entrega final, optimizando la conciliación de
-                                pedidos.
-                            </li>
+                                pedidos.</li>
                         </ul>
                     </div>
-                    <div class="module-icon-card">
-                        <i class="fas fa-boxes module-card-icon"></i>
+                    <div class="module-icon-large-container">
+                        <i class="fas fa-boxes module-large-icon"></i>
                     </div>
                 </div>
             </div>
 
-            <!-- Módulo 3: Cotizaciones -->
+            <!-- Módulo 3 -->
             <div class="module-block fade-in-up delay-2">
                 <h3 class="module-title">Cotizaciones a proveedor</h3>
                 <div class="module-grid">
-                    <div class="module-icon-card">
-                        <i class="fas fa-file-invoice-dollar module-card-icon"></i>
+                    <div class="module-icon-large-container">
+                        <i class="fas fa-file-invoice-dollar module-large-icon"></i>
                     </div>
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
-                                <strong>Eliminación de Duplicados:</strong> Optimiza el proceso al vincular las
+                            <li><strong>Eliminación de Duplicados:</strong> Optimiza el proceso al vincular las
                                 cotizaciones directamente con las requisiciones originales, garantizando consistencia.
                             </li>
-                            <li>
-                                <strong>Compras Estratégicas:</strong> Potencia la toma de decisiones mediante cuadros
-                                comparativos por artículo, asegurando costos competitivos y eficiencia financiera.
-                            </li>
-                            <li>
-                                <strong>Precisión Organizativa:</strong> Gestiona cada cotización de forma individual a
-                                través de un folio único, permitiendo un seguimiento ágil y excepcional.
-                            </li>
+                            <li><strong>Compras Estratégicas:</strong> Potencia la toma de decisiones mediante cuadros
+                                comparativos por artículo, asegurando costos competitivos y eficiencia financiera.</li>
+                            <li><strong>Precisión Organizativa:</strong> Gestiona cada cotización de forma individual a
+                                través de un folio único, permitiendo un seguimiento ágil y excepcional.</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Módulo 4: Compras (Alternado) -->
+            <!-- Módulo 4 -->
             <div class="module-block fade-in-up delay-1">
                 <h3 class="module-title">Compras a proveedor</h3>
                 <div class="module-grid">
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
-                                <strong>Autorización Basada en Proyectos:</strong> Optimiza las aprobaciones mediante un
+                            <li><strong>Autorización Basada en Proyectos:</strong> Optimiza las aprobaciones mediante un
                                 sistema configurable por proyecto, validando cada compra de acuerdo con los
-                                requerimientos.
-                            </li>
-                            <li>
-                                <strong>Toma de Decisiones Informada:</strong> Utiliza consultas adaptables para filtrar
+                                requerimientos.</li>
+                            <li><strong>Toma de Decisiones Informada:</strong> Utiliza consultas adaptables para filtrar
                                 y examinar los datos de compra, facilitando análisis ágil para decisiones estratégicas.
                             </li>
-                            <li>
-                                <strong>Visibilidad del Ciclo de Vida:</strong> Proporciona una visión integral del
+                            <li><strong>Visibilidad del Ciclo de Vida:</strong> Proporciona una visión integral del
                                 ciclo de vida de cada adquisición, desde su origen hasta la entrega final de materiales.
                             </li>
                         </ul>
                     </div>
-                    <div class="module-icon-card">
-                        <i class="fas fa-shopping-cart module-card-icon"></i>
+                    <div class="module-icon-large-container">
+                        <i class="fas fa-shopping-cart module-large-icon"></i>
                     </div>
                 </div>
             </div>
 
-            <!-- Módulo 5: Almacenes -->
+            <!-- Módulo 5 -->
             <div class="module-block fade-in-up delay-2">
                 <h3 class="module-title">Almacenes</h3>
                 <div class="module-grid">
-                    <div class="module-icon-card">
-                        <i class="fas fa-warehouse module-card-icon"></i>
+                    <div class="module-icon-large-container">
+                        <i class="fas fa-warehouse module-large-icon"></i>
                     </div>
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
-                                <strong>Flujo de Compras Integrado:</strong> Se conecta directamente con el módulo de
+                            <li><strong>Flujo de Compras Integrado:</strong> Se conecta directamente con el módulo de
                                 compras para facilitar el referenciamiento automático de pedidos y una gestión de
-                                inventario sincronizada.
-                            </li>
-                            <li>
-                                <strong>Redirección de Costos Operativos:</strong> Establece una conexión directa con
-                                los servicios operativos de AGL (incluyendo MasterMend) para envíos de salida, asignando
-                                costos a equipos específicos.
-                            </li>
-                            <li>
-                                <strong>Optimización de Tendencias y Niveles:</strong> Analiza las entradas y salidas de
+                                inventario sincronizada.</li>
+                            <li><strong>Redirección de Costos Operativos:</strong> Establece una conexión directa con
+                                los servicios operativos de AGL para envíos de salida, asignando costos a equipos
+                                específicos.</li>
+                            <li><strong>Optimización de Tendencias y Niveles:</strong> Analiza las entradas y salidas de
                                 productos para reconocer patrones de consumo, mejorando la planeación de requerimientos.
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- Nueva Sección de Contacto Simplificada -->
-    <section id="contacto" class="supply-cta">
-        <div class="container fade-in-up">
-            <h2>Contáctanos</h2>
+    <!-- Sección de Contacto -->
+    <section class="cta form-section" id="contacto">
+        <div class="container cta-container fade-in-up">
+            <h2 class="contact-title">Contáctanos</h2>
             <a href="https://wa.me/526182922284?text=Hola,%20quisiera%20solicitar%20una%20Demo%20de%20Supply%20Management"
-                target="_blank" class="btn-demo">
+                target="_blank" class="btn btn-primary btn-large">
                 Solicita una Demo
             </a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-container">
-            <div class="footer-top">
-                <div class="footer-logo">
-                    <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img footer-logo-img theme-logo"
-                        id="footer-logo">
-                    <p>Nacidos en la operación directa en campo, impulsando la excelencia.</p>
-                </div>
-                <div class="footer-socials">
-                    <a href="https://www.facebook.com/people/AGL-Business-Intelligence/61572439661784/?locale=es_LA"
-                        target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/aglbi.es/" target="_blank" rel="noopener noreferrer"
-                        class="social-icon-btn" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/aglbi" target="_blank" rel="noopener noreferrer"
-                        class="social-icon-btn" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <button id="back-to-top-footer" class="btn-back-to-top" title="Volver al inicio"
-                    aria-label="Volver arriba">
-                    <span>Volver arriba</span>
-                    <i class="fas fa-arrow-up"></i>
-                </button>
-                <div class="footer-copy">
-                    &copy; 2026 AGL Latinoamérica. Todos los derechos reservados.
-                </div>
+    <!-- Footer Simplificado -->
+    <footer class="simple-footer">
+        <div class="container footer-centered">
+            <div class="footer-copy-centered">
+                &reg; AGL Latinoamérica 2026. Todos los derechos reservados.
             </div>
         </div>
     </footer>
 
-    <script src="script_sup.js"></script>
+    <!-- Enlazado al JS maestro de Risk Management -->
+    <script src="script_risk.js"></script>
 </body>
 
 </html>
