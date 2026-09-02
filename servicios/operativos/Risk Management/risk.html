@@ -31,30 +31,53 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
+<<<<<<< HEAD
         <div class="container nav-container nav-container-centered">
             <a href="../../../index.html#ecosistema" class="logo" title="Volver al inicio">
+=======
+        <div class="container nav-container"
+            style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="../../../index.html" class="logo">
+>>>>>>> cb8d7f00d2ba8fbe2d644d2e543bb6665698e060
                 <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="nav-logo">
             </a>
+            <div class="nav-actions">
+                <!-- BOTÓN IDIOMA DESKTOP (Tipo Switch) -->
+                <button class="theme-toggle-btn" id="lang-toggle-desktop" aria-label="Cambiar idioma"
+                    title="Cambiar idioma"
+                    style="width: auto; padding: 5px 12px; border-radius: 20px; font-family: 'Inter', sans-serif; font-size: 0.9rem; background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; cursor: pointer;">
+                    <span class="lang-es" style="font-weight: 700; transition: 0.3s;">ES</span>
+                    <span style="margin: 0 3px; font-weight: 300;">/</span>
+                    <span class="lang-en" style="font-weight: 400; opacity: 0.5; transition: 0.3s;">EN</span>
+                </button>
+            </div>
         </div>
     </nav>
     <!-- Hero Section: ¿Qué es Risk Management? -->
     <section class="hero detail-hero">
         <div class="container">
-            <a href="../../../index.html#ecosistema" class="back-link"><i class="fas fa-arrow-left"></i> Volver al
+            <a href="../../../index.html#ecosistema" class="back-link"
+                data-es="<i class='fas fa-arrow-left'></i> Volver al Ecosistema"
+                data-en="<i class='fas fa-arrow-left'></i> Back to Ecosystem"><i class="fas fa-arrow-left"></i> Volver
+                al
                 Ecosistema</a>
 
             <div class="section-title-large fade-in-up">
-                <h1>¿Qué es Risk Management?</h1>
+                <h1 data-es="¿Qué es Risk Management?" data-en="What is Risk Management?">¿Qué es Risk Management?</h1>
             </div>
 
             <div class="mining-intro-grid fade-in-up delay-1">
                 <div class="mining-intro-text">
-                    <p class="intro-lead">
+                    <p class="intro-lead"
+                        data-es="<strong class='highlight-green-text'>AGL Risk Management</strong> proporciona una visión holística del riesgo, lo que permite a las organizaciones evaluar las amenazas tanto a nivel operativo como comercial."
+                        data-en="<strong class='highlight-green-text'>AGL Risk Management</strong> provides a holistic view of risk, allowing organizations to evaluate threats at both the operational and business levels.">
                         <strong class="highlight-green-text">AGL Risk Management</strong> proporciona una visión
                         holística del riesgo, lo que permite a las organizaciones evaluar las amenazas tanto a nivel
                         operativo como comercial.
                     </p>
-                    <p class="intro-sub">
+                    <p class="intro-sub"
+                        data-es="Este doble enfoque garantiza que los equipos de seguridad puedan mitigar los peligros inmediatos mientras el liderazgo gestiona las implicaciones estratégicas y financieras del riesgo en toda la empresa (alineado con ISO-31000)."
+                        data-en="This dual approach ensures safety teams can mitigate immediate hazards while leadership manages the strategic and financial implications of risk across the enterprise (aligned with ISO-31000).">
                         Este doble enfoque garantiza que los equipos de seguridad puedan mitigar los peligros inmediatos
                         mientras el liderazgo gestiona las implicaciones estratégicas y financieras del riesgo en toda
                         la empresa (alineado con ISO-31000).
@@ -74,21 +97,35 @@
                             <div class="screen-body">
                                 <div class="app-sidebar">
                                     <div class="app-logo-small"><i class="fas fa-mountain"></i> AGL</div>
-                                    <div class="app-nav-item active"><i class="fas fa-th-large"></i> Módulos</div>
+                                    <div class="app-nav-item active" data-es="<i class='fas fa-th-large'></i> Módulos"
+                                        data-en="<i class='fas fa-th-large'></i> Modules"><i
+                                            class="fas fa-th-large"></i> Módulos</div>
                                     <div class="app-nav-item"><i class="fas fa-chart-bar"></i> KPIs</div>
                                     <div class="app-nav-item"><i class="fas fa-cog"></i> Config</div>
                                 </div>
                                 <div class="app-content">
-                                    <div class="app-section-title">Módulo</div>
+                                    <div class="app-section-title" data-es="Módulo" data-en="Module">Módulo</div>
                                     <div class="app-cards-grid">
-                                        <div class="app-card"><i class="fas fa-exclamation-triangle"></i> Matriz</div>
-                                        <div class="app-card"><i class="fas fa-search"></i> Inspección</div>
-                                        <div class="app-card"><i class="fas fa-ambulance"></i> Eventos</div>
-                                        <div class="app-card"><i class="fas fa-tasks"></i> Plan de Acción</div>
+                                        <div class="app-card"
+                                            data-es="<i class='fas fa-exclamation-triangle'></i> Matriz"
+                                            data-en="<i class='fas fa-exclamation-triangle'></i> Matrix"><i
+                                                class="fas fa-exclamation-triangle"></i> Matriz</div>
+                                        <div class="app-card" data-es="<i class='fas fa-search'></i> Inspección"
+                                            data-en="<i class='fas fa-search'></i> Inspection"><i
+                                                class="fas fa-search"></i> Inspección</div>
+                                        <div class="app-card" data-es="<i class='fas fa-ambulance'></i> Eventos"
+                                            data-en="<i class='fas fa-ambulance'></i> Events"><i
+                                                class="fas fa-ambulance"></i> Eventos</div>
+                                        <div class="app-card" data-es="<i class='fas fa-tasks'></i> Plan de Acción"
+                                            data-en="<i class='fas fa-tasks'></i> Action Plan"><i
+                                                class="fas fa-tasks"></i> Plan de Acción</div>
                                     </div>
-                                    <div class="app-section-title">Catálogo</div>
+                                    <div class="app-section-title" data-es="Catálogo" data-en="Catalog">Catálogo</div>
                                     <div class="app-cards-grid">
-                                        <div class="app-card small"><i class="fas fa-project-diagram"></i> Proyectos
+                                        <div class="app-card small"
+                                            data-es="<i class='fas fa-project-diagram'></i> Proyectos"
+                                            data-en="<i class='fas fa-project-diagram'></i> Projects"><i
+                                                class="fas fa-project-diagram"></i> Proyectos
                                         </div>
                                     </div>
                                 </div>
@@ -109,29 +146,34 @@
     <section class="modules-section">
         <div class="container">
             <div class="section-header fade-in-up">
-                <h2 class="modules-main-title">Módulos del sistema</h2>
+                <h2 class="modules-main-title" data-es="Módulos del sistema" data-en="System Modules">Módulos del
+                    sistema</h2>
             </div>
 
             <!-- Módulo 1: Evaluación de riesgos -->
             <div class="module-block fade-in-up">
-                <h3 class="module-title">Evaluación de riesgos</h3>
+                <h3 class="module-title" data-es="Evaluación de riesgos" data-en="Risk Assessment">Evaluación de riesgos
+                </h3>
                 <div class="module-grid">
                     <div class="module-icon-large-container">
                         <i class="fas fa-exclamation-triangle module-large-icon"></i>
                     </div>
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
+                            <li data-es="<strong>Identificación Detallada:</strong> Detecta y define con precisión riesgos, causas raíz y efectos potenciales para brindar una comprensión integral de los peligros operativos."
+                                data-en="<strong>Detailed Identification:</strong> Accurately detects and defines risks, root causes, and potential effects to provide a comprehensive understanding of operational hazards.">
                                 <strong>Identificación Detallada:</strong> Detecta y define con precisión riesgos,
                                 causas raíz y efectos potenciales para brindar una comprensión integral de los peligros
                                 operativos.
                             </li>
-                            <li>
+                            <li data-es="<strong>Evaluación cuantitativa:</strong> Utiliza una calculadora de riesgos integrada para cuantificar la probabilidad y el impacto, permitiéndole priorizar los riesgos de manera objetiva."
+                                data-en="<strong>Quantitative Evaluation:</strong> Uses an integrated risk calculator to quantify probability and impact, allowing you to prioritize risks objectively.">
                                 <strong>Evaluación cuantitativa:</strong> Utiliza una calculadora de riesgos integrada
                                 para cuantificar la probabilidad y el impacto, permitiéndole priorizar los riesgos de
                                 manera objetiva.
                             </li>
-                            <li>
+                            <li data-es="<strong>Autorización Ágil:</strong> Implementa un flujo de trabajo estructurado que agiliza la aprobación y asignación de responsabilidades para cada riesgo identificado."
+                                data-en="<strong>Agile Authorization:</strong> Implements a structured workflow that streamlines approval and responsibility assignment for each identified risk.">
                                 <strong>Autorización Ágil:</strong> Implementa un flujo de trabajo estructurado que
                                 agiliza la aprobación y asignación de responsabilidades para cada riesgo identificado.
                             </li>
@@ -142,21 +184,25 @@
 
             <!-- Módulo 2: Inspecciones de seguridad -->
             <div class="module-block fade-in-up delay-1">
-                <h3 class="module-title">Inspecciones de seguridad</h3>
+                <h3 class="module-title" data-es="Inspecciones de seguridad" data-en="Safety Inspections">Inspecciones
+                    de seguridad</h3>
                 <div class="module-grid">
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
+                            <li data-es="<strong>Reportes Basados en Evidencia:</strong> Garantiza condiciones de trabajo óptimas mediante reportes de <em>checklists</em> estructurados y un repositorio centralizado de evidencia fotográfica."
+                                data-en="<strong>Evidence-Based Reports:</strong> Ensures optimal working conditions through structured <em>checklists</em> reports and a centralized repository of photographic evidence.">
                                 <strong>Reportes Basados en Evidencia:</strong> Garantiza condiciones de trabajo óptimas
                                 mediante reportes de <em>checklists</em> estructurados y un repositorio centralizado de
                                 evidencia fotográfica.
                             </li>
-                            <li>
+                            <li data-es="<strong>Gestión de Acciones Correctivas:</strong> Asigna y rastrea actividades correctivas de manera eficiente para asegurar que las deficiencias de seguridad se resuelvan oportunamente."
+                                data-en="<strong>Corrective Action Management:</strong> Efficiently assigns and tracks corrective activities to ensure safety deficiencies are resolved in a timely manner.">
                                 <strong>Gestión de Acciones Correctivas:</strong> Asigna y rastrea actividades
                                 correctivas de manera eficiente para asegurar que las deficiencias de seguridad se
                                 resuelvan oportunamente.
                             </li>
-                            <li>
+                            <li data-es="<strong>Análisis de Tendencias:</strong> Proporciona acceso a un historial completo de inspecciones para identificar tendencias y mantener un registro auditable de cumplimiento de seguridad."
+                                data-en="<strong>Trend Analysis:</strong> Provides access to a comprehensive history of inspections to identify trends and maintain an auditable record of safety compliance.">
                                 <strong>Análisis de Tendencias:</strong> Proporciona acceso a un historial completo de
                                 inspecciones para identificar tendencias y mantener un registro auditable de
                                 cumplimiento de seguridad.
@@ -171,23 +217,27 @@
 
             <!-- Módulo 3: Gestión de accidentes e incidentes -->
             <div class="module-block fade-in-up delay-2">
-                <h3 class="module-title">Gestión de accidentes e incidentes</h3>
+                <h3 class="module-title" data-es="Gestión de accidentes e incidentes"
+                    data-en="Accident and Incident Management">Gestión de accidentes e incidentes</h3>
                 <div class="module-grid">
                     <div class="module-icon-large-container">
                         <i class="fas fa-notes-medical module-large-icon"></i>
                     </div>
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
+                            <li data-es="<strong>Documentación centralizada:</strong> Simplifica la gestión de reportes de accidentes e incidentes, asegurando que cada evento esté documentado a detalle y siempre accesible."
+                                data-en="<strong>Centralized Documentation:</strong> Simplifies the management of accident and incident reports, ensuring every event is documented in detail and always accessible.">
                                 <strong>Documentación centralizada:</strong> Simplifica la gestión de reportes de
                                 accidentes e incidentes, asegurando que cada evento esté documentado a detalle y siempre
                                 accesible.
                             </li>
-                            <li>
+                            <li data-es="<strong>Análisis de Causa Raíz:</strong> Realiza análisis de causas basados en riesgos para identificar los factores subyacentes y prevenir su recurrencia de manera efectiva."
+                                data-en="<strong>Root Cause Analysis:</strong> Conducts risk-based cause analysis to identify underlying factors and prevent their recurrence effectively.">
                                 <strong>Análisis de Causa Raíz:</strong> Realiza análisis de causas basados en riesgos
                                 para identificar los factores subyacentes y prevenir su recurrencia de manera efectiva.
                             </li>
-                            <li>
+                            <li data-es="<strong>Respuesta Coordinada:</strong> Desarrolla planes de acción claros para abordar las causas identificadas, garantizando una respuesta rápida y estructurada ante los incidentes."
+                                data-en="<strong>Coordinated Response:</strong> Develops clear action plans to address identified causes, ensuring a rapid and structured response to incidents.">
                                 <strong>Respuesta Coordinada:</strong> Desarrolla planes de acción claros para abordar
                                 las causas identificadas, garantizando una respuesta rápida y estructurada ante los
                                 incidentes.
@@ -199,21 +249,24 @@
 
             <!-- Módulo 4: Plan de acción -->
             <div class="module-block fade-in-up delay-1">
-                <h3 class="module-title">Plan de acción</h3>
+                <h3 class="module-title" data-es="Plan de acción" data-en="Action Plan">Plan de acción</h3>
                 <div class="module-grid">
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
+                            <li data-es="<strong>Gestión del Ciclo de Vida del Plan de Acción:</strong> Permite monitorear y gestionar todo el ciclo de vida del plan de acción, desde la asignación hasta su cierre, asegurando que todas las medidas preventivas se implementen con éxito."
+                                data-en="<strong>Action Plan Lifecycle Management:</strong> Allows monitoring and managing the entire lifecycle of the action plan, from assignment to closure, ensuring all preventive measures are successfully implemented.">
                                 <strong>Gestión del Ciclo de Vida del Plan de Acción:</strong> Permite monitorear y
                                 gestionar todo el ciclo de vida del plan de acción, desde la asignación hasta su cierre,
                                 asegurando que todas las medidas preventivas se implementen con éxito.
                             </li>
-                            <li>
+                            <li data-es="<strong>Asignación Estructurada de Responsabilidad:</strong> Implementa un flujo de trabajo de autorización que agiliza el proceso de aprobación y asigna responsabilidades claras a departamentos o individuos específicos para cada riesgo identificado."
+                                data-en="<strong>Structured Responsibility Assignment:</strong> Implements an authorization workflow that streamlines the approval process and assigns clear responsibilities to specific departments or individuals for each identified risk.">
                                 <strong>Asignación Estructurada de Responsabilidad:</strong> Implementa un flujo de
                                 trabajo de autorización que agiliza el proceso de aprobación y asigna responsabilidades
                                 claras a departamentos o individuos específicos para cada riesgo identificado.
                             </li>
-                            <li>
+                            <li data-es="<strong>Catálogo Detallado de Tareas:</strong> Facilita el desarrollo de planes de acción concisos y directos mediante la selección de tareas predefinidas en un catálogo detallado, diseñadas para abordar las causas raíz de los incidentes."
+                                data-en="<strong>Detailed Task Catalog:</strong> Facilitates the development of concise and direct action plans by selecting predefined tasks from a detailed catalog designed to address the root causes of incidents.">
                                 <strong>Catálogo Detallado de Tareas:</strong> Facilita el desarrollo de planes de
                                 acción concisos y directos mediante la selección de tareas predefinidas en un catálogo
                                 detallado, diseñadas para abordar las causas raíz de los incidentes.
@@ -232,9 +285,9 @@
     <!-- Sección de Contacto -->
     <section class="cta form-section" id="contacto">
         <div class="container cta-container fade-in-up">
-            <h2 class="contact-title">Contáctanos</h2>
+            <h2 class="contact-title" data-es="Contáctanos" data-en="Contact Us">Contáctanos</h2>
             <a href="https://wa.me/526182922284?text=Hola,%20quisiera%20agendar%20una%20demostración%20de%20Risk%20Management"
-                target="_blank" class="btn btn-primary btn-large">
+                target="_blank" class="btn btn-primary btn-large" data-es="Solicita una Demo" data-en="Request a Demo">
                 Solicita una Demo
             </a>
         </div>
@@ -243,12 +296,43 @@
     <!-- Footer Simplificado -->
     <footer class="simple-footer">
         <div class="container footer-centered">
-            <div class="footer-copy-centered">
+            <div class="footer-copy-centered" data-es="&reg; AGL Latinoamérica 2026. Todos los derechos reservados."
+                data-en="&reg; AGL Latin America 2026. All rights reserved.">
                 &reg; AGL Latinoamérica 2026. Todos los derechos reservados.
             </div>
         </div>
     </footer>
 
+    <!-- Script de Traducción -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const langBtns = [document.getElementById('lang-toggle-desktop')];
+            let currentLang = 'es';
+
+            langBtns.forEach(btn => {
+                if (btn) {
+                    btn.addEventListener('click', () => {
+                        currentLang = currentLang === 'es' ? 'en' : 'es';
+
+                        // Actualizar estilo visual del Switch
+                        document.querySelectorAll('.lang-es').forEach(el => {
+                            el.style.fontWeight = currentLang === 'es' ? '700' : '400';
+                            el.style.opacity = currentLang === 'es' ? '1' : '0.5';
+                        });
+                        document.querySelectorAll('.lang-en').forEach(el => {
+                            el.style.fontWeight = currentLang === 'en' ? '700' : '400';
+                            el.style.opacity = currentLang === 'en' ? '1' : '0.5';
+                        });
+
+                        // Traducir todos los elementos de texto
+                        document.querySelectorAll('[data-en]').forEach(el => {
+                            el.innerHTML = el.getAttribute(`data-${currentLang}`);
+                        });
+                    });
+                }
+            });
+        });
+    </script>
     <script src="script_risk.js"></script>
 </body>
 

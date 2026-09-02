@@ -34,21 +34,31 @@
                 <img src="Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="nav-logo">
             </a>
             <ul class="nav-links">
-                <li><a href="#about">¿Qué hacemos?</a></li>
-                <li><a href="#diagnostico">Diagnóstico</a></li>
-                <li><a href="#industrias">Industrias</a></li>
-                <li><a href="#ecosistema">Ecosistema</a></li>
-                <li><a href="#integracion">Integración</a></li>
-                <li><a href="#valor">Propuesta de Valor</a></li>
+                <li><a href="#about" data-es="¿Qué hacemos?" data-en="What we do?">¿Qué hacemos?</a></li>
+                <li><a href="#diagnostico" data-es="Diagnóstico" data-en="Diagnosis">Diagnóstico</a></li>
+                <li><a href="#industrias" data-es="Industrias" data-en="Industries">Industrias</a></li>
+                <li><a href="#ecosistema" data-es="Ecosistema" data-en="Ecosystem">Ecosistema</a></li>
+                <li><a href="#integracion" data-es="Integración" data-en="Integration">Integración</a></li>
+                <li><a href="#valor" data-es="Propuesta de Valor" data-en="Value Proposition">Propuesta de Valor</a>
+                </li>
             </ul>
             <div class="nav-actions">
+                <!-- BOTÓN IDIOMA DESKTOP (Tipo Switch) -->
+                <button class="theme-toggle-btn" id="lang-toggle-desktop" aria-label="Cambiar idioma"
+                    title="Cambiar idioma"
+                    style="width: auto; padding: 0 12px; border-radius: 20px; font-family: 'Inter', sans-serif; font-size: 0.9rem;">
+                    <span class="lang-es" style="font-weight: 700; transition: 0.3s;">ES</span>
+                    <span style="margin: 0 3px; font-weight: 300;">/</span>
+                    <span class="lang-en" style="font-weight: 400; opacity: 0.5; transition: 0.3s;">EN</span>
+                </button>
+
                 <button class="theme-toggle-btn" id="theme-toggle" aria-label="Cambiar tema claro/oscuro"
                     title="Cambiar tema">
                     <i class="fas fa-sun theme-icon theme-icon-sun"></i>
                     <i class="fas fa-moon theme-icon theme-icon-moon"></i>
                 </button>
                 <a href="https://wa.me/526182922284?text=Hola,%20quisiera%20más%20información" target="_blank"
-                    class="btn btn-primary nav-btn">Contacto</a>
+                    class="btn btn-primary nav-btn" data-es="Contacto" data-en="Contact">Contacto</a>
                 <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menú de navegación"><i
                         class="fas fa-bars"></i></button>
             </div>
@@ -66,23 +76,40 @@
         </div>
         <!-- Links -->
         <ul class="mobile-nav-links">
-            <li><a href="#about" class="mobile-link">¿Qué hacemos?</a></li>
-            <li><a href="#diagnostico" class="mobile-link">Diagnóstico</a></li>
-            <li><a href="#industrias" class="mobile-link">Industrias</a></li>
-            <li><a href="#ecosistema" class="mobile-link">Ecosistema</a></li>
-            <li><a href="#integracion" class="mobile-link">Integración</a></li>
-            <li><a href="#valor" class="mobile-link">Propuesta de Valor</a></li>
+            <li><a href="#about" class="mobile-link" data-es="¿Qué hacemos?" data-en="What we do?">¿Qué hacemos?</a>
+            </li>
+            <li><a href="#diagnostico" class="mobile-link" data-es="Diagnóstico" data-en="Diagnosis">Diagnóstico</a>
+            </li>
+            <li><a href="#industrias" class="mobile-link" data-es="Industrias" data-en="Industries">Industrias</a></li>
+            <li><a href="#ecosistema" class="mobile-link" data-es="Ecosistema" data-en="Ecosystem">Ecosistema</a></li>
+            <li><a href="#integracion" class="mobile-link" data-es="Integración" data-en="Integration">Integración</a>
+            </li>
+            <li><a href="#valor" class="mobile-link" data-es="Propuesta de Valor" data-en="Value Proposition">Propuesta
+                    de Valor</a></li>
         </ul>
         <!-- Footer del menú móvil -->
         <div class="mobile-nav-footer">
             <a href="https://wa.me/526182922284?text=Hola,%20quisiera%20más%20información" target="_blank"
-                class="btn btn-primary mobile-link">Contacto</a>
-            <button class="mobile-theme-toggle" id="mobile-theme-toggle" aria-label="Cambiar tema">
-                <span class="theme-toggle-btn-inner">
-                    <i class="fas fa-sun theme-icon theme-icon-sun"></i>
-                    <i class="fas fa-moon theme-icon theme-icon-moon"></i>
-                </span>
-            </button>
+                class="btn btn-primary mobile-link" data-es="Contacto" data-en="Contact">Contacto</a>
+
+            <div style="display: flex; gap: 10px; margin-top: 15px; justify-content: center;">
+                <!-- BOTÓN IDIOMA MOBILE (Tipo Switch) -->
+                <button class="mobile-theme-toggle" id="lang-toggle-mobile" aria-label="Cambiar idioma"
+                    style="width: auto; padding: 0 15px; border-radius: 20px; font-family: 'Inter', sans-serif; font-size: 0.9rem;">
+                    <span class="theme-toggle-btn-inner">
+                        <span class="lang-es" style="font-weight: 700; transition: 0.3s;">ES</span>
+                        <span style="margin: 0 3px; font-weight: 300;">/</span>
+                        <span class="lang-en" style="font-weight: 400; opacity: 0.5; transition: 0.3s;">EN</span>
+                    </span>
+                </button>
+
+                <button class="mobile-theme-toggle" id="mobile-theme-toggle" aria-label="Cambiar tema">
+                    <span class="theme-toggle-btn-inner">
+                        <i class="fas fa-sun theme-icon theme-icon-sun"></i>
+                        <i class="fas fa-moon theme-icon theme-icon-moon"></i>
+                    </span>
+                </button>
+            </div>
         </div>
     </div>
 
@@ -90,12 +117,20 @@
     <section class="hero">
         <div class="container hero-container">
             <div class="hero-content fade-in-up">
-                <h1>Evoluciona tu operación <br><span class="gradient-text">sin detener tu negocio</span></h1>
-                <p>Transformamos datos operativos en indicadores (KPIs) en el tiempo justo para accionar y proteger la
-                    rentabilidad de tu negocio.</p>
+                <h1 data-es="Evoluciona tu operación <br><span class='gradient-text'>sin detener tu negocio</span>"
+                    data-en="Evolve your operation <br><span class='gradient-text'>without stopping your business</span>">
+                    Evoluciona tu operación <br><span class="gradient-text">sin detener tu negocio</span>
+                </h1>
+                <p data-es="Transformamos datos operativos en indicadores (KPIs) en el tiempo justo para accionar y proteger la rentabilidad de tu negocio."
+                    data-en="We transform operational data into indicators (KPIs) just in time to take action and protect your business profitability.">
+                    Transformamos datos operativos en indicadores (KPIs) en el tiempo justo para accionar y proteger la
+                    rentabilidad de tu negocio.
+                </p>
                 <div class="hero-actions">
                     <a href="https://wa.me/526182922284?text=Hola,%20quisiera%20más%20información" target="_blank"
-                        class="btn btn-primary btn-large">
+                        class="btn btn-primary btn-large"
+                        data-es="Inicia tu evolución <i class='fas fa-arrow-right'></i>"
+                        data-en="Start your evolution <i class='fas fa-arrow-right'></i>">
                         Inicia tu evolución <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -107,34 +142,55 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header fade-in-up">
+<<<<<<< HEAD
                 <h2>¿Qué hacemos en AGL Latinoamérica?</h2>
                 <h3 class="subtitle">"Nacidos en la operación directa en campo, no en un laboratorio de software."</h3>
+=======
+                <h2 data-es="¿Qué hacemos en AGL Latinoamérica?" data-en="What do we do at AGL Latin America?">¿Qué
+                    hacemos en AGL Latinoamérica?</h2>
+                <h3 class="subtitle"
+                    data-es="Nacidos en la operación directa en campo, no en un laboratorio de software."
+                    data-en="Born in direct field operations, not in a software lab.">Nacidos en la operación directa en
+                    campo, no en un laboratorio de software.</h3>
+>>>>>>> cb8d7f00d2ba8fbe2d644d2e543bb6665698e060
             </div>
             <div class="about-grid">
                 <div class="about-card fade-in-up delay-1">
                     <i class="fas fa-crosshairs card-icon"></i>
-                    <h4>Transformación Operacional</h4>
-                    <p>AGL Latinoamérica es una empresa especializada en la transformación operacional que combina
-                        consultoría estratégica,
-                        ingeniería y software para las industrias más exigentes.</p>
+                    <h4 data-es="Transformación Operacional" data-en="Operational Transformation">Transformación
+                        Operacional</h4>
+                    <p data-es="AGL Latinoamérica es una empresa especializada en la transformación operacional que combina consultoría estratégica, ingeniería y software para las industrias más exigentes."
+                        data-en="AGL Latin America is a company specialized in operational transformation that combines strategic consulting, engineering, and software for the most demanding industries.">
+                        AGL Latinoamérica es una empresa especializada en la transformación operacional que combina
+                        consultoría estratégica, ingeniería y software para las industrias más exigentes.</p>
                     <ul class="card-features">
-                        <li><i class="fas fa-check-circle"></i> Transformacion Operacional</li>
-                        <li><i class="fas fa-check-circle"></i> Servicios clave o SaaS</li>
-                        <li><i class="fas fa-check-circle"></i> Herramientas y Big Data</li>
+                        <li data-es="<i class='fas fa-check-circle'></i> Transformacion Operacional"
+                            data-en="<i class='fas fa-check-circle'></i> Operational Transformation"><i
+                                class="fas fa-check-circle"></i> Transformacion Operacional</li>
+                        <li data-es="<i class='fas fa-check-circle'></i> Servicios clave o SaaS"
+                            data-en="<i class='fas fa-check-circle'></i> Key Services or SaaS"><i
+                                class="fas fa-check-circle"></i> Servicios clave o SaaS</li>
+                        <li data-es="<i class='fas fa-check-circle'></i> Herramientas y Big Data"
+                            data-en="<i class='fas fa-check-circle'></i> Tools and Big Data"><i
+                                class="fas fa-check-circle"></i> Herramientas y Big Data</li>
                     </ul>
                 </div>
                 <div class="about-card fade-in-up delay-2">
                     <i class="fas fa-book-open card-icon"></i>
-                    <h4>Transferencia de Conocimiento</h4>
-                    <p>Llevamos la experiencia real de campo a tu organización. Codificamos años de conocimiento
+                    <h4 data-es="Transferencia de Conocimiento" data-en="Knowledge Transfer">Transferencia de
+                        Conocimiento</h4>
+                    <p data-es="Llevamos la experiencia real de campo a tu organización. Codificamos años de conocimiento operativo industrial en tecnología ágil para convertir procesos complejos en operaciones simples y medibles."
+                        data-en="We bring real field experience to your organization. We encode years of industrial operational knowledge into agile technology to turn complex processes into simple and measurable operations.">
+                        Llevamos la experiencia real de campo a tu organización. Codificamos años de conocimiento
                         operativo industrial en tecnología ágil para convertir procesos complejos en operaciones simples
                         y medibles.</p>
-
                 </div>
                 <div class="about-card fade-in-up delay-3">
                     <i class="fas fa-star card-icon"></i>
-                    <h4>Nuestro Propósito</h4>
-                    <p>Empoderar a tu dirección con visibilidad operativa continua y capacidad de anticipación.
+                    <h4 data-es="Nuestro Propósito" data-en="Our Purpose">Nuestro Propósito</h4>
+                    <p data-es="Empoderar a tu dirección con visibilidad operativa continua y capacidad de anticipación. Garantizamos la toma de decisiones basada en datos para llevar a tu empresa a la excelencia operativa."
+                        data-en="Empower your management with continuous operational visibility and anticipation capability. We guarantee data-driven decision-making to lead your company to operational excellence.">
+                        Empoderar a tu dirección con visibilidad operativa continua y capacidad de anticipación.
                         Garantizamos la toma de decisiones basada en datos para llevar a tu empresa a la excelencia
                         operativa.</p>
                 </div>
@@ -146,31 +202,41 @@
     <section id="sintomas" class="symptoms">
         <div class="container">
             <div class="section-header fade-in-up">
-                <h2>Síntomas comunes de una operación que necesita evolucionar</h2>
+                <h2 data-es="Síntomas comunes de una operación que necesita evolucionar"
+                    data-en="Common symptoms of an operation that needs to evolve">Síntomas comunes de una operación que
+                    necesita evolucionar</h2>
             </div>
             <div class="symptoms-list">
                 <div class="symptom-item fade-in-left">
                     <div class="symptom-icon"><i class="fas fa-users"></i></div>
-                    <p>Dependencia de personas clave: "Tu operación se detiene o pierde calidad si falta una persona
+                    <p data-es="Dependencia de personas clave: 'Tu operación se detiene o pierde calidad si falta una persona clave. El conocimiento crítico vive en la mente del personal y no en un proceso institucionalizado.'"
+                        data-en="Dependence on key people: 'Your operation stops or loses quality if a key person is missing. Critical knowledge lives in the staff's mind and not in an institutionalized process.'">
+                        Dependencia de personas clave: "Tu operación se detiene o pierde calidad si falta una persona
                         clave. El conocimiento crítico vive en la mente del personal y no en un proceso
                         institucionalizado."</p>
                 </div>
 
                 <div class="symptom-item fade-in-left delay-2">
                     <div class="symptom-icon"><i class="fas fa-clock"></i></div>
-                    <p>Información tardía y retrabajos: "Te enteras de las pérdidas, cuellos de botella o errores cuando
-                        ya afectaron tu margen. Tomas decisiones con datos de 'ayer' y no en tiempo para tomar acción."
-                    </p>
+                    <p data-es="Información tardía y retrabajos: 'Te enteras de las pérdidas, cuellos de botella o errores cuando ya afectaron tu margen. Tomas decisiones con datos de ayer y no en tiempo para tomar acción.'"
+                        data-en="Late information and rework: 'You find out about losses, bottlenecks, or errors when they have already affected your margin. You make decisions with yesterday's data, not in time to take action.'">
+                        Información tardía y retrabajos: "Te enteras de las pérdidas, cuellos de botella o errores
+                        cuando ya afectaron tu margen. Tomas decisiones con datos de 'ayer' y no en tiempo para tomar
+                        acción."</p>
                 </div>
                 <div class="symptom-item fade-in-left delay-1">
                     <div class="symptom-icon"><i class="fas fa-file-excel"></i></div>
-                    <p>Dependencia de hojas de cálculo: "El negocio intenta gestionarse con decenas de hojas de cálculo
+                    <p data-es="Dependencia de hojas de cálculo: 'El negocio intenta gestionarse con decenas de hojas de cálculo desconectadas, propensas a errores humanos y que nadie actualiza a tiempo.'"
+                        data-en="Dependence on spreadsheets: 'The business tries to manage itself with dozens of disconnected spreadsheets, prone to human error and that no one updates on time.'">
+                        Dependencia de hojas de cálculo: "El negocio intenta gestionarse con decenas de hojas de cálculo
                         desconectadas, propensas a errores humanos y que nadie actualiza a tiempo."</p>
                 </div>
 
                 <div class="symptom-item fade-in-left delay-1">
                     <div class="symptom-icon"><i class="fa fa-desktop"></i></div>
-                    <p>Sistemas rígidos que nadie usa:"Invertiste en un ERP o software costoso que el equipo de campo
+                    <p data-es="Sistemas rígidos que nadie usa: 'Invertiste en un ERP o software costoso que el equipo de campo terminó rechazando por complejo, obligándolos a volver a los registros en papel u hojas de cálculo.'"
+                        data-en="Rigid systems that no one uses: 'You invested in an expensive ERP or software that the field team ended up rejecting for being too complex, forcing them back to paper records or spreadsheets.'">
+                        Sistemas rígidos que nadie usa:"Invertiste en un ERP o software costoso que el equipo de campo
                         terminó rechazando por complejo, obligándolos a volver a los registros en papel u hojas de
                         cálculo."</p>
                 </div>
@@ -182,15 +248,19 @@
     <section id="diagnostico" class="diagnostic glass-section">
         <div class="container">
             <div class="section-header fade-in-up">
-                <h2>Diagnóstico Operacional AGL®</h2>
+                <h2 data-es="Diagnóstico Operacional AGL®" data-en="AGL® Operational Diagnosis">Diagnóstico Operacional
+                    AGL®</h2>
             </div>
 
             <div class="diagnostic-steps">
                 <div class="diagnostic-card fade-in-up">
                     <div class="diagnostic-icon"><i class="fas fa-satellite-dish"></i></div>
                     <div class="diagnostic-text">
-                        <h3>1. Evaluación de Pilares Operativos</h3>
-                        <p>Analizamos la salud global de tu operación evaluando 6 áreas críticas: estructura
+                        <h3 data-es="1. Evaluación de Pilares Operativos"
+                            data-en="1. Evaluation of Operational Pillars">1. Evaluación de Pilares Operativos</h3>
+                        <p data-es="Analizamos la salud global de tu operación evaluando 6 áreas críticas: estructura organizacional, estandarización, flujo de datos, control de errores, cultura de cambio e impacto financiero."
+                            data-en="We analyze the overall health of your operation by evaluating 6 critical areas: organizational structure, standardization, data flow, error control, change culture, and financial impact.">
+                            Analizamos la salud global de tu operación evaluando 6 áreas críticas: estructura
                             organizacional, estandarización, flujo de datos, control de errores, cultura de cambio e
                             impacto financiero.</p>
                     </div>
@@ -199,11 +269,19 @@
                 <div class="diagnostic-card fade-in-up delay-1">
                     <div class="diagnostic-icon"><i class="fas fa-cogs"></i></div>
                     <div class="diagnostic-text">
-                        <h3>2. Entrega del Dictamen IPO</h3>
-                        <p>Procesamos la información recopilada para entregarte un Dictamen Operativo que incluye:</p>
+                        <h3 data-es="2. Entrega del Dictamen IPO" data-en="2. Delivery of the OPI Report">2. Entrega del
+                            Dictamen IPO</h3>
+                        <p data-es="Procesamos la información recopilada para entregarte un Dictamen Operativo que incluye:"
+                            data-en="We process the collected information to deliver an Operational Report that includes:">
+                            Procesamos la información recopilada para entregarte un Dictamen Operativo que incluye:</p>
                         <ul>
-                            <li><strong>Índice de Preparación Operacional (IPO) exacto.</strong></li>
-                            <li><strong>Nivel de Madurez Actual</strong> (silos o dependencia de personas).</li>
+                            <li data-es="<strong>Índice de Preparación Operacional (IPO) exacto.</strong>"
+                                data-en="<strong>Exact Operational Preparation Index (OPI).</strong>"><strong>Índice de
+                                    Preparación Operacional (IPO) exacto.</strong></li>
+                            <li data-es="<strong>Nivel de Madurez Actual</strong> (silos o dependencia de personas)."
+                                data-en="<strong>Current Maturity Level</strong> (silos or dependence on people).">
+                                <strong>Nivel de Madurez Actual</strong> (silos o dependencia de personas).
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -211,8 +289,11 @@
                 <div class="diagnostic-card fade-in-up delay-2">
                     <div class="diagnostic-icon"><i class="fas fa-compass"></i></div>
                     <div class="diagnostic-text">
-                        <h3>3. Hoja de Ruta hacia la Excelencia</h3>
-                        <p>Prioridades clave de corrección y una propuesta estratégica para eliminar retrabajos,
+                        <h3 data-es="3. Hoja de Ruta hacia la Excelencia" data-en="3. Roadmap to Excellence">3. Hoja de
+                            Ruta hacia la Excelencia</h3>
+                        <p data-es="Prioridades clave de corrección y una propuesta estratégica para eliminar retrabajos, automatizar la información y escalar tu excelencia operativa."
+                            data-en="Key correction priorities and a strategic proposal to eliminate rework, automate information, and scale your operational excellence.">
+                            Prioridades clave de corrección y una propuesta estratégica para eliminar retrabajos,
                             automatizar la información y escalar tu excelencia operativa.</p>
                     </div>
                 </div>
@@ -224,8 +305,11 @@
     <section id="industrias" class="industries">
         <div class="container">
             <div class="section-header fade-in-up">
-                <h2>Industrias que impulsamos hacia la excelencia</h2>
-                <p>Nuestra experiencia abarca diversos sectores clave adaptando las soluciones a tu operación.</p>
+                <h2 data-es="Industrias que impulsamos hacia la excelencia"
+                    data-en="Industries we drive towards excellence">Industrias que impulsamos hacia la excelencia</h2>
+                <p data-es="Nuestra experiencia abarca diversos sectores clave adaptando las soluciones a tu operación."
+                    data-en="Our experience covers various key sectors, adapting solutions to your operation.">Nuestra
+                    experiencia abarca diversos sectores clave adaptando las soluciones a tu operación.</p>
             </div>
 
             <div class="carousel-wrapper fade-in-up delay-1">
@@ -234,32 +318,32 @@
                 <div class="carousel-container" id="industries-carousel">
                     <div class="carousel-slide about-card" style="align-items: center; text-align: center;">
                         <i class="fas fa-mountain card-icon"></i>
-                        <h4>Minería</h4>
+                        <h4 data-es="Minería" data-en="Mining">Minería</h4>
                     </div>
 
                     <div class="carousel-slide about-card" style="align-items: center; text-align: center;">
                         <i class="fas fa-helmet-safety card-icon"></i>
-                        <h4>Construcción</h4>
+                        <h4 data-es="Construcción" data-en="Construction">Construcción</h4>
                     </div>
 
                     <div class="carousel-slide about-card" style="align-items: center; text-align: center;">
                         <i class="fas fa-truck card-icon"></i>
-                        <h4>Logística y Transporte</h4>
+                        <h4 data-es="Logística y Transporte" data-en="Logistics & Transport">Logística y Transporte</h4>
                     </div>
 
                     <div class="carousel-slide about-card" style="align-items: center; text-align: center;">
                         <i class="fas fa-industry card-icon"></i>
-                        <h4>Manufactura Planta</h4>
+                        <h4 data-es="Manufactura Planta" data-en="Plant Manufacturing">Manufactura Planta</h4>
                     </div>
 
                     <div class="carousel-slide about-card" style="align-items: center; text-align: center;">
                         <i class="fas fa-store card-icon"></i>
-                        <h4>Servicios de Comercio</h4>
+                        <h4 data-es="Servicios de Comercio" data-en="Trade Services">Servicios de Comercio</h4>
                     </div>
 
                     <div class="carousel-slide about-card" style="align-items: center; text-align: center;">
                         <i class="fas fa-seedling card-icon"></i>
-                        <h4>Agroindustria</h4>
+                        <h4 data-es="Agroindustria" data-en="Agroindustry">Agroindustria</h4>
                     </div>
                 </div>
 
@@ -269,12 +353,20 @@
         </div>
     </section>
 
-    <!-- Ecosistema Section (con botones de Más información) -->
+    <!-- Ecosistema Section -->
     <section id="ecosistema" class="ecosystem glass-section">
         <div class="container">
             <div class="section-header fade-in-up">
-                <h2>Ecosistema de Soluciones AGL</h2>
-                <h3 class="subtitle">Diseñadas desde la operación</h3>
+                <h2 data-es="Ecosistema de Soluciones AGL" data-en="AGL Solutions Ecosystem">Ecosistema de Soluciones
+                    AGL</h2>
+                <h3 class="subtitle" data-es="Diseñadas desde la operación" data-en="Designed from the operation">
+                    Diseñadas desde la operación</h3>
+            </div>
+
+            <!-- ENCABEZADO: Soluciones Operativas -->
+            <div class="fade-in-up" style="text-align: center; margin-bottom: 2rem;">
+                <h3 style="font-size: 1.8rem; font-weight: 700; display: inline-block; padding-bottom: 5px; border-bottom: 3px solid #10b981;"
+                    data-es="Soluciones Operativas" data-en="Operational Solutions">Soluciones Operativas</h3>
             </div>
 
             <div class="ecosystem-grid">
@@ -282,44 +374,71 @@
                 <div class="ecosystem-card fade-in-up">
                     <div class="card-badge">BUSINESS OPERATIONS</div>
                     <div class="icon-wrapper"><i class="fas fa-layer-group"></i></div>
-                    <h3>Operaciones</h3>
-                    <p class="card-description">Metodología e ingeniería de procesos adaptada a la lógica de tu nicho
-                        para estandarizar operaciones sin soluciones genéricas.</p>
+                    <h3 data-es="Operaciones" data-en="Operations">Operaciones</h3>
+                    <p class="card-description"
+                        data-es="Metodología e ingeniería de procesos adaptada a la lógica de tu nicho para estandarizar operaciones sin soluciones genéricas."
+                        data-en="Process methodology and engineering adapted to the logic of your niche to standardize operations without generic solutions.">
+                        Metodología e ingeniería de procesos adaptada a la lógica de tu nicho para estandarizar
+                        operaciones sin soluciones genéricas.</p>
 
                     <div class="card-problems">
-                        <h5>PROBLEMAS QUE ELIMINA:</h5>
+                        <h5 data-es="PROBLEMAS QUE ELIMINA:" data-en="PROBLEMS IT ELIMINATES:">PROBLEMAS QUE ELIMINA:
+                        </h5>
                         <ul>
-                            <li><i class="fas fa-check"></i> Desalineación por usar procesos genéricos ajenos a tu
-                                sector.</li>
-                            <li><i class="fas fa-check"></i> Dependencia del criterio personal y registros aislados.
+                            <li data-es="<i class='fas fa-check'></i> Desalineación por usar procesos genéricos ajenos a tu sector."
+                                data-en="<i class='fas fa-check'></i> Misalignment from using generic processes outside your sector.">
+                                <i class="fas fa-check"></i> Desalineación por usar procesos genéricos ajenos a tu
+                                sector.
                             </li>
-                            <li><i class="fas fa-check"></i> Desperdicio de tiempo por falta de flujos específicos de
-                                industria.</li>
+                            <li data-es="<i class='fas fa-check'></i> Dependencia del criterio personal y registros aislados."
+                                data-en="<i class='fas fa-check'></i> Dependence on personal criteria and isolated records.">
+                                <i class="fas fa-check"></i> Dependencia del criterio personal y registros aislados.
+                            </li>
+                            <li data-es="<i class='fas fa-check'></i> Desperdicio de tiempo por falta de flujos específicos de industria."
+                                data-en="<i class='fas fa-check'></i> Wasted time due to lack of industry-specific workflows.">
+                                <i class="fas fa-check"></i> Desperdicio de tiempo por falta de flujos específicos de
+                                industria.
+                            </li>
                         </ul>
                     </div>
-                    <a href="servicios/operativos/BUSINESS OPERATIONS/operaciones.html" class="card-btn">Más información
-                        <i class="fas fa-arrow-right"></i></a>
+                    <a href="servicios/operativos/BUSINESS OPERATIONS/operaciones.html" class="card-btn"
+                        data-es="Más información <i class='fas fa-arrow-right'></i>"
+                        data-en="More information <i class='fas fa-arrow-right'></i>">Más información <i
+                            class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <!-- Mantenimiento -->
                 <div class="ecosystem-card fade-in-up delay-1">
                     <div class="card-badge">MASTERMEND</div>
                     <div class="icon-wrapper"><i class="fas fa-cogs"></i></div>
-                    <h3>Mantenimiento</h3>
-                    <p class="card-description">Gestión integral de activos, control preventivo/correctivo y bitácoras
-                        digitales con visibilidad al instante.</p>
+                    <h3 data-es="Mantenimiento" data-en="Maintenance">Mantenimiento</h3>
+                    <p class="card-description"
+                        data-es="Gestión integral de activos, control preventivo/correctivo y bitácoras digitales con visibilidad al instante."
+                        data-en="Comprehensive asset management, preventive/corrective control, and digital logs with instant visibility.">
+                        Gestión integral de activos, control preventivo/correctivo y bitácoras digitales con visibilidad
+                        al instante.</p>
 
                     <div class="card-problems">
-                        <h5>PROBLEMAS QUE ELIMINA:</h5>
+                        <h5 data-es="PROBLEMAS QUE ELIMINA:" data-en="PROBLEMS IT ELIMINATES:">PROBLEMAS QUE ELIMINA:
+                        </h5>
                         <ul>
-                            <li><i class="fas fa-check"></i> Paros imprevistos por falta de mantenimiento preventivo a
-                                tiempo.</li>
-                            <li><i class="fas fa-check"></i> Extravío o alteración de bitácoras físicas en papel.</li>
-                            <li><i class="fas fa-check"></i> Costos elevados por reparaciones correctivas de emergencia.
+                            <li data-es="<i class='fas fa-check'></i> Paros imprevistos por falta de mantenimiento preventivo a tiempo."
+                                data-en="<i class='fas fa-check'></i> Unforeseen downtimes due to lack of timely preventive maintenance.">
+                                <i class="fas fa-check"></i> Paros imprevistos por falta de mantenimiento preventivo a
+                                tiempo.
                             </li>
+                            <li data-es="<i class='fas fa-check'></i> Extravío o alteración de bitácoras físicas en papel."
+                                data-en="<i class='fas fa-check'></i> Loss or alteration of physical paper logs."><i
+                                    class="fas fa-check"></i> Extravío o alteración de bitácoras físicas en papel.</li>
+                            <li data-es="<i class='fas fa-check'></i> Costos elevados por reparaciones correctivas de emergencia."
+                                data-en="<i class='fas fa-check'></i> High costs for emergency corrective repairs."><i
+                                    class="fas fa-check"></i> Costos elevados por reparaciones correctivas de
+                                emergencia.</li>
                         </ul>
                     </div>
-                    <a href="servicios/operativos/MASTERMEND/master.html" class="card-btn">Más información <i
+                    <a href="servicios/operativos/MASTERMEND/master.html" class="card-btn"
+                        data-es="Más información <i class='fas fa-arrow-right'></i>"
+                        data-en="More information <i class='fas fa-arrow-right'></i>">Más información <i
                             class="fas fa-arrow-right"></i></a>
                 </div>
 
@@ -327,41 +446,79 @@
                 <div class="ecosystem-card fade-in-up delay-2">
                     <div class="card-badge">RISK MANAGEMENT</div>
                     <div class="icon-wrapper"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Control de Riesgos</h3>
-                    <p class="card-description">Gestión y prevención de riesgos operativos basada en el estándar ISO
-                        31000 para proteger la rentabilidad.</p>
+                    <h3 data-es="Control de Riesgos" data-en="Risk Management">Control de Riesgos</h3>
+                    <p class="card-description"
+                        data-es="Gestión y prevención de riesgos operativos basada en el estándar ISO 31000 para proteger la rentabilidad."
+                        data-en="Operational risk management and prevention based on the ISO 31000 standard to protect profitability.">
+                        Gestión y prevención de riesgos operativos basada en el estándar ISO 31000 para proteger la
+                        rentabilidad.</p>
 
                     <div class="card-problems">
-                        <h5>PROBLEMAS QUE ELIMINA:</h5>
+                        <h5 data-es="PROBLEMAS QUE ELIMINA:" data-en="PROBLEMS IT ELIMINATES:">PROBLEMAS QUE ELIMINA:
+                        </h5>
                         <ul>
-                            <li><i class="fas fa-check"></i> Evaluación de riesgos empírica o sin rigor normativo.</li>
-                            <li><i class="fas fa-check"></i> Incidentes que comprometen la continuidad del negocio.</li>
-                            <li><i class="fas fa-check"></i> Incumplimiento de controles preventivos en campo.</li>
+                            <li data-es="<i class='fas fa-check'></i> Evaluación de riesgos empírica o sin rigor normativo."
+                                data-en="<i class='fas fa-check'></i> Empirical risk assessment or without regulatory rigor.">
+                                <i class="fas fa-check"></i> Evaluación de riesgos empírica o sin rigor normativo.
+                            </li>
+                            <li data-es="<i class='fas fa-check'></i> Incidentes que comprometen la continuidad del negocio."
+                                data-en="<i class='fas fa-check'></i> Incidents that compromise business continuity."><i
+                                    class="fas fa-check"></i> Incidentes que comprometen la continuidad del negocio.
+                            </li>
+                            <li data-es="<i class='fas fa-check'></i> Incumplimiento de controles preventivos en campo."
+                                data-en="<i class='fas fa-check'></i> Non-compliance with preventive controls in the field.">
+                                <i class="fas fa-check"></i> Incumplimiento de controles preventivos en campo.
+                            </li>
                         </ul>
                     </div>
-                    <a href="servicios/operativos/RISK MANAGEMENT/risk.html" class="card-btn">Más información <i
+                    <a href="servicios/operativos/RISK MANAGEMENT/risk.html" class="card-btn"
+                        data-es="Más información <i class='fas fa-arrow-right'></i>"
+                        data-en="More information <i class='fas fa-arrow-right'></i>">Más información <i
                             class="fas fa-arrow-right"></i></a>
                 </div>
+            </div> <!-- Cierre de Grid Operativo -->
 
+            <!-- ENCABEZADO: Soluciones Administrativas -->
+            <div class="fade-in-up" style="text-align: center; margin-top: 4rem; margin-bottom: 2rem;">
+                <h3 style="font-size: 1.8rem; font-weight: 700; display: inline-block; padding-bottom: 5px; border-bottom: 3px solid #10b981;"
+                    data-es="Soluciones Administrativas" data-en="Administrative Solutions">Soluciones Administrativas
+                </h3>
+            </div>
+
+            <div class="ecosystem-grid">
                 <!-- Cadena de Suministros -->
                 <div class="ecosystem-card fade-in-up">
                     <div class="card-badge">SUPPLY MANAGEMENT</div>
                     <div class="icon-wrapper"><i class="fas fa-box-open"></i></div>
-                    <h3>Cadena de suministros</h3>
-                    <p class="card-description">Control integral multinivel: desde la requisición y cotización hasta la
-                        compra y recepción en almacén.</p>
+                    <h3 data-es="Cadena de suministros" data-en="Supply Chain">Cadena de suministros</h3>
+                    <p class="card-description"
+                        data-es="Control integral multinivel: desde la requisición y cotización hasta la compra y recepción en almacén."
+                        data-en="Comprehensive multilevel control: from requisition and quotation to purchase and warehouse reception.">
+                        Control integral multinivel: desde la requisición y cotización hasta la compra y recepción en
+                        almacén.</p>
 
                     <div class="card-problems">
-                        <h5>PROBLEMAS QUE ELIMINA:</h5>
+                        <h5 data-es="PROBLEMAS QUE ELIMINA:" data-en="PROBLEMS IT ELIMINATES:">PROBLEMAS QUE ELIMINA:
+                        </h5>
                         <ul>
-                            <li><i class="fas fa-check"></i> Compras no autorizadas, sin cotizar o fuera de presupuesto.
+                            <li data-es="<i class='fas fa-check'></i> Compras no autorizadas, sin cotizar o fuera de presupuesto."
+                                data-en="<i class='fas fa-check'></i> Unauthorized purchases, unquoted or over budget.">
+                                <i class="fas fa-check"></i> Compras no autorizadas, sin cotizar o fuera de presupuesto.
                             </li>
-                            <li><i class="fas fa-check"></i> Cuellos de botella entre la solicitud y la entrega en
-                                almacén.</li>
-                            <li><i class="fas fa-check"></i> Mermas y desabasto de insumos o refacciones clave.</li>
+                            <li data-es="<i class='fas fa-check'></i> Cuellos de botella entre la solicitud y la entrega en almacén."
+                                data-en="<i class='fas fa-check'></i> Bottlenecks between the request and warehouse delivery.">
+                                <i class="fas fa-check"></i> Cuellos de botella entre la solicitud y la entrega en
+                                almacén.
+                            </li>
+                            <li data-es="<i class='fas fa-check'></i> Mermas y desabasto de insumos o refacciones clave."
+                                data-en="<i class='fas fa-check'></i> Shrinkage and shortage of key supplies or spare parts.">
+                                <i class="fas fa-check"></i> Mermas y desabasto de insumos o refacciones clave.
+                            </li>
                         </ul>
                     </div>
-                    <a href="servicios/administrativos/supply/supply.html" class="card-btn">Más información <i
+                    <a href="servicios/administrativos/supply/supply.html" class="card-btn"
+                        data-es="Más información <i class='fas fa-arrow-right'></i>"
+                        data-en="More information <i class='fas fa-arrow-right'></i>">Más información <i
                             class="fas fa-arrow-right"></i></a>
                 </div>
 
@@ -369,22 +526,36 @@
                 <div class="ecosystem-card fade-in-up delay-1">
                     <div class="card-badge">WORKFORCE</div>
                     <div class="icon-wrapper"><i class="fas fa-user-check"></i></div>
-                    <h3>Recursos Humanos</h3>
-                    <p class="card-description">Ciclo completo de vida del colaborador, desde la requisición aprobada
-                        hasta prenóminas operativas.</p>
+                    <h3 data-es="Recursos Humanos" data-en="Human Resources">Recursos Humanos</h3>
+                    <p class="card-description"
+                        data-es="Ciclo completo de vida del colaborador, desde la requisición aprobada hasta prenóminas operativas."
+                        data-en="Complete employee lifecycle, from approved requisition to operational pre-payroll.">
+                        Ciclo completo de vida del colaborador, desde la requisición aprobada hasta prenóminas
+                        operativas.</p>
 
                     <div class="card-problems">
-                        <h5>PROBLEMAS QUE ELIMINA:</h5>
+                        <h5 data-es="PROBLEMAS QUE ELIMINA:" data-en="PROBLEMS IT ELIMINATES:">PROBLEMAS QUE ELIMINA:
+                        </h5>
                         <ul>
-                            <li><i class="fas fa-check"></i> Contrataciones sin flujo de aprobación ni control de
-                                vacantes.</li>
-                            <li><i class="fas fa-check"></i> Prenóminas desconectadas de la asistencia real en campo.
+                            <li data-es="<i class='fas fa-check'></i> Contrataciones sin flujo de aprobación ni control de vacantes."
+                                data-en="<i class='fas fa-check'></i> Hirings without approval workflow or vacancy control.">
+                                <i class="fas fa-check"></i> Contrataciones sin flujo de aprobación ni control de
+                                vacantes.
                             </li>
-                            <li><i class="fas fa-check"></i> Falta de trazabilidad en rotación y expedientes de
-                                personal.</li>
+                            <li data-es="<i class='fas fa-check'></i> Prenóminas desconectadas de la asistencia real en campo."
+                                data-en="<i class='fas fa-check'></i> Pre-payroll disconnected from actual field attendance.">
+                                <i class="fas fa-check"></i> Prenóminas desconectadas de la asistencia real en campo.
+                            </li>
+                            <li data-es="<i class='fas fa-check'></i> Falta de trazabilidad en rotación y expedientes de personal."
+                                data-en="<i class='fas fa-check'></i> Lack of traceability in turnover and personnel files.">
+                                <i class="fas fa-check"></i> Falta de trazabilidad en rotación y expedientes de
+                                personal.
+                            </li>
                         </ul>
                     </div>
-                    <a href="servicios/administrativos/workforce/workforce.html" class="card-btn">Más información <i
+                    <a href="servicios/administrativos/workforce/workforce.html" class="card-btn"
+                        data-es="Más información <i class='fas fa-arrow-right'></i>"
+                        data-en="More information <i class='fas fa-arrow-right'></i>">Más información <i
                             class="fas fa-arrow-right"></i></a>
                 </div>
 
@@ -392,25 +563,38 @@
                 <div class="ecosystem-card fade-in-up delay-2">
                     <div class="card-badge">PROFINANCE</div>
                     <div class="icon-wrapper"><i class="fas fa-chart-line"></i></div>
-                    <h3>Contabilidad & Costos</h3>
-                    <p class="card-description">Analítica financiera, cuentas por pagar/cobrar y control de costos para
-                        una toma de decisiones certera.</p>
+                    <h3 data-es="Contabilidad & Costos" data-en="Accounting & Costs">Contabilidad & Costos</h3>
+                    <p class="card-description"
+                        data-es="Analítica financiera, cuentas por pagar/cobrar y control de costos para una toma de decisiones certera."
+                        data-en="Financial analytics, accounts payable/receivable, and cost control for accurate decision-making.">
+                        Analítica financiera, cuentas por pagar/cobrar y control de costos para una toma de decisiones
+                        certera.</p>
 
                     <div class="card-problems">
-                        <h5>PROBLEMAS QUE ELIMINA:</h5>
+                        <h5 data-es="PROBLEMAS QUE ELIMINA:" data-en="PROBLEMS IT ELIMINATES:">PROBLEMAS QUE ELIMINA:
+                        </h5>
                         <ul>
-                            <li><i class="fas fa-check"></i> Incertidumbre sobre el margen real por centro de costo.
+                            <li data-es="<i class='fas fa-check'></i> Incertidumbre sobre el margen real por centro de costo."
+                                data-en="<i class='fas fa-check'></i> Uncertainty about the actual margin per cost center.">
+                                <i class="fas fa-check"></i> Incertidumbre sobre el margen real por centro de costo.
                             </li>
-                            <li><i class="fas fa-check"></i> Fugas en el flujo de caja por cobranza o pagos a destiempo.
+                            <li data-es="<i class='fas fa-check'></i> Fugas en el flujo de caja por cobranza o pagos a destiempo."
+                                data-en="<i class='fas fa-check'></i> Cash flow leaks due to untimely collections or payments.">
+                                <i class="fas fa-check"></i> Fugas en el flujo de caja por cobranza o pagos a destiempo.
                             </li>
-                            <li><i class="fas fa-check"></i> Toma de decisiones basada en suposiciones y no en datos.
+                            <li data-es="<i class='fas fa-check'></i> Toma de decisiones basada en suposiciones y no en datos."
+                                data-en="<i class='fas fa-check'></i> Decision-making based on assumptions rather than data.">
+                                <i class="fas fa-check"></i> Toma de decisiones basada en suposiciones y no en datos.
                             </li>
                         </ul>
                     </div>
-                    <a href="servicios/administrativos/profinance/profinance.html" class="card-btn">Más información <i
+                    <a href="servicios/administrativos/profinance/profinance.html" class="card-btn"
+                        data-es="Más información <i class='fas fa-arrow-right'></i>"
+                        data-en="More information <i class='fas fa-arrow-right'></i>">Más información <i
                             class="fas fa-arrow-right"></i></a>
                 </div>
-            </div>
+            </div> <!-- Cierre de Grid Administrativo -->
+
         </div>
     </section>
 
@@ -418,23 +602,34 @@
     <section id="integracion" class="integration">
         <div class="container">
             <div class="section-header fade-in-up">
-                <h2>¿Cómo nos integramos con tu empresa sin paralizar tu operación?</h2>
+                <h2 data-es="¿Cómo nos integramos con tu empresa sin paralizar tu operación?"
+                    data-en="How do we integrate with your company without halting your operation?">¿Cómo nos integramos
+                    con tu empresa sin paralizar tu operación?</h2>
             </div>
             <div class="symptoms-list">
                 <div class="symptom-item fade-in-left">
                     <div class="symptom-icon"><i class="fas fa-search"></i></div>
-                    <p><strong>1. Análisis y Entendimiento:</strong> Nos sumergimos en tu proceso actual para construir
-                        sobre él, sin romper la inercia del día a día.</p>
+                    <p data-es="<strong>1. Análisis y Entendimiento:</strong> Nos sumergimos en tu proceso actual para construir sobre él, sin romper la inercia del día a día."
+                        data-en="<strong>1. Analysis and Understanding:</strong> We dive into your current process to build upon it, without breaking the day-to-day momentum.">
+                        <strong>1. Análisis y Entendimiento:</strong> Nos sumergimos en tu proceso actual para construir
+                        sobre él, sin romper la inercia del día a día.
+                    </p>
                 </div>
                 <div class="symptom-item fade-in-left delay-1">
                     <div class="symptom-icon"><i class="fas fa-code"></i></div>
-                    <p><strong>2. Desarrollo Paralelo:</strong> Creamos y probamos el ecosistema en un ambiente seguro
-                        que no afecta la operación viva.</p>
+                    <p data-es="<strong>2. Desarrollo Paralelo:</strong> Creamos y probamos el ecosistema en un ambiente seguro que no afecta la operación viva."
+                        data-en="<strong>2. Parallel Development:</strong> We create and test the ecosystem in a safe environment that does not affect live operations.">
+                        <strong>2. Desarrollo Paralelo:</strong> Creamos y probamos el ecosistema en un ambiente seguro
+                        que no afecta la operación viva.
+                    </p>
                 </div>
                 <div class="symptom-item fade-in-left delay-2">
                     <div class="symptom-icon"><i class="fas fa-rocket"></i></div>
-                    <p><strong>3. Despliegue y Acompañamiento:</strong> Lanzamos de forma gradual y brindamos
-                        capacitación para una transición orgánica y exitosa.</p>
+                    <p data-es="<strong>3. Despliegue y Acompañamiento:</strong> Lanzamos de forma gradual y brindamos capacitación para una transición orgánica y exitosa."
+                        data-en="<strong>3. Deployment and Support:</strong> We launch gradually and provide training for an organic and successful transition.">
+                        <strong>3. Despliegue y Acompañamiento:</strong> Lanzamos de forma gradual y brindamos
+                        capacitación para una transición orgánica y exitosa.
+                    </p>
                 </div>
             </div>
         </div>
@@ -444,27 +639,44 @@
     <section id="valor" class="value-prop">
         <div class="container">
             <div class="section-header fade-in-up">
-                <h2>Nuestra propuesta de valor</h2>
-                <p>Ecosistema de Soluciones AGL - Diseñadas desde la operación</p>
+                <h2 data-es="Nuestra propuesta de valor" data-en="Our value proposition">Nuestra propuesta de valor</h2>
+                <p data-es="Ecosistema de Soluciones AGL - Diseñadas desde la operación"
+                    data-en="AGL Solutions Ecosystem - Designed from the operation">Ecosistema de Soluciones AGL -
+                    Diseñadas desde la operación</p>
             </div>
             <div class="value-grid">
                 <div class="value-card fade-in-up">
                     <div class="icon-wrapper"><i class="fas fa-robot"></i></div>
-                    <h3>Automatización Escalable</h3>
-                    <p>Convertimos las tareas manuales, repetitivas y en papel en flujos digitales automáticos y libres
+                    <h3 data-es="Automatización Escalable" data-en="Scalable Automation">Automatización Escalable</h3>
+                    <p data-es="Convertimos las tareas manuales, repetitivas y en papel en flujos digitales automáticos y libres de error humano."
+                        data-en="We turn manual, repetitive, and paper-based tasks into automatic digital workflows free of human error.">
+                        Convertimos las tareas manuales, repetitivas y en papel en flujos digitales automáticos y libres
                         de error humano.</p>
                 </div>
                 <div class="value-card fade-in-up delay-1">
                     <div class="icon-wrapper"><i class="fas fa-eye"></i></div>
-                    <h3>Visibilidad e Impacto</h3>
-                    <p>Transformamos datos operativos en indicadores (KPIs) en el tiempo justo para accionar y para
+                    <h3 data-es="Visibilidad e Impacto" data-en="Visibility and Impact">Visibilidad e Impacto</h3>
+                    <p data-es="Transformamos datos operativos en indicadores (KPIs) en el tiempo justo para accionar y para proteger la rentabilidad."
+                        data-en="We transform operational data into indicators (KPIs) just in time to take action and protect profitability.">
+                        Transformamos datos operativos en indicadores (KPIs) en el tiempo justo para accionar y para
                         proteger la rentabilidad.</p>
                 </div>
                 <div class="value-card fade-in-up delay-2">
                     <div class="icon-wrapper"><i class="fas fa-project-diagram"></i></div>
-                    <h3>Integración Sin Pausas</h3>
-                    <p>Nos integramos con tu empresa de forma progresiva, sin paralizar tu operación actual ni
+                    <h3 data-es="Integración Sin Pausas" data-en="Seamless Integration">Integración Sin Pausas</h3>
+                    <p data-es="Nos integramos con tu empresa de forma progresiva, sin paralizar tu operación actual ni interrumpir tu negocio."
+                        data-en="We integrate with your company progressively, without halting your current operation or interrupting your business.">
+                        Nos integramos con tu empresa de forma progresiva, sin paralizar tu operación actual ni
                         interrumpir tu negocio.</p>
+                </div>
+                <div class="value-card fade-in-up delay-2">
+                    <div class="icon-wrapper"><i class="fas fa-desktop"></i></div>
+                    <h3 data-es="Consultoría + Tecnología" data-en="Consulting + Technology">Consultoría + Tecnología
+                    </h3>
+                    <p data-es="No solo te decimos qué hacer en un reporte estático; construimos y desplegamos la herramienta para ejecutarlo de punta a punta."
+                        data-en="We don't just tell you what to do in a static report; we build and deploy the tool to execute it from end to end.">
+                        No solo te decimos qué hacer en un reporte estático; construimos y desplegamos la herramienta
+                        para ejecutarlo de punta a punta.</p>
                 </div>
             </div>
         </div>
@@ -475,68 +687,97 @@
         <div class="container form-container fade-in-up">
             <div class="form-wrapper">
                 <div class="form-header">
-                    <h2>Agenda tu <span class="highlight-green">Diagnóstico</span></h2>
-                    <p>Completa tus datos para personalizar la sesión de análisis operativo.</p>
+                    <h2 data-es="Agenda tu <span class='highlight-green'>Diagnóstico</span>"
+                        data-en="Schedule your <span class='highlight-green'>Diagnosis</span>">Agenda tu <span
+                            class="highlight-green">Diagnóstico</span></h2>
+                    <p data-es="Completa tus datos para personalizar la sesión de análisis operativo."
+                        data-en="Fill in your details to customize the operational analysis session.">Completa tus datos
+                        para personalizar la sesión de análisis operativo.</p>
                 </div>
 
                 <form id="diagnostico-form" class="custom-form">
                     <div class="form-group full-width">
-                        <label for="nombre">NOMBRE COMPLETO <span class="required">*</span></label>
+                        <label for="nombre" data-es="NOMBRE COMPLETO <span class='required'>*</span>"
+                            data-en="FULL NAME <span class='required'>*</span>">NOMBRE COMPLETO <span
+                                class="required">*</span></label>
                         <input type="text" id="nombre" name="nombre" required>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="telefono">TELÉFONO / WHATSAPP <span class="required">*</span></label>
+                            <label for="telefono" data-es="TELÉFONO / WHATSAPP <span class='required'>*</span>"
+                                data-en="PHONE / WHATSAPP <span class='required'>*</span>">TELÉFONO / WHATSAPP <span
+                                    class="required">*</span></label>
                             <input type="tel" id="telefono" name="telefono" placeholder="+52 55 1234 5678" required>
                         </div>
                         <div class="form-group">
-                            <label for="empresa">NOMBRE DE LA EMPRESA <span class="required">*</span></label>
-                            <input type="text" id="empresa" name="empresa" placeholder="Ej. Logística Global" required>
+                            <label for="empresa" data-es="NOMBRE DE LA EMPRESA <span class='required'>*</span>"
+                                data-en="COMPANY NAME <span class='required'>*</span>">NOMBRE DE LA EMPRESA <span
+                                    class="required">*</span></label>
+                            <input type="text" id="empresa" name="empresa" placeholder="Ej. Logística Global"
+                                data-es-placeholder="Ej. Logística Global" data-en-placeholder="Ex. Global Logistics"
+                                required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="cargo">CARGO / PUESTO <span class="required">*</span></label>
+                            <label for="cargo" data-es="CARGO / PUESTO <span class='required'>*</span>"
+                                data-en="JOB TITLE / POSITION <span class='required'>*</span>">CARGO / PUESTO <span
+                                    class="required">*</span></label>
                             <input type="text" id="cargo" name="cargo" placeholder="Ej. Director de Operaciones"
-                                required>
+                                data-es-placeholder="Ej. Director de Operaciones"
+                                data-en-placeholder="Ex. Operations Director" required>
                         </div>
                         <div class="form-group">
-                            <label for="sector">SECTOR / INDUSTRIA <span class="required">*</span></label>
+                            <label for="sector" data-es="SECTOR / INDUSTRIA <span class='required'>*</span>"
+                                data-en="SECTOR / INDUSTRY <span class='required'>*</span>">SECTOR / INDUSTRIA <span
+                                    class="required">*</span></label>
                             <input type="text" id="sector" name="sector" placeholder="Ej. Manufactura / Retail"
-                                required>
+                                data-es-placeholder="Ej. Manufactura / Retail"
+                                data-en-placeholder="Ex. Manufacturing / Retail" required>
                         </div>
                     </div>
 
                     <div class="form-group full-width">
-                        <label for="codigo">CÓDIGO DE REFERENCIA <span class="required">*</span></label>
-                        <input type="text" id="codigo" name="codigo" placeholder="Ej. VEND-123" required>
+                        <label for="codigo" data-es="CÓDIGO DE REFERENCIA <span class='required'>*</span>"
+                            data-en="REFERENCE CODE <span class='required'>*</span>">CÓDIGO DE REFERENCIA <span
+                                class="required">*</span></label>
+                        <input type="text" id="codigo" name="codigo" placeholder="Ej. VEND-123"
+                            data-es-placeholder="Ej. VEND-123" data-en-placeholder="Ex. VEND-123" required>
                     </div>
 
                     <div class="form-group full-width">
-                        <label>¿Qué área necesitas reforzar primero? <span class="required">*</span></label>
+                        <label data-es="¿Qué área necesitas reforzar primero? <span class='required'>*</span>"
+                            data-en="Which area do you need to reinforce first? <span class='required'>*</span>">¿Qué
+                            área necesitas reforzar primero? <span class="required">*</span></label>
                         <div class="radio-group">
                             <label class="radio-card">
                                 <input type="radio" name="area" value="OperativaBusiness Operations, MasterMend, Risk"
                                     required>
                                 <div class="radio-content">
                                     <span class="radio-badge">A</span>
-                                    <span>Operativa<br><small>Business Operations, MasterMend, Risk</small></span>
+                                    <span data-es="Operativa<br><small>Business Operations, MasterMend, Risk</small>"
+                                        data-en="Operational<br><small>Business Operations, MasterMend, Risk</small>">Operativa<br><small>Business
+                                            Operations, MasterMend, Risk</small></span>
                                 </div>
                             </label>
                             <label class="radio-card">
                                 <input type="radio" name="area" value="AdministrativaWorkForce, Supply, ProFinance">
                                 <div class="radio-content">
                                     <span class="radio-badge">B</span>
-                                    <span>Administrativa<br><small>WorkForce, Supply, ProFinance</small></span>
+                                    <span data-es="Administrativa<br><small>WorkForce, Supply, ProFinance</small>"
+                                        data-en="Administrative<br><small>WorkForce, Supply, ProFinance</small>">Administrativa<br><small>WorkForce,
+                                            Supply, ProFinance</small></span>
                                 </div>
                             </label>
                         </div>
                     </div>
 
                     <div class="form-footer">
-                        <button type="submit" class="btn btn-submit" id="submit-btn">
+                        <button type="submit" class="btn btn-submit" id="submit-btn"
+                            data-es="Enviar <i class='fas fa-arrow-right'></i>"
+                            data-en="Submit <i class='fas fa-arrow-right'></i>">
                             Enviar <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
@@ -553,7 +794,13 @@
                 <div class="footer-logo">
                     <img src="Logos/logo blanco.png" alt="AGL" class="logo-img footer-logo-img theme-logo"
                         id="footer-logo">
+<<<<<<< HEAD
                     <p>Nacidos en la operación directa en campo, impulsando la excelencia.</p>
+=======
+                    <p data-es="Juntos, llevamos a tu empresa el siguiente nivel."
+                        data-en="Together, we take your company to the next level.">Juntos, llevamos a tu empresa el
+                        siguiente nivel.</p>
+>>>>>>> cb8d7f00d2ba8fbe2d644d2e543bb6665698e060
                 </div>
                 <div class="footer-socials">
                     <a href="https://www.facebook.com/people/AGL-Business-Intelligence/61572439661784/?locale=es_LA"
@@ -574,16 +821,56 @@
             <div class="footer-bottom">
                 <button id="back-to-top-footer" class="btn-back-to-top" title="Volver al inicio"
                     aria-label="Volver arriba">
-                    <span>Volver arriba</span>
+                    <span data-es="Volver arriba" data-en="Back to top">Volver arriba</span>
                     <i class="fas fa-arrow-up"></i>
                 </button>
-                <div class="footer-copy">
+                <div class="footer-copy" data-es="&copy; 2026 AGL Latinoamérica. Todos los derechos reservados."
+                    data-en="&copy; 2026 AGL Latin America. All rights reserved.">
                     &copy; 2026 AGL Latinoamérica. Todos los derechos reservados.
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Script de Traducción -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const langBtns = [
+                document.getElementById('lang-toggle-desktop'),
+                document.getElementById('lang-toggle-mobile')
+            ];
+
+            let currentLang = 'es';
+
+            langBtns.forEach(btn => {
+                if (btn) {
+                    btn.addEventListener('click', () => {
+                        currentLang = currentLang === 'es' ? 'en' : 'es';
+
+                        // Actualizar estilo visual del Switch
+                        document.querySelectorAll('.lang-es').forEach(el => {
+                            el.style.fontWeight = currentLang === 'es' ? '700' : '400';
+                            el.style.opacity = currentLang === 'es' ? '1' : '0.5';
+                        });
+                        document.querySelectorAll('.lang-en').forEach(el => {
+                            el.style.fontWeight = currentLang === 'en' ? '700' : '400';
+                            el.style.opacity = currentLang === 'en' ? '1' : '0.5';
+                        });
+
+                        // Traducir todos los elementos de texto
+                        document.querySelectorAll('[data-en]').forEach(el => {
+                            el.innerHTML = el.getAttribute(`data-${currentLang}`);
+                        });
+
+                        // Traducir los placeholders del formulario
+                        document.querySelectorAll('[data-en-placeholder]').forEach(el => {
+                            el.setAttribute('placeholder', el.getAttribute(`data-${currentLang}-placeholder`));
+                        });
+                    });
+                }
+            });
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 

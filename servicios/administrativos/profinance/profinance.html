@@ -7,6 +7,7 @@
     <title>ProFinance | AGL Latinoamérica</title>
     <meta name="description"
         content="Supervisión financiera estratégica para un crecimiento sostenible. De las cuentas por pagar al análisis de costos.">
+<<<<<<< HEAD
     <script>
         (function () {
             const savedTheme = localStorage.getItem('agl-theme');
@@ -15,6 +16,10 @@
             }
         })();
     </script>
+=======
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../../Logos/favicon.png">
+>>>>>>> cb8d7f00d2ba8fbe2d644d2e543bb6665698e060
     <!-- Google Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,42 +27,67 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Enlazado al CSS de esta sección -->
-    <link rel="stylesheet" href="styles_pf.css">
+
+    <!-- Enlazado al CSS maestro -->
+    <link rel="stylesheet" href="risk_style.css">
 </head>
 
 <body>
     <!-- Navbar -->
     <nav class="navbar">
+<<<<<<< HEAD
         <div class="container nav-container nav-container-centered">
             <a href="../../../index.html#ecosistema" class="logo" title="Volver al inicio">
                 <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="nav-logo">
             </a>
+=======
+        <div class="container nav-container"
+            style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="../../../index.html" class="logo">
+                <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="nav-logo">
+            </a>
+            <div class="nav-actions">
+                <!-- BOTÓN IDIOMA DESKTOP (Tipo Switch) -->
+                <button class="theme-toggle-btn" id="lang-toggle-desktop" aria-label="Cambiar idioma"
+                    title="Cambiar idioma"
+                    style="width: auto; padding: 5px 12px; border-radius: 20px; font-family: 'Inter', sans-serif; font-size: 0.9rem; background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; cursor: pointer;">
+                    <span class="lang-es" style="font-weight: 700; transition: 0.3s;">ES</span>
+                    <span style="margin: 0 3px; font-weight: 300;">/</span>
+                    <span class="lang-en" style="font-weight: 400; opacity: 0.5; transition: 0.3s;">EN</span>
+                </button>
+            </div>
+>>>>>>> cb8d7f00d2ba8fbe2d644d2e543bb6665698e060
         </div>
     </nav>
 
     <!-- Hero Section: ¿Qué es ProFinance? -->
     <section class="hero detail-hero">
         <div class="container">
-            <a href="../../../index.html#ecosistema" class="back-link"><i class="fas fa-arrow-left"></i> Volver al
+            <a href="../../../index.html#ecosistema" class="back-link"
+                data-es="<i class='fas fa-arrow-left'></i> Volver al Ecosistema"
+                data-en="<i class='fas fa-arrow-left'></i> Back to Ecosystem"><i class="fas fa-arrow-left"></i> Volver
+                al
                 Ecosistema</a>
 
             <div class="section-title-large fade-in-up">
-                <h1>Supervisión financiera estratégica <br><span class="gradient-text">para un crecimiento
-                        sostenible</span></h1>
-                <p class="intro-sub" style="margin-top: -1rem; margin-bottom: 2.5rem;">De las cuentas por pagar al
-                    análisis de costos</p>
+                <h1 data-es="Supervisión financiera estratégica para un crecimiento sostenible"
+                    data-en="Strategic financial oversight for sustainable growth">Supervisión financiera estratégica
+                    para un crecimiento sostenible</h1>
             </div>
 
             <div class="mining-intro-grid fade-in-up delay-1">
                 <div class="mining-intro-text">
-                    <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">¿Qué es ProFinance?</h3>
-                    <p class="intro-lead">
+                    <p class="intro-lead"
+                        data-es="<strong class='highlight-green-text'>AGL ProFinance</strong> es una solución de gestión financiera integrada diseñada para transformar el control económico de su organización."
+                        data-en="<strong class='highlight-green-text'>AGL ProFinance</strong> is an integrated financial management solution designed to transform the economic control of your organization.">
                         <strong class="highlight-green-text">AGL ProFinance</strong> es una solución de gestión
                         financiera integrada diseñada para transformar el control económico de su organización.
                     </p>
-                    <p class="intro-sub">
-                        Centraliza y automatiza todo el ciclo de vida financiero, desde la gestión de las obligaciones
+                    <p class="intro-sub"
+                        data-es="De las cuentas por pagar al análisis de costos. Centraliza y automatiza todo el ciclo de vida financiero, desde la gestión de las obligaciones de los proveedores hasta el cumplimiento fiscal y la optimización del flujo de caja."
+                        data-en="From accounts payable to cost analysis. It centralizes and automates the entire financial lifecycle, from managing supplier obligations to tax compliance and cash flow optimization.">
+                        De las cuentas por pagar al análisis de costos. Centraliza y automatiza todo el ciclo de vida
+                        financiero, desde la gestión de las obligaciones
                         de los proveedores hasta el cumplimiento fiscal y la optimización del flujo de caja.
                     </p>
                 </div>
@@ -76,29 +106,59 @@
                             <div class="screen-body">
                                 <div class="app-sidebar">
                                     <div class="app-logo-small"><i class="fas fa-wallet"></i> AGL</div>
-                                    <div class="app-nav-item active"><i class="fas fa-file-invoice-dollar"></i> CxP /
+                                    <div class="app-nav-item active"
+                                        data-es="<i class='fas fa-file-invoice-dollar'></i> CxP / CxC"
+                                        data-en="<i class='fas fa-file-invoice-dollar'></i> AP / AR"><i
+                                            class="fas fa-file-invoice-dollar"></i> CxP /
                                         CxC</div>
-                                    <div class="app-nav-item"><i class="fas fa-piggy-bank"></i> Tesorería</div>
-                                    <div class="app-nav-item"><i class="fas fa-chart-pie"></i> Costos</div>
+                                    <div class="app-nav-item" data-es="<i class='fas fa-piggy-bank'></i> Tesorería"
+                                        data-en="<i class='fas fa-piggy-bank'></i> Treasury"><i
+                                            class="fas fa-piggy-bank"></i> Tesorería</div>
+                                    <div class="app-nav-item" data-es="<i class='fas fa-chart-pie'></i> Costos"
+                                        data-en="<i class='fas fa-chart-pie'></i> Costs"><i
+                                            class="fas fa-chart-pie"></i> Costos</div>
                                 </div>
                                 <div class="app-content">
-                                    <div class="app-section-title">Flujo de Caja (Tiempo Real)</div>
+                                    <div class="app-section-title" data-es="Flujo de Caja (Tiempo Real)"
+                                        data-en="Cash Flow (Real Time)">Flujo de Caja (Tiempo Real)</div>
                                     <div class="app-cards-grid">
-                                        <div class="app-card"><i class="fas fa-arrow-up" style="color: #22c55e;"></i>
-                                            Ingresos: +$142K</div>
-                                        <div class="app-card"><i class="fas fa-arrow-down" style="color: #ef4444;"></i>
-                                            Egresos: -$38K</div>
-                                        <div class="app-card"><i class="fas fa-clock" style="color: #f59e0b;"></i> Por
-                                            Pagar: $12K</div>
-                                        <div class="app-card"><i class="fas fa-check-circle"
-                                                style="color: #22c55e;"></i> Conciliado</div>
+                                        <div class="app-card"
+                                            data-es="<i class='fas fa-arrow-up' style='color: #22c55e;'></i> Ingresos: +$142K"
+                                            data-en="<i class='fas fa-arrow-up' style='color: #22c55e;'></i> Income: +$142K">
+                                            <i class="fas fa-arrow-up" style="color: #22c55e;"></i>
+                                            Ingresos: +$142K
+                                        </div>
+                                        <div class="app-card"
+                                            data-es="<i class='fas fa-arrow-down' style='color: #ef4444;'></i> Egresos: -$38K"
+                                            data-en="<i class='fas fa-arrow-down' style='color: #ef4444;'></i> Expenses: -$38K">
+                                            <i class="fas fa-arrow-down" style="color: #ef4444;"></i>
+                                            Egresos: -$38K
+                                        </div>
+                                        <div class="app-card"
+                                            data-es="<i class='fas fa-clock' style='color: #f59e0b;'></i> Por Pagar: $12K"
+                                            data-en="<i class='fas fa-clock' style='color: #f59e0b;'></i> Payable: $12K">
+                                            <i class="fas fa-clock" style="color: #f59e0b;"></i> Por
+                                            Pagar: $12K
+                                        </div>
+                                        <div class="app-card"
+                                            data-es="<i class='fas fa-check-circle' style='color: #22c55e;'></i> Conciliado"
+                                            data-en="<i class='fas fa-check-circle' style='color: #22c55e;'></i> Reconciled">
+                                            <i class="fas fa-check-circle" style="color: #22c55e;"></i> Conciliado
+                                        </div>
                                     </div>
-                                    <div class="app-section-title">Alertas Estratégicas</div>
+                                    <div class="app-section-title" data-es="Alertas Estratégicas"
+                                        data-en="Strategic Alerts">Alertas Estratégicas</div>
                                     <div class="app-cards-grid">
-                                        <div class="app-card small"><i class="fas fa-landmark"
-                                                style="color: #3b82f6;"></i> Cierre Fiscal</div>
-                                        <div class="app-card small"><i class="fas fa-file-signature"
-                                                style="color: #f59e0b;"></i> Auditar</div>
+                                        <div class="app-card small"
+                                            data-es="<i class='fas fa-landmark' style='color: #3b82f6;'></i> Cierre Fiscal"
+                                            data-en="<i class='fas fa-landmark' style='color: #3b82f6;'></i> Tax Close">
+                                            <i class="fas fa-landmark" style="color: #3b82f6;"></i> Cierre Fiscal
+                                        </div>
+                                        <div class="app-card small"
+                                            data-es="<i class='fas fa-file-signature' style='color: #f59e0b;'></i> Auditar"
+                                            data-en="<i class='fas fa-file-signature' style='color: #f59e0b;'></i> Audit">
+                                            <i class="fas fa-file-signature" style="color: #f59e0b;"></i> Auditar
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -118,29 +178,33 @@
     <section class="modules-section">
         <div class="container">
             <div class="section-header fade-in-up">
-                <h2 class="modules-main-title">Módulos del sistema</h2>
+                <h2 class="modules-main-title" data-es="Módulos del sistema" data-en="System Modules">Módulos del
+                    sistema</h2>
             </div>
 
             <!-- Módulo 1: Cuentas por pagar -->
             <div class="module-block fade-in-up">
-                <h3 class="module-title">Cuentas por pagar</h3>
+                <h3 class="module-title" data-es="Cuentas por pagar" data-en="Accounts Payable">Cuentas por pagar</h3>
                 <div class="module-grid">
-                    <div class="module-icon-card">
-                        <i class="fas fa-file-invoice-dollar module-card-icon"></i>
+                    <div class="module-icon-large-container">
+                        <i class="fas fa-file-invoice-dollar module-large-icon"></i>
                     </div>
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
+                            <li data-es="<strong>Conciliación Automatizada:</strong> Se vincula directamente con la Gestión de Suministros de AGL para cotejar órdenes de compra y notas de entrega con las facturas, reduciendo errores de captura manual."
+                                data-en="<strong>Automated Reconciliation:</strong> Links directly with AGL Supply Management to cross-reference purchase orders and delivery notes with invoices, reducing manual entry errors.">
                                 <strong>Conciliación Automatizada:</strong> Se vincula directamente con la Gestión de
                                 Suministros de AGL para cotejar órdenes de compra y notas de entrega con las facturas,
                                 reduciendo errores de captura manual.
                             </li>
-                            <li>
+                            <li data-es="<strong>Tiempos de Respuesta Optimizados:</strong> Mejora los ciclos de aprobación y la programación de pagos mediante flujos de trabajo personalizables, garantizando liquidaciones oportunas y mejores relaciones con proveedores."
+                                data-en="<strong>Optimized Response Times:</strong> Improves approval cycles and payment scheduling through customizable workflows, ensuring timely settlements and better supplier relationships.">
                                 <strong>Tiempos de Respuesta Optimizados:</strong> Mejora los ciclos de aprobación y la
                                 programación de pagos mediante flujos de trabajo personalizables, garantizando
                                 liquidaciones oportunas y mejores relaciones con proveedores.
                             </li>
-                            <li>
+                            <li data-es="<strong>Control Preciso de Obligaciones:</strong> Monitorea cada obligación individualmente a través de un sistema de folios distintivos, proporcionando trazabilidad completa desde la compra inicial hasta el pago final."
+                                data-en="<strong>Precise Control of Obligations:</strong> Monitors each obligation individually through a distinct folio system, providing full traceability from the initial purchase to the final payment.">
                                 <strong>Control Preciso de Obligaciones:</strong> Monitorea cada obligación
                                 individualmente a través de un sistema de folios distintivos, proporcionando
                                 trazabilidad completa desde la compra inicial hasta el pago final.
@@ -150,54 +214,61 @@
                 </div>
             </div>
 
-            <!-- Módulo 2: Cuentas por cobrar - ventas (Alternado) -->
+            <!-- Módulo 2: Cuentas por cobrar - ventas -->
             <div class="module-block fade-in-up delay-1">
-                <h3 class="module-title">Cuentas por cobrar - ventas</h3>
+                <h3 class="module-title" data-es="Cuentas por cobrar - ventas" data-en="Accounts Receivable - Sales">
+                    Cuentas por cobrar - ventas</h3>
                 <div class="module-grid">
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
+                            <li data-es="<strong>Integración Fluida con ProFinance:</strong> Conecta directamente los folios de venta seleccionados con el módulo ProFinance, automatizando la transferencia de información y minimizando el esfuerzo manual."
+                                data-en="<strong>Seamless Integration with ProFinance:</strong> Directly connects selected sales folios with the ProFinance module, automating information transfer and minimizing manual effort.">
                                 <strong>Integración Fluida con ProFinance:</strong> Conecta directamente los folios de
                                 venta seleccionados con el módulo ProFinance, automatizando la transferencia de
                                 información y minimizando el esfuerzo manual.
                             </li>
-                            <li>
+                            <li data-es="<strong>Precisión en Facturación Automatizada:</strong> Elimina los errores manuales mediante el cálculo automatizado de percepciones y deducciones, garantizando registros financieros exactos y la satisfacción del cliente."
+                                data-en="<strong>Precision in Automated Billing:</strong> Eliminates manual errors through automated calculation of perceptions and deductions, guaranteeing accurate financial records and customer satisfaction.">
                                 <strong>Precisión en Facturación Automatizada:</strong> Elimina los errores manuales
                                 mediante el cálculo automatizado de percepciones y deducciones, garantizando registros
                                 financieros exactos y la satisfacción del cliente.
                             </li>
-                            <li>
+                            <li data-es="<strong>Perspectiva 360° de los Ingresos:</strong> Ofrece una visibilidad inigualable de la productividad y eficiencia comercial al integrarse con todo el ecosistema AGL."
+                                data-en="<strong>360° Perspective on Revenue:</strong> Offers unmatched visibility into commercial productivity and efficiency by integrating with the entire AGL ecosystem.">
                                 <strong>Perspectiva 360° de los Ingresos:</strong> Ofrece una visibilidad inigualable de
                                 la productividad y eficiencia comercial al integrarse con todo el ecosistema AGL.
                             </li>
                         </ul>
                     </div>
-                    <div class="module-icon-card">
-                        <i class="fas fa-hand-holding-usd module-card-icon"></i>
+                    <div class="module-icon-large-container">
+                        <i class="fas fa-hand-holding-usd module-large-icon"></i>
                     </div>
                 </div>
             </div>
 
             <!-- Módulo 3: Tesorería -->
             <div class="module-block fade-in-up delay-2">
-                <h3 class="module-title">Tesorería</h3>
+                <h3 class="module-title" data-es="Tesorería" data-en="Treasury">Tesorería</h3>
                 <div class="module-grid">
-                    <div class="module-icon-card">
-                        <i class="fas fa-piggy-bank module-card-icon"></i>
+                    <div class="module-icon-large-container">
+                        <i class="fas fa-piggy-bank module-large-icon"></i>
                     </div>
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
+                            <li data-es="<strong>Visibilidad de Efectivo en Tiempo Real:</strong> Integra datos de todo el ecosistema AGL para proporcionar una visión precisa del capital disponible y los próximos gastos."
+                                data-en="<strong>Real-Time Cash Visibility:</strong> Integrates data from across the AGL ecosystem to provide an accurate view of available capital and upcoming expenses.">
                                 <strong>Visibilidad de Efectivo en Tiempo Real:</strong> Integra datos de todo el
                                 ecosistema AGL para proporcionar una visión precisa del capital disponible y los
                                 próximos gastos.
                             </li>
-                            <li>
+                            <li data-es="<strong>Asignación Estratégica de Recursos:</strong> Empodera a los líderes para tomar decisiones informadas sobre la distribución de fondos mediante el análisis del rendimiento histórico y los costos operativos."
+                                data-en="<strong>Strategic Resource Allocation:</strong> Empowers leaders to make informed decisions on fund distribution by analyzing historical performance and operational costs.">
                                 <strong>Asignación Estratégica de Recursos:</strong> Empodera a los líderes para tomar
                                 decisiones informadas sobre la distribución de fondos mediante el análisis del
                                 rendimiento histórico y los costos operativos.
                             </li>
-                            <li>
+                            <li data-es="<strong>Mitigación de Riesgos:</strong> Configura alertas inteligentes para parámetros financieros esenciales, permitiendo respuestas rápidas ante las tendencias de liquidez."
+                                data-en="<strong>Risk Mitigation:</strong> Configures smart alerts for essential financial parameters, enabling rapid responses to liquidity trends.">
                                 <strong>Mitigación de Riesgos:</strong> Configura alertas inteligentes para parámetros
                                 financieros esenciales, permitiendo respuestas rápidas ante las tendencias de liquidez.
                             </li>
@@ -206,55 +277,61 @@
                 </div>
             </div>
 
-            <!-- Módulo 4: Impuestos (Alternado) -->
+            <!-- Módulo 4: Impuestos -->
             <div class="module-block fade-in-up delay-1">
-                <h3 class="module-title">Impuestos</h3>
+                <h3 class="module-title" data-es="Impuestos" data-en="Taxes">Impuestos</h3>
                 <div class="module-grid">
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
+                            <li data-es="<strong>Reportes Fiscales Estandarizados:</strong> Elimina tareas redundantes mediante la estandarización de la recolección de datos fiscales, de acuerdo con sus reglas de negocio específicas y las regulaciones locales."
+                                data-en="<strong>Standardized Tax Reporting:</strong> Eliminates redundant tasks by standardizing tax data collection according to your specific business rules and local regulations.">
                                 <strong>Reportes Fiscales Estandarizados:</strong> Elimina tareas redundantes mediante
                                 la estandarización de la recolección de datos fiscales, de acuerdo con sus reglas de
                                 negocio específicas y las regulaciones locales.
                             </li>
-                            <li>
+                            <li data-es="<strong>Pista de Auditoría Integral:</strong> Mantiene un historial detallado de todas las transacciones financieras, proporcionando un registro auditable que garantiza el cumplimiento continuo."
+                                data-en="<strong>Comprehensive Audit Trail:</strong> Maintains a detailed history of all financial transactions, providing an auditable record that ensures ongoing compliance.">
                                 <strong>Pista de Auditoría Integral:</strong> Mantiene un historial detallado de todas
                                 las transacciones financieras, proporcionando un registro auditable que garantiza el
                                 cumplimiento continuo.
                             </li>
-                            <li>
+                            <li data-es="<strong>Precisión en Cálculos Automatizados:</strong> Minimiza errores logísticos y fiscales mediante el cómputo automatizado de percepciones, deducciones y obligaciones tributarias basado en datos operativos integrados."
+                                data-en="<strong>Precision in Automated Calculations:</strong> Minimizes logistical and tax errors through the automated computation of perceptions, deductions, and tax obligations based on integrated operational data.">
                                 <strong>Precisión en Cálculos Automatizados:</strong> Minimiza errores logísticos y
                                 fiscales mediante el cómputo automatizado de percepciones, deducciones y obligaciones
                                 tributarias basado en datos operativos integrados.
                             </li>
                         </ul>
                     </div>
-                    <div class="module-icon-card">
-                        <i class="fas fa-landmark module-card-icon"></i>
+                    <div class="module-icon-large-container">
+                        <i class="fas fa-landmark module-large-icon"></i>
                     </div>
                 </div>
             </div>
 
             <!-- Módulo 5: Gestión de costos -->
             <div class="module-block fade-in-up delay-2">
-                <h3 class="module-title">Gestión de costos</h3>
+                <h3 class="module-title" data-es="Gestión de costos" data-en="Cost Management">Gestión de costos</h3>
                 <div class="module-grid">
-                    <div class="module-icon-card">
-                        <i class="fas fa-calculator module-card-icon"></i>
+                    <div class="module-icon-large-container">
+                        <i class="fas fa-calculator module-large-icon"></i>
                     </div>
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
+                            <li data-es="<strong>Redirección de Costos Precisa:</strong> Permite la asignación estratégica de gastos a proyectos o activos específicos mediante el referenciamiento de las herramientas operativas de AGL, garantizando que los costos se atribuyan con exactitud."
+                                data-en="<strong>Accurate Cost Redirection:</strong> Allows strategic allocation of expenses to specific projects or assets by referencing AGL's operational tools, ensuring costs are attributed accurately.">
                                 <strong>Redirección de Costos Precisa:</strong> Permite la asignación estratégica de
                                 gastos a proyectos o activos específicos mediante el referenciamiento de las
                                 herramientas operativas de AGL, garantizando que los costos se atribuyan con exactitud.
                             </li>
-                            <li>
+                            <li data-es="<strong>Análisis de Rentabilidad en Tiempo Real:</strong> Integra cada sistema para extraer métricas esenciales, visualizándolas en un tablero inteligente que permite a la dirección supervisar el rendimiento financiero desde un solo lugar."
+                                data-en="<strong>Real-Time Profitability Analysis:</strong> Integrates every system to extract essential metrics, visualizing them in a smart dashboard that allows management to oversee financial performance from a single place.">
                                 <strong>Análisis de Rentabilidad en Tiempo Real:</strong> Integra cada sistema para
                                 extraer métricas esenciales, visualizándolas en un tablero inteligente que permite a la
                                 dirección supervisar el rendimiento financiero desde un solo lugar.
                             </li>
-                            <li>
+                            <li data-es="<strong>Exactitud Logística y Fiscal:</strong> Minimiza errores al automatizar el vínculo entre las salidas de almacén y los reportes financieros, proporcionando una pista de auditoría confiable para cada recurso invertido."
+                                data-en="<strong>Logistical and Fiscal Accuracy:</strong> Minimizes errors by automating the link between warehouse outputs and financial reports, providing a reliable audit trail for every resource invested.">
                                 <strong>Exactitud Logística y Fiscal:</strong> Minimiza errores al automatizar el
                                 vínculo entre las salidas de almacén y los reportes financieros, proporcionando una
                                 pista de auditoría confiable para cada recurso invertido.
@@ -268,54 +345,61 @@
     </section>
 
     <!-- Sección de Contacto Simplificada -->
-    <section id="contacto" class="supply-cta">
-        <div class="container fade-in-up">
-            <h2>Contáctanos</h2>
+    <section class="cta form-section" id="contacto">
+        <div class="container cta-container fade-in-up">
+            <h2 class="contact-title" data-es="Contáctanos" data-en="Contact Us">Contáctanos</h2>
             <a href="https://wa.me/526182922284?text=Hola,%20quisiera%20solicitar%20una%20Demo%20de%20ProFinance"
-                target="_blank" class="btn-demo">
+                target="_blank" class="btn btn-primary btn-large" data-es="Solicita una Demo" data-en="Request a Demo">
                 Solicita una Demo
             </a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-container">
-            <div class="footer-top">
-                <div class="footer-logo">
-                    <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img footer-logo-img theme-logo"
-                        id="footer-logo">
-                    <p>Nacidos en la operación directa en campo, impulsando la excelencia.</p>
-                </div>
-                <div class="footer-socials">
-                    <a href="https://www.facebook.com/people/AGL-Business-Intelligence/61572439661784/?locale=es_LA"
-                        target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/aglbi.es/" target="_blank" rel="noopener noreferrer"
-                        class="social-icon-btn" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/aglbi" target="_blank" rel="noopener noreferrer"
-                        class="social-icon-btn" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <button id="back-to-top-footer" class="btn-back-to-top" title="Volver al inicio"
-                    aria-label="Volver arriba">
-                    <span>Volver arriba</span>
-                    <i class="fas fa-arrow-up"></i>
-                </button>
-                <div class="footer-copy">
-                    &copy; 2026 AGL Latinoamérica. Todos los derechos reservados.
-                </div>
+    <!-- Footer Simplificado -->
+    <footer class="simple-footer">
+        <div class="container footer-centered">
+            <div class="footer-copy-centered" data-es="&reg; AGL Latinoamérica 2026. Todos los derechos reservados."
+                data-en="&reg; AGL Latin America 2026. All rights reserved.">
+                &reg; AGL Latinoamérica 2026. Todos los derechos reservados.
             </div>
         </div>
     </footer>
 
+<<<<<<< HEAD
     <script src="script__pf.js"></script>
+=======
+    <!-- Script de Traducción -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const langBtns = [document.getElementById('lang-toggle-desktop')];
+            let currentLang = 'es';
+
+            langBtns.forEach(btn => {
+                if (btn) {
+                    btn.addEventListener('click', () => {
+                        currentLang = currentLang === 'es' ? 'en' : 'es';
+
+                        // Actualizar estilo visual del Switch
+                        document.querySelectorAll('.lang-es').forEach(el => {
+                            el.style.fontWeight = currentLang === 'es' ? '700' : '400';
+                            el.style.opacity = currentLang === 'es' ? '1' : '0.5';
+                        });
+                        document.querySelectorAll('.lang-en').forEach(el => {
+                            el.style.fontWeight = currentLang === 'en' ? '700' : '400';
+                            el.style.opacity = currentLang === 'en' ? '1' : '0.5';
+                        });
+
+                        // Traducir todos los elementos de texto
+                        document.querySelectorAll('[data-en]').forEach(el => {
+                            el.innerHTML = el.getAttribute(`data-${currentLang}`);
+                        });
+                    });
+                }
+            });
+        });
+    </script>
+    <script src="script_risk.js"></script>
+>>>>>>> cb8d7f00d2ba8fbe2d644d2e543bb6665698e060
 </body>
 
 </html>

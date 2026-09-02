@@ -31,30 +31,53 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
+<<<<<<< HEAD
         <div class="container nav-container nav-container-centered">
             <a href="../../../index.html#ecosistema" class="logo" title="Volver al inicio">
+=======
+        <div class="container nav-container"
+            style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="../../../index.html" class="logo">
+>>>>>>> cb8d7f00d2ba8fbe2d644d2e543bb6665698e060
                 <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="nav-logo">
             </a>
+            <div class="nav-actions">
+                <!-- BOTÓN IDIOMA DESKTOP (Tipo Switch) -->
+                <button class="theme-toggle-btn" id="lang-toggle-desktop" aria-label="Cambiar idioma"
+                    title="Cambiar idioma"
+                    style="width: auto; padding: 5px 12px; border-radius: 20px; font-family: 'Inter', sans-serif; font-size: 0.9rem; background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; cursor: pointer;">
+                    <span class="lang-es" style="font-weight: 700; transition: 0.3s;">ES</span>
+                    <span style="margin: 0 3px; font-weight: 300;">/</span>
+                    <span class="lang-en" style="font-weight: 400; opacity: 0.5; transition: 0.3s;">EN</span>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section: ¿Qué es MasterMend? -->
     <section class="hero detail-hero">
         <div class="container">
-            <a href="../../../index.html#ecosistema" class="back-link"><i class="fas fa-arrow-left"></i> Volver al
+            <a href="../../../index.html#ecosistema" class="back-link"
+                data-es="<i class='fas fa-arrow-left'></i> Volver al Ecosistema"
+                data-en="<i class='fas fa-arrow-left'></i> Back to Ecosystem"><i class="fas fa-arrow-left"></i> Volver
+                al
                 Ecosistema</a>
 
             <div class="section-title-large fade-in-up">
-                <h1>¿Qué es MasterMend?</h1>
+                <h1 data-es="¿Qué es MasterMend?" data-en="What is MasterMend?">¿Qué es MasterMend?</h1>
             </div>
 
             <div class="mining-intro-grid fade-in-up delay-1">
                 <div class="mining-intro-text">
-                    <p class="intro-lead">
+                    <p class="intro-lead"
+                        data-es="<strong class='highlight-green-text'>AGL MasterMend</strong> es una solución tecnológica integral diseñada para optimizar la gestión del mantenimiento."
+                        data-en="<strong class='highlight-green-text'>AGL MasterMend</strong> is a comprehensive technological solution designed to optimize maintenance management.">
                         <strong class="highlight-green-text">AGL MasterMend</strong> es una solución tecnológica
                         integral diseñada para optimizar la gestión del mantenimiento.
                     </p>
-                    <p class="intro-sub">
+                    <p class="intro-sub"
+                        data-es="Centraliza y automatiza el ciclo completo —desde la planificación y programación hasta la ejecución del servicio— en una sola plataforma."
+                        data-en="It centralizes and automates the complete cycle—from planning and scheduling to service execution—in a single platform.">
                         Centraliza y automatiza el ciclo completo —desde la planificación y programación hasta la
                         ejecución del servicio— en una sola plataforma.
                     </p>
@@ -73,22 +96,36 @@
                             <div class="screen-body">
                                 <div class="app-sidebar">
                                     <div class="app-logo-small"><i class="fas fa-mountain"></i> AGL</div>
-                                    <div class="app-nav-item active"><i class="fas fa-th-large"></i> Módulos</div>
+                                    <div class="app-nav-item active" data-es="<i class='fas fa-th-large'></i> Módulos"
+                                        data-en="<i class='fas fa-th-large'></i> Modules"><i
+                                            class="fas fa-th-large"></i> Módulos</div>
                                     <div class="app-nav-item"><i class="fas fa-chart-bar"></i> KPIs</div>
                                     <div class="app-nav-item"><i class="fas fa-cog"></i> Config</div>
                                 </div>
                                 <div class="app-content">
-                                    <div class="app-section-title">Módulo</div>
+                                    <div class="app-section-title" data-es="Módulo" data-en="Module">Módulo</div>
                                     <div class="app-cards-grid">
-                                        <div class="app-card"><i class="fas fa-clipboard-list"></i> Planeación</div>
-                                        <div class="app-card"><i class="fas fa-calendar-alt"></i> Programación</div>
-                                        <div class="app-card"><i class="fas fa-tools"></i> Mantenimiento</div>
-                                        <div class="app-card"><i class="fas fa-sliders-h"></i> Parámetros</div>
+                                        <div class="app-card" data-es="<i class='fas fa-clipboard-list'></i> Planeación"
+                                            data-en="<i class='fas fa-clipboard-list'></i> Planning"><i
+                                                class="fas fa-clipboard-list"></i> Planeación</div>
+                                        <div class="app-card" data-es="<i class='fas fa-calendar-alt'></i> Programación"
+                                            data-en="<i class='fas fa-calendar-alt'></i> Scheduling"><i
+                                                class="fas fa-calendar-alt"></i> Programación</div>
+                                        <div class="app-card" data-es="<i class='fas fa-tools'></i> Mantenimiento"
+                                            data-en="<i class='fas fa-tools'></i> Maintenance"><i
+                                                class="fas fa-tools"></i> Mantenimiento</div>
+                                        <div class="app-card" data-es="<i class='fas fa-sliders-h'></i> Parámetros"
+                                            data-en="<i class='fas fa-sliders-h'></i> Parameters"><i
+                                                class="fas fa-sliders-h"></i> Parámetros</div>
                                     </div>
-                                    <div class="app-section-title">Catálogo</div>
+                                    <div class="app-section-title" data-es="Catálogo" data-en="Catalog">Catálogo</div>
                                     <div class="app-cards-grid">
-                                        <div class="app-card small"><i class="fas fa-cogs"></i> Equipos</div>
-                                        <div class="app-card small"><i class="fas fa-boxes"></i> Insumos</div>
+                                        <div class="app-card small" data-es="<i class='fas fa-cogs'></i> Equipos"
+                                            data-en="<i class='fas fa-cogs'></i> Equipment"><i class="fas fa-cogs"></i>
+                                            Equipos</div>
+                                        <div class="app-card small" data-es="<i class='fas fa-boxes'></i> Insumos"
+                                            data-en="<i class='fas fa-boxes'></i> Supplies"><i class="fas fa-boxes"></i>
+                                            Insumos</div>
                                     </div>
                                 </div>
                             </div>
@@ -108,28 +145,33 @@
     <section class="modules-section">
         <div class="container">
             <div class="section-header fade-in-up">
-                <h2 class="modules-main-title">Módulos del sistema</h2>
+                <h2 class="modules-main-title" data-es="Módulos del sistema" data-en="System Modules">Módulos del
+                    sistema</h2>
             </div>
 
             <!-- Módulo 1: Planeación de mantenimiento -->
             <div class="module-block fade-in-up">
-                <h3 class="module-title">Planeación de mantenimiento</h3>
+                <h3 class="module-title" data-es="Planeación de mantenimiento" data-en="Maintenance Planning">Planeación
+                    de mantenimiento</h3>
                 <div class="module-grid">
                     <div class="module-icon-large-container">
                         <i class="fas fa-clipboard-check module-large-icon"></i>
                     </div>
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
+                            <li data-es="<strong>Conocimiento centralizado:</strong> Crea una base de conocimientos sólida y accesible para gestionar activos y organizar todos los recursos de mantenimiento."
+                                data-en="<strong>Centralized knowledge:</strong> Creates a solid and accessible knowledge base to manage assets and organize all maintenance resources.">
                                 <strong>Conocimiento centralizado:</strong> Crea una base de conocimientos sólida y
                                 accesible para gestionar activos y organizar todos los recursos de mantenimiento.
                             </li>
-                            <li>
+                            <li data-es="<strong>Anticipación de fallas:</strong> Detecta automáticamente las necesidades de planificación, permitiendo a los equipos anticipar fallas y optimizar la disponibilidad operativa."
+                                data-en="<strong>Failure Anticipation:</strong> Automatically detects planning needs, allowing teams to anticipate failures and optimize operational availability.">
                                 <strong>Anticipación de fallas:</strong> Detecta automáticamente las necesidades de
                                 planificación, permitiendo a los equipos anticipar fallas y optimizar la disponibilidad
                                 operativa.
                             </li>
-                            <li>
+                            <li data-es="<strong>Longevidad de los activos:</strong> Diseña planes preventivos que reducen los costos por averías inesperadas y extienden la vida útil de la maquinaria."
+                                data-en="<strong>Asset longevity:</strong> Designs preventive plans that reduce costs from unexpected breakdowns and extend the lifespan of machinery.">
                                 <strong>Longevidad de los activos:</strong> Diseña planes preventivos que reducen los
                                 costos por averías inesperadas y extienden la vida útil de la maquinaria.
                             </li>
@@ -140,19 +182,23 @@
 
             <!-- Módulo 2: Programación de mantenimiento -->
             <div class="module-block fade-in-up delay-1">
-                <h3 class="module-title">Programación de mantenimiento</h3>
+                <h3 class="module-title" data-es="Programación de mantenimiento" data-en="Maintenance Scheduling">
+                    Programación de mantenimiento</h3>
                 <div class="module-grid">
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
+                            <li data-es="<strong>Control de tiempos:</strong> Permite el ajuste y control de los tiempos de las órdenes de trabajo preventivo para minimizar el tiempo de inactividad no planificado."
+                                data-en="<strong>Time Control:</strong> Allows the adjustment and control of preventive work order times to minimize unplanned downtime.">
                                 <strong>Control de tiempos:</strong> Permite el ajuste y control de los tiempos de las
                                 órdenes de trabajo preventivo para minimizar el tiempo de inactividad no planificado.
                             </li>
-                            <li>
+                            <li data-es="<strong>Seguimiento Operativo:</strong> Documenta con precisión el mantenimiento correctivo planificado para rastrear las reparaciones y su impacto en las operaciones."
+                                data-en="<strong>Operational Tracking:</strong> Accurately documents planned corrective maintenance to track repairs and their impact on operations.">
                                 <strong>Seguimiento Operativo:</strong> Documenta con precisión el mantenimiento
                                 correctivo planificado para rastrear las reparaciones y su impacto en las operaciones.
                             </li>
-                            <li>
+                            <li data-es="<strong>Ejecución coordinada:</strong> Proporciona programas dinámicos para coordinar de manera óptima los recursos, equipos y tareas para una ejecución sin contratiempos."
+                                data-en="<strong>Coordinated execution:</strong> Provides dynamic schedules to optimally coordinate resources, equipment, and tasks for seamless execution.">
                                 <strong>Ejecución coordinada:</strong> Proporciona programas dinámicos para coordinar de
                                 manera óptima los recursos, equipos y tareas para una ejecución sin contratiempos.
                             </li>
@@ -166,23 +212,27 @@
 
             <!-- Módulo 3: Ejecución de mantenimiento -->
             <div class="module-block fade-in-up delay-2">
-                <h3 class="module-title">Ejecución de mantenimiento</h3>
+                <h3 class="module-title" data-es="Ejecución de mantenimiento" data-en="Maintenance Execution">Ejecución
+                    de mantenimiento</h3>
                 <div class="module-grid">
                     <div class="module-icon-large-container">
                         <i class="fas fa-tools module-large-icon"></i>
                     </div>
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
+                            <li data-es="<strong>Eficiencia Operativa:</strong> El sistema agiliza la organización y ejecución de las tareas de los equipos mediante un proceso claro de asignación y seguimiento."
+                                data-en="<strong>Operational Efficiency:</strong> The system streamlines the organization and execution of team tasks through a clear assignment and tracking process.">
                                 <strong>Eficiencia Operativa:</strong> El sistema agiliza la organización y ejecución de
                                 las tareas de los equipos mediante un proceso claro de asignación y seguimiento.
                             </li>
-                            <li>
+                            <li data-es="<strong>Ejecución Estratégica:</strong> Asegura el estricto cumplimiento de los cronogramas de mantenimiento preventivo y correctivo, optimizando la disponibilidad de los activos."
+                                data-en="<strong>Strategic Execution:</strong> Ensures strict compliance with preventive and corrective maintenance schedules, optimizing asset availability.">
                                 <strong>Ejecución Estratégica:</strong> Asegura el estricto cumplimiento de los
                                 cronogramas de mantenimiento preventivo y correctivo, optimizando la disponibilidad de
                                 los activos.
                             </li>
-                            <li>
+                            <li data-es="<strong>Integración Financiera:</strong> Al conectarse con AGL Supply Management, el sistema genera Órdenes de Trabajo (OT) con costeo completo."
+                                data-en="<strong>Financial Integration:</strong> By connecting with AGL Supply Management, the system generates fully costed Work Orders (WO).">
                                 <strong>Integración Financiera:</strong> Al conectarse con AGL Supply Management, el
                                 sistema genera Órdenes de Trabajo (OT) con costeo completo.
                             </li>
@@ -193,21 +243,25 @@
 
             <!-- Módulo 4: Control de parámetros -->
             <div class="module-block fade-in-up delay-1">
-                <h3 class="module-title">Control de parámetros</h3>
+                <h3 class="module-title" data-es="Control de parámetros" data-en="Parameter Control">Control de
+                    parámetros</h3>
                 <div class="module-grid">
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
+                            <li data-es="<strong>Métricas de Rendimiento:</strong> Monitorea automáticamente lecturas críticas, como horómetros y odómetros, para generar reportes diarios sobre la disponibilidad y utilización de los equipos."
+                                data-en="<strong>Performance Metrics:</strong> Automatically monitors critical readings, such as hour meters and odometers, to generate daily reports on equipment availability and utilization.">
                                 <strong>Métricas de Rendimiento:</strong> Monitorea automáticamente lecturas críticas,
                                 como horómetros y odómetros, para generar reportes diarios sobre la disponibilidad y
                                 utilización de los equipos.
                             </li>
-                            <li>
+                            <li data-es="<strong>Análisis de Indicadores de Mantenimiento:</strong> Proporciona el historial técnico y los datos necesarios para rastrear patrones esenciales de rendimiento, como el MTBF y el MTTR, permitiendo optimizar las frecuencias de mantenimiento."
+                                data-en="<strong>Maintenance Indicator Analysis:</strong> Provides technical history and data needed to track essential performance patterns like MTBF and MTTR, allowing optimization of maintenance frequencies.">
                                 <strong>Análisis de Indicadores de Mantenimiento:</strong> Proporciona el historial
                                 técnico y los datos necesarios para rastrear patrones esenciales de rendimiento, como el
                                 MTBF y el MTTR, permitiendo optimizar las frecuencias de mantenimiento.
                             </li>
-                            <li>
+                            <li data-es="<strong>Plan de acción sobre corrección de parámetros en equipos:</strong> Rastrea las medidas tomadas directamente sobre los parámetros críticos de la maquinaria para mantener la operatividad y el alineamiento con los objetivos de disponibilidad."
+                                data-en="<strong>Action plan for equipment parameter correction:</strong> Tracks measures taken directly on critical machinery parameters to maintain operability and alignment with availability objectives.">
                                 <strong>Plan de acción sobre corrección de parámetros en equipos:</strong> Rastrea las
                                 medidas tomadas directamente sobre los parámetros críticos de la maquinaria para
                                 mantener la operatividad y el alineamiento con los objetivos de disponibilidad.
@@ -226,9 +280,9 @@
     <!-- Sección de Contacto -->
     <section class="cta form-section" id="contacto">
         <div class="container cta-container fade-in-up">
-            <h2 class="contact-title">Contáctanos</h2>
+            <h2 class="contact-title" data-es="Contáctanos" data-en="Contact Us">Contáctanos</h2>
             <a href="https://wa.me/526182922284?text=Hola,%20quisiera%20agendar%20una%20demostración%20de%20MasterMend"
-                target="_blank" class="btn btn-primary btn-large">
+                target="_blank" class="btn btn-primary btn-large" data-es="Solicita una Demo" data-en="Request a Demo">
                 Solicita una Demo
             </a>
         </div>
@@ -237,12 +291,43 @@
     <!-- Footer Simplificado -->
     <footer class="simple-footer">
         <div class="container footer-centered">
-            <div class="footer-copy-centered">
+            <div class="footer-copy-centered" data-es="&reg; AGL Latinoamérica 2026. Todos los derechos reservados."
+                data-en="&reg; AGL Latin America 2026. All rights reserved.">
                 &reg; AGL Latinoamérica 2026. Todos los derechos reservados.
             </div>
         </div>
     </footer>
 
+    <!-- Script de Traducción -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const langBtns = [document.getElementById('lang-toggle-desktop')];
+            let currentLang = 'es';
+
+            langBtns.forEach(btn => {
+                if (btn) {
+                    btn.addEventListener('click', () => {
+                        currentLang = currentLang === 'es' ? 'en' : 'es';
+
+                        // Actualizar estilo visual del Switch
+                        document.querySelectorAll('.lang-es').forEach(el => {
+                            el.style.fontWeight = currentLang === 'es' ? '700' : '400';
+                            el.style.opacity = currentLang === 'es' ? '1' : '0.5';
+                        });
+                        document.querySelectorAll('.lang-en').forEach(el => {
+                            el.style.fontWeight = currentLang === 'en' ? '700' : '400';
+                            el.style.opacity = currentLang === 'en' ? '1' : '0.5';
+                        });
+
+                        // Traducir todos los elementos de texto
+                        document.querySelectorAll('[data-en]').forEach(el => {
+                            el.innerHTML = el.getAttribute(`data-${currentLang}`);
+                        });
+                    });
+                }
+            });
+        });
+    </script>
     <script src="script_master.js"></script>
 </body>
 
