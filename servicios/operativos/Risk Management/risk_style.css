@@ -251,6 +251,10 @@ ul {
     align-items: center;
 }
 
+.nav-container-centered {
+    justify-content: center !important;
+}
+
 .logo {
     display: flex;
     align-items: center;

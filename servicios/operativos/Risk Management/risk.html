@@ -7,6 +7,14 @@
     <title>Risk Management | AGL Latinoamérica</title>
     <meta name="description"
         content="AGL Risk Management proporciona una visión holística del riesgo, permitiendo a las organizaciones evaluar amenazas a nivel operativo y comercial.">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('agl-theme');
+            if (savedTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../../../Logos/favicon.png">
     <!-- Google Fonts -->
@@ -23,13 +31,12 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="container nav-container">
-            <a href="../../../index.html" class="logo">
+        <div class="container nav-container nav-container-centered">
+            <a href="../../../index.html#ecosistema" class="logo" title="Volver al inicio">
                 <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="nav-logo">
             </a>
         </div>
     </nav>
-
     <!-- Hero Section: ¿Qué es Risk Management? -->
     <section class="hero detail-hero">
         <div class="container">

@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WorkForce | AGL Latinoamérica</title>
     <meta name="description" content="Gestión de personal optimizada. De la solicitud a la nómina con AGL WorkForce.">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('agl-theme');
+            if (savedTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
     <!-- Google Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,52 +28,12 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="container nav-container">
-            <a href="../../../index.html" class="logo">
+        <div class="container nav-container nav-container-centered">
+            <a href="../../../index.html#ecosistema" class="logo" title="Volver al inicio">
                 <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="nav-logo">
             </a>
-            <ul class="nav-links">
-                <li><a href="../../../index.html#about">¿Qué hacemos?</a></li>
-                <li><a href="../../../index.html#diagnostico">Diagnóstico</a></li>
-                <li><a href="../../../index.html#industrias">Industrias</a></li>
-                <li><a href="../../../index.html#ecosistema">Ecosistema</a></li>
-                <li><a href="../../../index.html#integracion">Integración</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Cambiar tema">
-                    <i class="fas fa-sun theme-icon theme-icon-sun"></i>
-                    <i class="fas fa-moon theme-icon theme-icon-moon"></i>
-                </button>
-                <a href="#contacto" class="btn btn-primary nav-btn">Contacto</a>
-                <button class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
-            </div>
         </div>
     </nav>
-
-    <!-- Menú Móvil -->
-    <div class="mobile-nav" id="mobile-nav">
-        <div class="mobile-nav-header">
-            <a href="../../../index.html" class="logo">
-                <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="mobile-nav-logo">
-            </a>
-            <button class="mobile-close-btn" id="mobile-close-btn"><i class="fas fa-times"></i></button>
-        </div>
-        <ul class="mobile-nav-links">
-            <li><a href="../../../index.html#about" class="mobile-link">¿Qué hacemos?</a></li>
-            <li><a href="../../../index.html#ecosistema" class="mobile-link">Ecosistema</a></li>
-            <li><a href="../../../index.html#integracion" class="mobile-link">Integración</a></li>
-        </ul>
-        <div class="mobile-nav-footer">
-            <a href="#contacto" class="btn btn-primary mobile-link">Contacto</a>
-            <button class="mobile-theme-toggle" id="mobile-theme-toggle">
-                <span class="theme-toggle-btn-inner">
-                    <i class="fas fa-sun theme-icon theme-icon-sun"></i>
-                    <i class="fas fa-moon theme-icon theme-icon-moon"></i>
-                </span>
-            </button>
-        </div>
-    </div>
 
     <!-- Hero Section: ¿Qué es WorkForce? -->
     <section class="hero detail-hero">
@@ -339,83 +307,7 @@
         </div>
     </footer>
 
-    <script src="script_wf.js"></script>
-    <!-- Script Integrado a prueba de fallos -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 1. FUNCIONAMIENTO DEL MENÚ MÓVIL
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileCloseBtn = document.getElementById('mobile-close-btn');
-            const mobileNav = document.getElementById('mobile-nav');
-            const mobileLinks = document.querySelectorAll('.mobile-link');
-
-            if (mobileMenuBtn && mobileNav) {
-                mobileMenuBtn.addEventListener('click', () => {
-                    mobileNav.classList.add('active');
-                    mobileNav.style.display = 'flex';
-                    document.body.style.overflow = 'hidden'; // Evita que el fondo haga scroll
-                });
-            }
-
-            if (mobileCloseBtn && mobileNav) {
-                mobileCloseBtn.addEventListener('click', () => {
-                    mobileNav.classList.remove('active');
-                    document.body.style.overflow = '';
-                });
-            }
-
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (mobileNav) mobileNav.classList.remove('active');
-                    document.body.style.overflow = '';
-                });
-            });
-
-            // 2. CAMBIO DE TEMA (CLARO/OSCURO)
-            const htmlEl = document.documentElement;
-            const themeToggle = document.getElementById('theme-toggle');
-            const mobileToggle = document.getElementById('mobile-theme-toggle');
-            const themeLogos = document.querySelectorAll('.theme-logo');
-
-            const DARK_LOGO = '../../../Logos/logo blanco.png';
-            const LIGHT_LOGO = '../../../Logos/logo negro.png';
-
-            function applyTheme(theme) {
-                if (theme === 'light') {
-                    htmlEl.setAttribute('data-theme', 'light');
-                    themeLogos.forEach(img => img.src = LIGHT_LOGO);
-                } else {
-                    htmlEl.removeAttribute('data-theme');
-                    themeLogos.forEach(img => img.src = DARK_LOGO);
-                }
-                localStorage.setItem('agl-theme', theme);
-            }
-
-            const savedTheme = localStorage.getItem('agl-theme') || 'dark';
-            applyTheme(savedTheme);
-
-            const toggleTheme = () => applyTheme(htmlEl.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
-            if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
-            if (mobileToggle) mobileToggle.addEventListener('click', toggleTheme);
-
-            // 3. EFECTO SCROLL EN NAVBAR
-            const navbar = document.querySelector('.navbar');
-            window.addEventListener('scroll', () => {
-                if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 50);
-            });
-
-            // 4. BOTÓN VOLVER ARRIBA
-            const footerBackToTop = document.getElementById('back-to-top-footer');
-            if (footerBackToTop) {
-                footerBackToTop.addEventListener('click', () => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            }
-        });
-    </script>
-</body>
-
-</html>
+    <script src="script__wf.js"></script>
 </body>
 
 </html>

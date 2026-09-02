@@ -124,4 +124,37 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // =========================================================
+    // RETURN TO ECOSYSTEM ANIMATION (Logo travels Center -> Left)
+    // =========================================================
+    const returnLinks = document.querySelectorAll('.back-link, .navbar .logo');
+    returnLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (!href || href.startsWith('#')) return;
+            e.preventDefault();
+
+            const navContainer = document.querySelector('.nav-container');
+            const logo = document.querySelector('.navbar .logo');
+
+            if (navContainer && logo) {
+                const containerRect = navContainer.getBoundingClientRect();
+                const logoRect = logo.getBoundingClientRect();
+                const deltaX = containerRect.left - logoRect.left;
+
+                logo.style.transition = 'transform 0.5s cubic-bezier(0.34, 1.25, 0.64, 1)';
+                logo.style.transform = `translateX(${deltaX}px)`;
+            }
+
+            document.body.style.transition = 'opacity 0.45s ease';
+            document.body.style.opacity = '0.7';
+
+            sessionStorage.setItem('agl_nav_anim', 'returning_home');
+
+            setTimeout(() => {
+                window.location.href = href;
+            }, 450);
+        });
+    });
 });

@@ -25,72 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const DARK_LOGO = '../../../Logos/logo blanco.png';
     const LIGHT_LOGO = '../../../Logos/logo negro.png';
 
-    function document.addEventListener('DOMContentLoaded', () => {
-        try {
-            // 1. TEMA CLARO/OSCURO
-            const htmlEl = document.documentElement;
-            const themeToggle = document.getElementById('theme-toggle');
-            const mobileToggle = document.getElementById('mobile-theme-toggle');
-            const themeLogos = document.querySelectorAll('.theme-logo');
-
-            const DARK_LOGO = '../../../Logos/logo blanco.png';
-            const LIGHT_LOGO = '../../../Logos/logo negro.png';
-
-            function applyTheme(theme) {
-                if (theme === 'light') {
-                    htmlEl.setAttribute('data-theme', 'light');
-                    themeLogos.forEach(img => img.src = LIGHT_LOGO);
-                } else {
-                    htmlEl.removeAttribute('data-theme');
-                    themeLogos.forEach(img => img.src = DARK_LOGO);
-                }
-                localStorage.setItem('agl-theme', theme);
-            }
-
-            const savedTheme = localStorage.getItem('agl-theme') || 'dark';
-            applyTheme(savedTheme);
-
-            if (themeToggle) themeToggle.addEventListener('click', () => applyTheme(htmlEl.getAttribute('data-theme') === 'light' ? 'dark' : 'light'));
-            if (mobileToggle) mobileToggle.addEventListener('click', () => applyTheme(htmlEl.getAttribute('data-theme') === 'light' ? 'dark' : 'light'));
-
-            // 2. EFECTO SCROLL NAVBAR
-            const navbar = document.querySelector('.navbar');
-            window.addEventListener('scroll', () => {
-                if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 50);
-            });
-
-            // 3. MENÚ MÓVIL (Corrección principal)
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileCloseBtn = document.getElementById('mobile-close-btn');
-            const mobileNav = document.getElementById('mobile-nav');
-            const mobileLinks = document.querySelectorAll('.mobile-link');
-
-            if (mobileMenuBtn && mobileNav) {
-                mobileMenuBtn.addEventListener('click', () => {
-                    mobileNav.classList.add('active');
-                    mobileNav.style.display = 'flex';
-                    document.body.style.overflow = 'hidden'; // Bloquea el scroll de fondo
-                });
-            }
-
-            if (mobileCloseBtn && mobileNav) {
-                mobileCloseBtn.addEventListener('click', () => {
-                    mobileNav.classList.remove('active');
-                    document.body.style.overflow = '';
-                });
-            }
-
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (mobileNav) mobileNav.classList.remove('active');
-                    document.body.style.overflow = '';
-                });
-            });
-
-        } catch (error) {
-            console.error("Error detectado en el script:", error);
-        }
-    }); (theme) {
+    function applyTheme(theme) {
         if (theme === 'light') {
             htmlEl.setAttribute('data-theme', 'light');
             themeLogos.forEach(img => img.src = LIGHT_LOGO);
@@ -189,4 +124,37 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // =========================================================
+    // RETURN TO ECOSYSTEM ANIMATION (Logo travels Center -> Left)
+    // =========================================================
+    const returnLinks = document.querySelectorAll('.back-link, .navbar .logo');
+    returnLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (!href || href.startsWith('#')) return;
+            e.preventDefault();
+
+            const navContainer = document.querySelector('.nav-container');
+            const logo = document.querySelector('.navbar .logo');
+
+            if (navContainer && logo) {
+                const containerRect = navContainer.getBoundingClientRect();
+                const logoRect = logo.getBoundingClientRect();
+                const deltaX = containerRect.left - logoRect.left;
+
+                logo.style.transition = 'transform 0.5s cubic-bezier(0.34, 1.25, 0.64, 1)';
+                logo.style.transform = `translateX(${deltaX}px)`;
+            }
+
+            document.body.style.transition = 'opacity 0.45s ease';
+            document.body.style.opacity = '0.7';
+
+            sessionStorage.setItem('agl_nav_anim', 'returning_home');
+
+            setTimeout(() => {
+                window.location.href = href;
+            }, 450);
+        });
+    });
 });

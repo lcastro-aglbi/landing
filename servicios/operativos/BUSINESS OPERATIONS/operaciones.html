@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mining Operations | AGL Latinoamérica</title>
     <meta name="description"
-        content="AGL Mining Operations es una solución tecnológica integrada diseñada para estandarizar eficazmente todos los procesos operativos y estratégicos dentro de una empresa minera.">
+        content="AGL Mining Operations es una solución tecnológica integral diseñada para estandarizar procesos operativos y estratégicos dentro de una empresa minera.">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('agl-theme');
+            if (savedTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../../../Logos/favicon.png">
     <!-- Google Fonts -->
@@ -23,8 +31,8 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="container nav-container">
-            <a href="../../../index.html" class="logo">
+        <div class="container nav-container nav-container-centered">
+            <a href="../../../index.html#ecosistema" class="logo" title="Volver al inicio">
                 <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="nav-logo">
             </a>
         </div>

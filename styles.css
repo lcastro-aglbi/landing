@@ -219,6 +219,7 @@ ul {
     display: flex;
     align-items: center;
     gap: 1rem;
+    will-change: transform, opacity;
 }
 
 .theme-toggle-btn {
@@ -348,6 +349,10 @@ ul {
     align-items: center;
 }
 
+.nav-container-centered {
+    justify-content: center !important;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -355,6 +360,7 @@ ul {
     font-weight: 800;
     font-family: 'Outfit', sans-serif;
     letter-spacing: -0.5px;
+    will-change: transform;
 }
 
 .logo-img {
@@ -369,6 +375,7 @@ ul {
 .nav-links {
     display: flex;
     gap: 2rem;
+    will-change: transform, opacity;
 }
 
 .nav-links a {

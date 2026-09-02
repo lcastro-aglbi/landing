@@ -306,4 +306,146 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+
+    // =========================================================
+    // DETAIL PAGE TRANSITION ANIMATION (Go to Detail)
+    // =========================================================
+    const moreInfoBtns = document.querySelectorAll('.card-btn, a[href*="servicios/"]');
+    moreInfoBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const href = btn.getAttribute('href');
+            if (!href || href.startsWith('#')) return;
+            e.preventDefault();
+
+            const navContainer = document.querySelector('.nav-container');
+            const logo = document.querySelector('.navbar .logo');
+            const navActions = document.querySelector('.nav-actions');
+            const navLinks = document.querySelector('.nav-links');
+
+            // 1. Logo viaja al centro horizontal
+            if (navContainer && logo) {
+                const containerRect = navContainer.getBoundingClientRect();
+                const logoRect = logo.getBoundingClientRect();
+                const currentCenter = logoRect.left + logoRect.width / 2;
+                const targetCenter = containerRect.left + containerRect.width / 2;
+                const deltaX = targetCenter - currentCenter;
+
+                logo.style.transition = 'transform 0.5s cubic-bezier(0.34, 1.25, 0.64, 1)';
+                logo.style.transform = `translateX(${deltaX}px)`;
+            }
+
+            // 2. Acciones (Tema y Contacto) se desplazan a la derecha y se ocultan
+            if (navActions) {
+                navActions.style.transition = 'transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease';
+                navActions.style.transform = 'translateX(120%)';
+                navActions.style.opacity = '0';
+                navActions.style.pointerEvents = 'none';
+            }
+
+            // 3. Menú de navegación central se desvanece
+            if (navLinks) {
+                navLinks.style.transition = 'transform 0.35s ease, opacity 0.3s ease';
+                navLinks.style.transform = 'scale(0.92) translateY(-8px)';
+                navLinks.style.opacity = '0';
+                navLinks.style.pointerEvents = 'none';
+            }
+
+            document.body.style.transition = 'opacity 0.45s ease';
+            document.body.style.opacity = '0.7';
+
+            sessionStorage.setItem('agl_nav_anim', 'to_detail');
+
+            setTimeout(() => {
+                window.location.href = href;
+            }, 450);
+        });
+    });
+
+    // =========================================================
+    // RETURN ANIMATION ON HOME (Logo: Center -> Left, Nav & Actions: Fade/In)
+    // =========================================================
+    if (sessionStorage.getItem('agl_nav_anim') === 'returning_home') {
+        sessionStorage.removeItem('agl_nav_anim');
+
+        const navContainer = document.querySelector('.nav-container');
+        const logo = document.querySelector('.navbar .logo');
+        const navActions = document.querySelector('.nav-actions');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (navContainer && logo) {
+            const containerRect = navContainer.getBoundingClientRect();
+            const logoRect = logo.getBoundingClientRect();
+            const currentCenter = logoRect.left + logoRect.width / 2;
+            const targetCenter = containerRect.left + containerRect.width / 2;
+            const deltaX = targetCenter - currentCenter;
+
+            // 1. Estado inicial previo a la animación (Logo al centro, botones y enlaces ocultos)
+            logo.style.transition = 'none';
+            logo.style.transform = `translateX(${deltaX}px)`;
+
+            if (navActions) {
+                navActions.style.transition = 'none';
+                navActions.style.transform = 'translateX(60px)';
+                navActions.style.opacity = '0';
+            }
+
+            if (navLinks) {
+                navLinks.style.transition = 'none';
+                navLinks.style.transform = 'translateY(-10px) scale(0.95)';
+                navLinks.style.opacity = '0';
+            }
+
+            // Forzar reflow para asegurar que el navegador aplique los estilos de inicio
+            logo.getBoundingClientRect();
+
+            // 2. Transición coordinada en paralelo
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    // Logo regresa a la izquierda
+                    logo.style.transition = 'transform 0.6s cubic-bezier(0.34, 1.25, 0.64, 1)';
+                    logo.style.transform = 'translateX(0)';
+
+                    // Acciones (Tema y Contacto) entran desde la derecha de forma fluida
+                    if (navActions) {
+                        navActions.style.transition = 'transform 0.55s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.45s ease';
+                        navActions.style.transform = 'translateX(0)';
+                        navActions.style.opacity = '1';
+                    }
+
+                    // Enlaces del menú aparecen suavemente
+                    if (navLinks) {
+                        navLinks.style.transition = 'transform 0.5s ease 0.1s, opacity 0.45s ease 0.1s';
+                        navLinks.style.transform = 'none';
+                        navLinks.style.opacity = '1';
+                    }
+
+                    // Limpieza de estilos inline al terminar
+                    setTimeout(() => {
+                        logo.style.transition = '';
+                        logo.style.transform = '';
+                        if (navActions) {
+                            navActions.style.transition = '';
+                            navActions.style.transform = '';
+                            navActions.style.opacity = '';
+                        }
+                        if (navLinks) {
+                            navLinks.style.transition = '';
+                            navLinks.style.transform = '';
+                            navLinks.style.opacity = '';
+                        }
+                    }, 650);
+                }, 40);
+            });
+        }
+    }
+
+    window.addEventListener('pageshow', () => {
+        const logo = document.querySelector('.navbar .logo');
+        const navActions = document.querySelector('.nav-actions');
+        const navLinks = document.querySelector('.nav-links');
+        if (logo) { logo.style.transform = ''; logo.style.transition = ''; }
+        if (navActions) { navActions.style.transform = ''; navActions.style.opacity = ''; navActions.style.transition = ''; navActions.style.pointerEvents = ''; }
+        if (navLinks) { navLinks.style.transform = ''; navLinks.style.opacity = ''; navLinks.style.transition = ''; navLinks.style.pointerEvents = ''; }
+        document.body.style.opacity = '';
+    });
 });

@@ -7,6 +7,14 @@
     <title>Supply Management | AGL Latinoamérica</title>
     <meta name="description"
         content="Gestión integral de su cadena de suministro. De las requisiciones a los almacenes con AGL Supply Management.">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('agl-theme');
+            if (savedTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
     <!-- Google Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,52 +29,12 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="container nav-container">
-            <a href="../../../index.html" class="logo">
+        <div class="container nav-container nav-container-centered">
+            <a href="../../../index.html#ecosistema" class="logo" title="Volver al inicio">
                 <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="nav-logo">
             </a>
-            <ul class="nav-links">
-                <li><a href="../../../index.html#about">¿Qué hacemos?</a></li>
-                <li><a href="../../../index.html#diagnostico">Diagnóstico</a></li>
-                <li><a href="../../../index.html#industrias">Industrias</a></li>
-                <li><a href="../../../index.html#ecosistema">Ecosistema</a></li>
-                <li><a href="../../../index.html#integracion">Integración</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Cambiar tema">
-                    <i class="fas fa-sun theme-icon theme-icon-sun"></i>
-                    <i class="fas fa-moon theme-icon theme-icon-moon"></i>
-                </button>
-                <a href="#contacto" class="btn btn-primary nav-btn">Contacto</a>
-                <button class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
-            </div>
         </div>
     </nav>
-
-    <!-- Menú Móvil -->
-    <div class="mobile-nav" id="mobile-nav">
-        <div class="mobile-nav-header">
-            <a href="../../../index.html" class="logo">
-                <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="mobile-nav-logo">
-            </a>
-            <button class="mobile-close-btn" id="mobile-close-btn"><i class="fas fa-times"></i></button>
-        </div>
-        <ul class="mobile-nav-links">
-            <li><a href="../../../index.html#about" class="mobile-link">¿Qué hacemos?</a></li>
-            <li><a href="../../../index.html#ecosistema" class="mobile-link">Ecosistema</a></li>
-            <li><a href="../../../index.html#integracion" class="mobile-link">Integración</a></li>
-        </ul>
-        <div class="mobile-nav-footer">
-            <a href="#contacto" class="btn btn-primary mobile-link">Contacto</a>
-            <button class="mobile-theme-toggle" id="mobile-theme-toggle">
-                <span class="theme-toggle-btn-inner">
-                    <i class="fas fa-sun theme-icon theme-icon-sun"></i>
-                    <i class="fas fa-moon theme-icon theme-icon-moon"></i>
-                </span>
-            </button>
-        </div>
-    </div>
 
     <!-- Hero Section: ¿Qué es Supply Management? -->
     <section class="hero detail-hero">
