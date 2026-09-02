@@ -46,24 +46,32 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileToggle) mobileToggle.addEventListener('click', toggleTheme);
 
     // =========================================================
-    // MOBILE MENU TOGGLE
+    // MOBILE MENU TOGGLE & TOUCH DRAG MANIPULATION
     // =========================================================
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileCloseBtn = document.getElementById('mobile-close-btn');
     const mobileNav = document.getElementById('mobile-nav');
     const mobileLinks = document.querySelectorAll('.mobile-link');
 
+    let isDragging = false;
+    let startX = 0;
+    let currentX = 0;
+    let currentTranslateX = 0;
+
     function openMobileMenu() {
         if (!mobileNav) return;
         mobileNav.classList.add('active');
+        mobileNav.classList.remove('dragging');
         mobileNav.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
+        mobileNav.style.transform = 'translateX(0)';
+        document.body.classList.add('menu-open'); // Bloquea interacción con la página principal
     }
 
     function closeMobileMenu() {
         if (!mobileNav) return;
-        mobileNav.classList.remove('active');
-        document.body.style.overflow = '';
+        mobileNav.classList.remove('active', 'dragging');
+        mobileNav.style.transform = '';
+        document.body.classList.remove('menu-open'); // Libera interacción con la página principal
     }
 
     if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileMenu);
@@ -77,14 +85,100 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.innerWidth > 992) closeMobileMenu();
     });
 
+    // --- MANIPULACIÓN TÁCTIL EN TIEMPO REAL (DRAG / MANIPULAR CON EL DEDO) ---
+    document.addEventListener('touchstart', (e) => {
+        const touch = e.touches[0];
+        startX = touch.clientX;
+        const screenWidth = window.innerWidth;
+        const isOpen = mobileNav && mobileNav.classList.contains('active');
+
+        // Permitir arrastrar si el menú está abierto O si inicia el toque cerca del borde derecho (para abrir)
+        if (isOpen || startX > screenWidth - 60) {
+            isDragging = true;
+            if (isOpen) {
+                mobileNav.classList.add('dragging');
+            }
+        }
+    }, { passive: true });
+
+    document.addEventListener('touchmove', (e) => {
+        if (!isDragging || !mobileNav) return;
+
+        const touch = e.touches[0];
+        currentX = touch.clientX;
+        const deltaX = currentX - startX;
+        const isOpen = mobileNav.classList.contains('active');
+
+        if (isOpen) {
+            // Si el menú está abierto y deslizamos a la derecha (deltaX > 0), el menú sigue al dedo
+            if (deltaX > 0) {
+                currentTranslateX = deltaX;
+                mobileNav.style.transform = `translateX(${currentTranslateX}px)`;
+            }
+        } else {
+            // Si el menú está cerrado y deslizamos desde el borde derecho hacia la izquierda (deltaX < 0)
+            if (deltaX < 0) {
+                mobileNav.style.display = 'flex';
+                mobileNav.classList.add('dragging');
+                const screenWidth = window.innerWidth;
+                const offset = Math.max(0, screenWidth + deltaX);
+                mobileNav.style.transform = `translateX(${offset}px)`;
+            }
+        }
+    }, { passive: true });
+
+    document.addEventListener('touchend', () => {
+        if (!isDragging || !mobileNav) return;
+        isDragging = false;
+        mobileNav.classList.remove('dragging');
+
+        const isOpen = mobileNav.classList.contains('active');
+        const screenWidth = window.innerWidth;
+
+        if (isOpen) {
+            // Si se arrastró más del 30% del ancho hacia la derecha, se cierra
+            if (currentTranslateX > screenWidth * 0.3) {
+                closeMobileMenu();
+            } else {
+                // Si no, regresa suavemente a la posición abierta
+                openMobileMenu();
+            }
+        } else {
+            // Si se arrastró hacia la izquierda más del 30%, se abre por completo
+            const deltaX = currentX - startX;
+            if (deltaX < -screenWidth * 0.3) {
+                openMobileMenu();
+            } else {
+                // Si no se arrastró lo suficiente, se vuelve a ocultar
+                closeMobileMenu();
+            }
+        }
+
+        currentTranslateX = 0;
+    }, { passive: true });
+
     // =========================================================
-    // NAVBAR SCROLL EFFECT
+    // NAVBAR SCROLL EFFECT (Ocultar al bajar / Mostrar al subir)
     // =========================================================
     const navbar = document.querySelector('.navbar');
+    let lastScrollY = window.scrollY;
+
     window.addEventListener('scroll', () => {
-        if (navbar) {
-            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        if (!navbar) return;
+
+        const currentScrollY = window.scrollY;
+
+        // Fondo con desenfoque al pasar de los 50px
+        navbar.classList.toggle('scrolled', currentScrollY > 50);
+
+        // Ocultar al deslizar hacia abajo, mostrar al deslizar hacia arriba
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            navbar.classList.add('navbar-hidden');
+        } else {
+            navbar.classList.remove('navbar-hidden');
         }
+
+        lastScrollY = currentScrollY;
     });
 
     // =========================================================

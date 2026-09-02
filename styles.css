@@ -128,6 +128,13 @@ body {
     transition: var(--theme-transition);
 }
 
+/* Bloqueo total de interacción con la página cuando el menú está abierto */
+body.menu-open {
+    overflow: hidden !important;
+    touch-action: none !important;
+    pointer-events: none !important;
+}
+
 h1,
 h2,
 h3,
@@ -330,7 +337,7 @@ ul {
     width: 100%;
     padding: 1.5rem 0;
     z-index: 1000;
-    transition: var(--transition);
+    transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), background 0.3s ease, padding 0.3s ease;
     background: transparent;
 }
 
@@ -341,6 +348,10 @@ ul {
     border-bottom: 1px solid var(--glass-border);
     padding: 1rem 0;
     box-shadow: var(--card-shadow);
+}
+
+.navbar.navbar-hidden {
+    transform: translateY(-100%);
 }
 
 .nav-container {
@@ -410,12 +421,19 @@ ul {
     z-index: 1001;
     display: none;
     flex-direction: column;
-    transition: right 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: right 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.1s ease-out;
     overflow: hidden;
+    will-change: transform, right;
+    pointer-events: auto !important;
+    touch-action: pan-y !important;
 }
 
 .mobile-nav.active {
     right: 0;
+}
+
+.mobile-nav.dragging {
+    transition: none !important;
 }
 
 .mobile-nav-header {
