@@ -22,32 +22,50 @@
 </head>
 
 <body>
-    <!-- Navbar Simplificado -->
+    <!-- Navbar -->
     <nav class="navbar">
-        <div class="container nav-container">
+        <div class="container nav-container"
+            style="display: flex; justify-content: space-between; align-items: center;">
             <a href="../../../index.html" class="logo">
                 <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="nav-logo">
             </a>
+            <div class="nav-actions">
+                <!-- BOTÓN IDIOMA DESKTOP (Tipo Switch) -->
+                <button class="theme-toggle-btn" id="lang-toggle-desktop" aria-label="Cambiar idioma"
+                    title="Cambiar idioma"
+                    style="width: auto; padding: 5px 12px; border-radius: 20px; font-family: 'Inter', sans-serif; font-size: 0.9rem; background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; cursor: pointer;">
+                    <span class="lang-es" style="font-weight: 700; transition: 0.3s;">ES</span>
+                    <span style="margin: 0 3px; font-weight: 300;">/</span>
+                    <span class="lang-en" style="font-weight: 400; opacity: 0.5; transition: 0.3s;">EN</span>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section: ¿Qué es WorkForce? -->
     <section class="hero detail-hero">
         <div class="container">
-            <a href="../../../index.html#ecosistema" class="back-link"><i class="fas fa-arrow-left"></i> Volver al
+            <a href="../../../index.html#ecosistema" class="back-link"
+                data-es="<i class='fas fa-arrow-left'></i> Volver al Ecosistema"
+                data-en="<i class='fas fa-arrow-left'></i> Back to Ecosystem"><i class="fas fa-arrow-left"></i> Volver
+                al
                 Ecosistema</a>
 
             <div class="section-title-large fade-in-up">
-                <h1>¿Qué es WorkForce?</h1>
+                <h1 data-es="¿Qué es WorkForce?" data-en="What is WorkForce?">¿Qué es WorkForce?</h1>
             </div>
 
             <div class="mining-intro-grid fade-in-up delay-1">
                 <div class="mining-intro-text">
-                    <p class="intro-lead">
+                    <p class="intro-lead"
+                        data-es="<strong class='highlight-green-text'>AGL WorkForce</strong> es una solución tecnológica diseñada para transformar y optimizar la gestión del talento humano."
+                        data-en="<strong class='highlight-green-text'>AGL WorkForce</strong> is a technological solution designed to transform and optimize human talent management.">
                         <strong class="highlight-green-text">AGL WorkForce</strong> es una solución tecnológica diseñada
                         para transformar y optimizar la gestión del talento humano.
                     </p>
-                    <p class="intro-sub">
+                    <p class="intro-sub"
+                        data-es="Automatiza y centraliza todo el ciclo de recursos humanos, desde las solicitudes de personal hasta el procesamiento de nóminas, en una única plataforma cohesiva."
+                        data-en="It automates and centralizes the entire human resources cycle, from personnel requests to payroll processing, in a single cohesive platform.">
                         Automatiza y centraliza todo el ciclo de recursos humanos, desde las solicitudes de personal
                         hasta el procesamiento de nóminas, en una única plataforma cohesiva.
                     </p>
@@ -67,25 +85,53 @@
                             <div class="screen-body">
                                 <div class="app-sidebar">
                                     <div class="app-logo-small"><i class="fas fa-user-tie"></i> AGL</div>
-                                    <div class="app-nav-item active"><i class="fas fa-user-plus"></i> Reclutamiento
+                                    <div class="app-nav-item active"
+                                        data-es="<i class='fas fa-user-plus'></i> Reclutamiento"
+                                        data-en="<i class='fas fa-user-plus'></i> Recruitment"><i
+                                            class="fas fa-user-plus"></i> Reclutamiento
                                     </div>
-                                    <div class="app-nav-item"><i class="fas fa-users-cog"></i> Personal</div>
-                                    <div class="app-nav-item"><i class="fas fa-file-invoice-dollar"></i> Nómina</div>
+                                    <div class="app-nav-item" data-es="<i class='fas fa-users-cog'></i> Personal"
+                                        data-en="<i class='fas fa-users-cog'></i> Personnel"><i
+                                            class="fas fa-users-cog"></i> Personal</div>
+                                    <div class="app-nav-item"
+                                        data-es="<i class='fas fa-file-invoice-dollar'></i> Nómina"
+                                        data-en="<i class='fas fa-file-invoice-dollar'></i> Payroll"><i
+                                            class="fas fa-file-invoice-dollar"></i> Nómina</div>
                                 </div>
                                 <div class="app-content">
-                                    <div class="app-section-title">Estatus de Requisiciones</div>
+                                    <div class="app-section-title" data-es="Estatus de Requisiciones"
+                                        data-en="Requisition Status">Estatus de Requisiciones</div>
                                     <div class="app-cards-grid">
-                                        <div class="app-card"><i class="fas fa-check-circle"></i> Aprobadas (4)</div>
-                                        <div class="app-card"><i class="fas fa-clock"></i> Pendientes (2)</div>
-                                        <div class="app-card"><i class="fas fa-user-check"></i> Entrevistas (8)</div>
-                                        <div class="app-card"><i class="fas fa-file-signature"></i> Ofertas (3)</div>
+                                        <div class="app-card"
+                                            data-es="<i class='fas fa-check-circle'></i> Aprobadas (4)"
+                                            data-en="<i class='fas fa-check-circle'></i> Approved (4)"><i
+                                                class="fas fa-check-circle"></i> Aprobadas (4)</div>
+                                        <div class="app-card" data-es="<i class='fas fa-clock'></i> Pendientes (2)"
+                                            data-en="<i class='fas fa-clock'></i> Pending (2)"><i
+                                                class="fas fa-clock"></i> Pendientes (2)</div>
+                                        <div class="app-card"
+                                            data-es="<i class='fas fa-user-check'></i> Entrevistas (8)"
+                                            data-en="<i class='fas fa-user-check'></i> Interviews (8)"><i
+                                                class="fas fa-user-check"></i> Entrevistas (8)</div>
+                                        <div class="app-card"
+                                            data-es="<i class='fas fa-file-signature'></i> Ofertas (3)"
+                                            data-en="<i class='fas fa-file-signature'></i> Offers (3)"><i
+                                                class="fas fa-file-signature"></i> Ofertas (3)</div>
                                     </div>
-                                    <div class="app-section-title">Alertas de Personal</div>
+                                    <div class="app-section-title" data-es="Alertas de Personal"
+                                        data-en="Personnel Alerts">Alertas de Personal</div>
                                     <div class="app-cards-grid">
-                                        <div class="app-card small"><i class="fas fa-exclamation-triangle"
-                                                style="color: #f59e0b;"></i> Fin Contrato (5)</div>
-                                        <div class="app-card small"><i class="fas fa-graduation-cap"
-                                                style="color: #22c55e;"></i> Cursos Pend.</div>
+                                        <div class="app-card small"
+                                            data-es="<i class='fas fa-exclamation-triangle' style='color: #f59e0b;'></i> Fin Contrato (5)"
+                                            data-en="<i class='fas fa-exclamation-triangle' style='color: #f59e0b;'></i> Contract End (5)">
+                                            <i class="fas fa-exclamation-triangle" style="color: #f59e0b;"></i> Fin
+                                            Contrato (5)
+                                        </div>
+                                        <div class="app-card small"
+                                            data-es="<i class='fas fa-graduation-cap' style='color: #22c55e;'></i> Cursos Pend."
+                                            data-en="<i class='fas fa-graduation-cap' style='color: #22c55e;'></i> Pending Courses">
+                                            <i class="fas fa-graduation-cap" style="color: #22c55e;"></i> Cursos Pend.
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -105,27 +151,38 @@
     <section class="modules-section">
         <div class="container">
             <div class="section-header fade-in-up">
-                <h2 class="modules-main-title">Módulos del sistema</h2>
+                <h2 class="modules-main-title" data-es="Módulos del sistema" data-en="System Modules">Módulos del
+                    sistema</h2>
             </div>
 
             <!-- Módulo 1: Requisición de personal -->
             <div class="module-block fade-in-up">
-                <h3 class="module-title">Requisición de personal</h3>
+                <h3 class="module-title" data-es="Requisición de personal" data-en="Personnel Requisition">Requisición
+                    de personal</h3>
                 <div class="module-grid">
                     <div class="module-icon-large-container">
                         <i class="fas fa-user-plus module-large-icon"></i>
                     </div>
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li><strong>Autorización Transparente:</strong> Mejora la gestión de vacantes mediante un
+                            <li data-es="<strong>Autorización Transparente:</strong> Mejora la gestión de vacantes mediante un proceso de autorización claro y eficiente que garantiza el cumplimiento de las políticas internas de la empresa."
+                                data-en="<strong>Transparent Authorization:</strong> Improves vacancy management through a clear and efficient authorization process that ensures compliance with internal company policies.">
+                                <strong>Autorización Transparente:</strong> Mejora la gestión de vacantes mediante un
                                 proceso de autorización claro y eficiente que garantiza el cumplimiento de las políticas
-                                internas de la empresa.</li>
-                            <li><strong>Flujos de Trabajo Jerárquicos:</strong> Optimiza las aprobaciones con flujos
+                                internas de la empresa.
+                            </li>
+                            <li data-es="<strong>Flujos de Trabajo Jerárquicos:</strong> Optimiza las aprobaciones con flujos personalizables por departamento o jerarquía, asegurando una validación rápida adaptada a su estructura."
+                                data-en="<strong>Hierarchical Workflows:</strong> Optimizes approvals with customizable flows by department or hierarchy, ensuring rapid validation tailored to your structure.">
+                                <strong>Flujos de Trabajo Jerárquicos:</strong> Optimiza las aprobaciones con flujos
                                 personalizables por departamento o jerarquía, asegurando una validación rápida adaptada
-                                a su estructura.</li>
-                            <li><strong>Inicio de Reclutamiento Automatizado:</strong> Las requisiciones aprobadas se
+                                a su estructura.
+                            </li>
+                            <li data-es="<strong>Inicio de Reclutamiento Automatizado:</strong> Las requisiciones aprobadas se transforman automáticamente en vacantes activas, eliminando la carga manual de datos y acelerando la búsqueda de talento."
+                                data-en="<strong>Automated Recruitment Initiation:</strong> Approved requisitions automatically transform into active vacancies, eliminating manual data entry and accelerating the talent search.">
+                                <strong>Inicio de Reclutamiento Automatizado:</strong> Las requisiciones aprobadas se
                                 transforman automáticamente en vacantes activas, eliminando la carga manual de datos y
-                                acelerando la búsqueda de talento.</li>
+                                acelerando la búsqueda de talento.
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -133,19 +190,29 @@
 
             <!-- Módulo 2: Reclutamiento y Contratación -->
             <div class="module-block fade-in-up delay-1">
-                <h3 class="module-title">Reclutamiento y Contratación</h3>
+                <h3 class="module-title" data-es="Reclutamiento y Contratación" data-en="Recruitment and Hiring">
+                    Reclutamiento y Contratación</h3>
                 <div class="module-grid">
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li><strong>Base de Datos de Candidatos Centralizada:</strong> Simplifica la adquisición de
+                            <li data-es="<strong>Base de Datos de Candidatos Centralizada:</strong> Simplifica la adquisición de talento al centralizar a todos los aspirantes (internos y externos) y sus currículos en una sola base de datos accesible."
+                                data-en="<strong>Centralized Candidate Database:</strong> Simplifies talent acquisition by centralizing all applicants (internal and external) and their resumes into a single accessible database.">
+                                <strong>Base de Datos de Candidatos Centralizada:</strong> Simplifica la adquisición de
                                 talento al centralizar a todos los aspirantes (internos y externos) y sus currículos en
-                                una sola base de datos accesible.</li>
-                            <li><strong>Supervisión Integral (End-to-End):</strong> Proporciona un control meticuloso
+                                una sola base de datos accesible.
+                            </li>
+                            <li data-es="<strong>Supervisión Integral (End-to-End):</strong> Proporciona un control meticuloso del proceso de selección mediante el monitoreo de cada entrevista, evaluación y oferta de trabajo."
+                                data-en="<strong>End-to-End Supervision:</strong> Provides meticulous control of the selection process by monitoring every interview, evaluation, and job offer.">
+                                <strong>Supervisión Integral (End-to-End):</strong> Proporciona un control meticuloso
                                 del proceso de selección mediante el monitoreo de cada entrevista, evaluación y oferta
-                                de trabajo.</li>
-                            <li><strong>Onboarding Fluido:</strong> Automatiza la transición de los candidatos
+                                de trabajo.
+                            </li>
+                            <li data-es="<strong>Onboarding Fluido:</strong> Automatiza la transición de los candidatos seleccionados al sistema como nuevos empleados, minimizando el esfuerzo manual y garantizando una experiencia profesional."
+                                data-en="<strong>Fluid Onboarding:</strong> Automates the transition of selected candidates into the system as new employees, minimizing manual effort and guaranteeing a professional experience.">
+                                <strong>Onboarding Fluido:</strong> Automatiza la transición de los candidatos
                                 seleccionados al sistema como nuevos empleados, minimizando el esfuerzo manual y
-                                garantizando una experiencia profesional.</li>
+                                garantizando una experiencia profesional.
+                            </li>
                         </ul>
                     </div>
                     <div class="module-icon-large-container">
@@ -156,22 +223,32 @@
 
             <!-- Módulo 3: Gestión de personal -->
             <div class="module-block fade-in-up delay-2">
-                <h3 class="module-title">Gestión de personal</h3>
+                <h3 class="module-title" data-es="Gestión de personal" data-en="Personnel Management">Gestión de
+                    personal</h3>
                 <div class="module-grid">
                     <div class="module-icon-large-container">
                         <i class="fas fa-users-cog module-large-icon"></i>
                     </div>
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li><strong>Institucionalización de Movimientos:</strong> Agiliza la gestión de altas,
+                            <li data-es="<strong>Institucionalización de Movimientos:</strong> Agiliza la gestión de altas, bajas, reingresos y cambios de puesto para garantizar un registro confiable y actualizado."
+                                data-en="<strong>Institutionalization of Movements:</strong> Streamlines the management of hires, terminations, rehires, and role changes to guarantee a reliable and updated record.">
+                                <strong>Institucionalización de Movimientos:</strong> Agiliza la gestión de altas,
                                 bajas, reingresos y cambios de puesto para garantizar un registro confiable y
-                                actualizado.</li>
-                            <li><strong>Control Inteligente de Ausentismos:</strong> Optimiza la disponibilidad del
+                                actualizado.
+                            </li>
+                            <li data-es="<strong>Control Inteligente de Ausentismos:</strong> Optimiza la disponibilidad del personal mediante la programación y supervisión eficiente de vacaciones, permisos e incapacidades."
+                                data-en="<strong>Smart Absenteeism Control:</strong> Optimizes staff availability through efficient scheduling and supervision of vacations, permits, and disabilities.">
+                                <strong>Control Inteligente de Ausentismos:</strong> Optimiza la disponibilidad del
                                 personal mediante la programación y supervisión eficiente de vacaciones, permisos e
-                                incapacidades.</li>
-                            <li><strong>Control de Contratos Centralizado:</strong> Institucionaliza el monitoreo y
+                                incapacidades.
+                            </li>
+                            <li data-es="<strong>Control de Contratos Centralizado:</strong> Institucionaliza el monitoreo y análisis del ciclo de vida del colaborador, proporcionando una supervisión integral de todos los contratos internos y asegurando actualizaciones precisas."
+                                data-en="<strong>Centralized Contract Control:</strong> Institutionalizes the monitoring and analysis of the employee lifecycle, providing comprehensive oversight of all internal contracts and ensuring accurate updates.">
+                                <strong>Control de Contratos Centralizado:</strong> Institucionaliza el monitoreo y
                                 análisis del ciclo de vida del colaborador, proporcionando una supervisión integral de
-                                todos los contratos internos y asegurando actualizaciones precisas.</li>
+                                todos los contratos internos y asegurando actualizaciones precisas.
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -179,19 +256,28 @@
 
             <!-- Módulo 4: Capacitación y Desarrollo -->
             <div class="module-block fade-in-up delay-1">
-                <h3 class="module-title">Capacitación y Desarrollo</h3>
+                <h3 class="module-title" data-es="Capacitación y Desarrollo" data-en="Training and Development">
+                    Capacitación y Desarrollo</h3>
                 <div class="module-grid">
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li><strong>Inversión Inteligente:</strong> Asigna con precisión a los colaboradores los
+                            <li data-es="<strong>Inversión Inteligente:</strong> Asigna con precisión a los colaboradores los cursos más relevantes según sus roles, perfiles específicos o necesidades de desarrollo."
+                                data-en="<strong>Smart Investment:</strong> Accurately assigns the most relevant courses to employees based on their roles, specific profiles, or development needs.">
+                                <strong>Inversión Inteligente:</strong> Asigna con precisión a los colaboradores los
                                 cursos más relevantes según sus roles, perfiles específicos o necesidades de desarrollo.
                             </li>
-                            <li><strong>Alineación Estratégica de Habilidades:</strong> Alinea las iniciativas de
+                            <li data-es="<strong>Alineación Estratégica de Habilidades:</strong> Alinea las iniciativas de capacitación directamente con los objetivos esenciales del negocio para fomentar el crecimiento profesional y la competencia organizacional."
+                                data-en="<strong>Strategic Skills Alignment:</strong> Aligns training initiatives directly with essential business objectives to foster professional growth and organizational competence.">
+                                <strong>Alineación Estratégica de Habilidades:</strong> Alinea las iniciativas de
                                 capacitación directamente con los objetivos esenciales del negocio para fomentar el
-                                crecimiento profesional y la competencia organizacional.</li>
-                            <li><strong>Monitoreo de Cumplimientos:</strong> Genera reportes detallados por departamento
+                                crecimiento profesional y la competencia organizacional.
+                            </li>
+                            <li data-es="<strong>Monitoreo de Cumplimientos:</strong> Genera reportes detallados por departamento o empleado para monitorear el progreso, identificar brechas de habilidades y asegurar una mejora continua."
+                                data-en="<strong>Compliance Monitoring:</strong> Generates detailed reports by department or employee to monitor progress, identify skill gaps, and ensure continuous improvement.">
+                                <strong>Monitoreo de Cumplimientos:</strong> Genera reportes detallados por departamento
                                 o empleado para monitorear el progreso, identificar brechas de habilidades y asegurar
-                                una mejora continua.</li>
+                                una mejora continua.
+                            </li>
                         </ul>
                     </div>
                     <div class="module-icon-large-container">
@@ -202,22 +288,31 @@
 
             <!-- Módulo 5: Gestión de nómina -->
             <div class="module-block fade-in-up delay-2">
-                <h3 class="module-title">Gestión de nómina</h3>
+                <h3 class="module-title" data-es="Gestión de nómina" data-en="Payroll Management">Gestión de nómina</h3>
                 <div class="module-grid">
                     <div class="module-icon-large-container">
                         <i class="fas fa-money-check-alt module-large-icon"></i>
                     </div>
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li><strong>Optimización de Destajos Operativos:</strong> Mejora el cálculo de pagos por
+                            <li data-es="<strong>Optimización de Destajos Operativos:</strong> Mejora el cálculo de pagos por destajo mediante la integración fluida con el ecosistema AGL, asegurando que la gestión de salarios y beneficios se alinee directamente con los datos de productividad y eficiencia en campo."
+                                data-en="<strong>Optimization of Operational Piece Rates:</strong> Improves piece-rate payment calculation through fluid integration with the AGL ecosystem, ensuring that salary and benefits management directly aligns with field productivity and efficiency data.">
+                                <strong>Optimización de Destajos Operativos:</strong> Mejora el cálculo de pagos por
                                 destajo mediante la integración fluida con el ecosistema AGL, asegurando que la gestión
                                 de salarios y beneficios se alinee directamente con los datos de productividad y
-                                eficiencia en campo.</li>
-                            <li><strong>Ciclos de Pago Flexibles:</strong> Adapta la gestión a diversas necesidades con
-                                un control automatizado sobre esquemas de pago semanales, quincenales o mensuales.</li>
-                            <li><strong>Precisión y Velocidad:</strong> Elimina errores manuales mediante el cálculo
+                                eficiencia en campo.
+                            </li>
+                            <li data-es="<strong>Ciclos de Pago Flexibles:</strong> Adapta la gestión a diversas necesidades con un control automatizado sobre esquemas de pago semanales, quincenales o mensuales."
+                                data-en="<strong>Flexible Payment Cycles:</strong> Adapts management to diverse needs with automated control over weekly, bi-weekly, or monthly payment schemes.">
+                                <strong>Ciclos de Pago Flexibles:</strong> Adapta la gestión a diversas necesidades con
+                                un control automatizado sobre esquemas de pago semanales, quincenales o mensuales.
+                            </li>
+                            <li data-es="<strong>Precisión y Velocidad:</strong> Elimina errores manuales mediante el cálculo automatizado de percepciones y deducciones, garantizando registros financieros exactos y la satisfacción del colaborador."
+                                data-en="<strong>Precision and Speed:</strong> Eliminates manual errors through automated calculation of perceptions and deductions, guaranteeing accurate financial records and employee satisfaction.">
+                                <strong>Precisión y Velocidad:</strong> Elimina errores manuales mediante el cálculo
                                 automatizado de percepciones y deducciones, garantizando registros financieros exactos y
-                                la satisfacción del colaborador.</li>
+                                la satisfacción del colaborador.
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -229,9 +324,9 @@
     <!-- Sección de Contacto -->
     <section class="cta form-section" id="contacto">
         <div class="container cta-container fade-in-up">
-            <h2 class="contact-title">Contáctanos</h2>
+            <h2 class="contact-title" data-es="Contáctanos" data-en="Contact Us">Contáctanos</h2>
             <a href="https://wa.me/526182922284?text=Hola,%20quisiera%20solicitar%20una%20Demo%20de%20WorkForce"
-                target="_blank" class="btn btn-primary btn-large">
+                target="_blank" class="btn btn-primary btn-large" data-es="Solicita una Demo" data-en="Request a Demo">
                 Solicita una Demo
             </a>
         </div>
@@ -240,13 +335,43 @@
     <!-- Footer Simplificado -->
     <footer class="simple-footer">
         <div class="container footer-centered">
-            <div class="footer-copy-centered">
+            <div class="footer-copy-centered" data-es="&reg; AGL Latinoamérica 2026. Todos los derechos reservados."
+                data-en="&reg; AGL Latin America 2026. All rights reserved.">
                 &reg; AGL Latinoamérica 2026. Todos los derechos reservados.
             </div>
         </div>
     </footer>
 
-    <!-- Puedes usar el mismo JS limpio que usas en Risk -->
+    <!-- Script de Traducción -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const langBtns = [document.getElementById('lang-toggle-desktop')];
+            let currentLang = 'es';
+
+            langBtns.forEach(btn => {
+                if (btn) {
+                    btn.addEventListener('click', () => {
+                        currentLang = currentLang === 'es' ? 'en' : 'es';
+
+                        // Actualizar estilo visual del Switch
+                        document.querySelectorAll('.lang-es').forEach(el => {
+                            el.style.fontWeight = currentLang === 'es' ? '700' : '400';
+                            el.style.opacity = currentLang === 'es' ? '1' : '0.5';
+                        });
+                        document.querySelectorAll('.lang-en').forEach(el => {
+                            el.style.fontWeight = currentLang === 'en' ? '700' : '400';
+                            el.style.opacity = currentLang === 'en' ? '1' : '0.5';
+                        });
+
+                        // Traducir todos los elementos de texto
+                        document.querySelectorAll('[data-en]').forEach(el => {
+                            el.innerHTML = el.getAttribute(`data-${currentLang}`);
+                        });
+                    });
+                }
+            });
+        });
+    </script>
     <script src="script_risk.js"></script>
 </body>
 

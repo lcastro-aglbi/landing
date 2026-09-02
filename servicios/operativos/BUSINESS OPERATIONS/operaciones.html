@@ -23,31 +23,50 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="container nav-container">
+        <div class="container nav-container"
+            style="display: flex; justify-content: space-between; align-items: center;">
             <a href="../../../index.html" class="logo">
                 <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="nav-logo">
             </a>
+            <div class="nav-actions">
+                <!-- BOTÓN IDIOMA DESKTOP (Tipo Switch) -->
+                <button class="theme-toggle-btn" id="lang-toggle-desktop" aria-label="Cambiar idioma"
+                    title="Cambiar idioma"
+                    style="width: auto; padding: 5px 12px; border-radius: 20px; font-family: 'Inter', sans-serif; font-size: 0.9rem; background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; cursor: pointer;">
+                    <span class="lang-es" style="font-weight: 700; transition: 0.3s;">ES</span>
+                    <span style="margin: 0 3px; font-weight: 300;">/</span>
+                    <span class="lang-en" style="font-weight: 400; opacity: 0.5; transition: 0.3s;">EN</span>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section: ¿Qué es Mining Operations? -->
     <section class="hero detail-hero">
         <div class="container">
-            <a href="../../../index.html#ecosistema" class="back-link"><i class="fas fa-arrow-left"></i> Volver al
+            <a href="../../../index.html#ecosistema" class="back-link"
+                data-es="<i class='fas fa-arrow-left'></i> Volver al Ecosistema"
+                data-en="<i class='fas fa-arrow-left'></i> Back to Ecosystem"><i class="fas fa-arrow-left"></i> Volver
+                al
                 Ecosistema</a>
 
             <div class="section-title-large fade-in-up">
-                <h1>¿Qué es Mining Operations?</h1>
+                <h1 data-es="¿Qué es Mining Operations?" data-en="What is Mining Operations?">¿Qué es Mining Operations?
+                </h1>
             </div>
 
             <div class="mining-intro-grid fade-in-up delay-1">
                 <div class="mining-intro-text">
-                    <p class="intro-lead">
+                    <p class="intro-lead"
+                        data-es="<strong class='highlight-green-text'>AGL Mining Operations</strong> es una solución tecnológica integrada, diseñada para estandarizar eficazmente todos los procesos operativos y estratégicos dentro de una empresa minera."
+                        data-en="<strong class='highlight-green-text'>AGL Mining Operations</strong> is an integrated technological solution designed to effectively standardize all operational and strategic processes within a mining company.">
                         <strong class="highlight-green-text">AGL Mining Operations</strong> es una solución tecnológica
                         integrada, diseñada para estandarizar eficazmente todos los procesos operativos y estratégicos
                         dentro de una empresa minera.
                     </p>
-                    <p class="intro-sub">
+                    <p class="intro-sub"
+                        data-es="Desde la planificación hasta el control de la mina, consolida y automatiza cada fase del ciclo minero en una plataforma unificada."
+                        data-en="From planning to mine control, it consolidates and automates every phase of the mining cycle into a unified platform.">
                         Desde la planificación hasta el control de la mina, consolida y automatiza cada fase del ciclo
                         minero en una plataforma unificada.
                     </p>
@@ -66,22 +85,39 @@
                             <div class="screen-body">
                                 <div class="app-sidebar">
                                     <div class="app-logo-small"><i class="fas fa-mountain"></i> AGL</div>
-                                    <div class="app-nav-item active"><i class="fas fa-th-large"></i> Módulos</div>
+                                    <div class="app-nav-item active" data-es="<i class='fas fa-th-large'></i> Módulos"
+                                        data-en="<i class='fas fa-th-large'></i> Modules"><i
+                                            class="fas fa-th-large"></i> Módulos</div>
                                     <div class="app-nav-item"><i class="fas fa-chart-bar"></i> KPIs</div>
                                     <div class="app-nav-item"><i class="fas fa-cog"></i> Config</div>
                                 </div>
                                 <div class="app-content">
-                                    <div class="app-section-title">Módulo</div>
+                                    <div class="app-section-title" data-es="Módulo" data-en="Module">Módulo</div>
                                     <div class="app-cards-grid">
-                                        <div class="app-card"><i class="fas fa-calendar-check"></i> Planeación</div>
-                                        <div class="app-card"><i class="fas fa-hard-hat"></i> Operación</div>
-                                        <div class="app-card"><i class="fas fa-drafting-compass"></i> Monitoreo</div>
-                                        <div class="app-card"><i class="fas fa-shield-alt"></i> Control</div>
+                                        <div class="app-card" data-es="<i class='fas fa-calendar-check'></i> Planeación"
+                                            data-en="<i class='fas fa-calendar-check'></i> Planning"><i
+                                                class="fas fa-calendar-check"></i> Planeación</div>
+                                        <div class="app-card" data-es="<i class='fas fa-hard-hat'></i> Operación"
+                                            data-en="<i class='fas fa-hard-hat'></i> Operation"><i
+                                                class="fas fa-hard-hat"></i> Operación</div>
+                                        <div class="app-card"
+                                            data-es="<i class='fas fa-drafting-compass'></i> Monitoreo"
+                                            data-en="<i class='fas fa-drafting-compass'></i> Monitoring"><i
+                                                class="fas fa-drafting-compass"></i> Monitoreo</div>
+                                        <div class="app-card" data-es="<i class='fas fa-shield-alt'></i> Control"
+                                            data-en="<i class='fas fa-shield-alt'></i> Control"><i
+                                                class="fas fa-shield-alt"></i> Control</div>
                                     </div>
-                                    <div class="app-section-title">Catálogo</div>
+                                    <div class="app-section-title" data-es="Catálogo" data-en="Catalog">Catálogo</div>
                                     <div class="app-cards-grid">
-                                        <div class="app-card small"><i class="fas fa-map-marker-alt"></i> Zonas</div>
-                                        <div class="app-card small"><i class="fas fa-truck-monster"></i> Equipos</div>
+                                        <div class="app-card small"
+                                            data-es="<i class='fas fa-map-marker-alt'></i> Zonas"
+                                            data-en="<i class='fas fa-map-marker-alt'></i> Zones"><i
+                                                class="fas fa-map-marker-alt"></i> Zonas</div>
+                                        <div class="app-card small"
+                                            data-es="<i class='fas fa-truck-monster'></i> Equipos"
+                                            data-en="<i class='fas fa-truck-monster'></i> Equipment"><i
+                                                class="fas fa-truck-monster"></i> Equipos</div>
                                     </div>
                                 </div>
                             </div>
@@ -101,27 +137,31 @@
     <section class="modules-section">
         <div class="container">
             <div class="section-header fade-in-up">
-                <h2 class="modules-main-title">Módulos del sistema</h2>
+                <h2 class="modules-main-title" data-es="Módulos del sistema" data-en="System Modules">Módulos del
+                    sistema</h2>
             </div>
 
             <!-- Módulo 1: Planeación minera -->
             <div class="module-block fade-in-up">
-                <h3 class="module-title">Planeación minera</h3>
+                <h3 class="module-title" data-es="Planeación minera" data-en="Mining Planning">Planeación minera</h3>
                 <div class="module-grid">
                     <div class="module-icon-large-container">
                         <i class="fas fa-drafting-compass module-large-icon"></i>
                     </div>
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
+                            <li data-es="<strong>Gestión de múltiples proyectos:</strong> Coordine y gestione múltiples proyectos mineros desde una sola plataforma para optimizar la asignación de recursos."
+                                data-en="<strong>Multi-project management:</strong> Coordinate and manage multiple mining projects from a single platform to optimize resource allocation.">
                                 <strong>Gestión de múltiples proyectos:</strong> Coordine y gestione múltiples proyectos
                                 mineros desde una sola plataforma para optimizar la asignación de recursos.
                             </li>
-                            <li>
+                            <li data-es="<strong>Visión estratégica unificada:</strong> Organice todos los planes de exploración, desarrollo y producción para obtener una perspectiva clara de la estrategia operativa."
+                                data-en="<strong>Unified strategic vision:</strong> Organize all exploration, development, and production plans to gain a clear perspective of the operational strategy.">
                                 <strong>Visión estratégica unificada:</strong> Organice todos los planes de exploración,
                                 desarrollo y producción para obtener una perspectiva clara de la estrategia operativa.
                             </li>
-                            <li>
+                            <li data-es="<strong>Cumplimiento operativo:</strong> Se conecta directamente con el módulo de operación para proporcionar un historial exhaustivo del cumplimiento del plan en tiempo real."
+                                data-en="<strong>Operational compliance:</strong> Connects directly with the operation module to provide a comprehensive history of plan compliance in real-time.">
                                 <strong>Cumplimiento operativo:</strong> Se conecta directamente con el módulo de
                                 operación para proporcionar un historial exhaustivo del cumplimiento del plan en tiempo
                                 real.
@@ -133,20 +173,23 @@
 
             <!-- Módulo 2: Operación minera -->
             <div class="module-block fade-in-up delay-1">
-                <h3 class="module-title">Operación minera</h3>
+                <h3 class="module-title" data-es="Operación minera" data-en="Mining Operation">Operación minera</h3>
                 <div class="module-grid">
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
+                            <li data-es="<strong>Trazabilidad total:</strong> Documenta cada actividad realizada dentro de la mina con las bitácoras inteligentes para un control operativo preciso y detallado."
+                                data-en="<strong>Total traceability:</strong> Documents every activity performed inside the mine with smart logs for precise and detailed operational control.">
                                 <strong>Trazabilidad total:</strong> Documenta cada actividad realizada dentro de la
                                 mina con las bitácoras inteligentes para un control operativo preciso y detallado.
                             </li>
-                            <li>
+                            <li data-es="<strong>Control de recursos:</strong> Registra y monitorea la gestión de personal, equipos y materiales para garantizar la productividad, seguridad así como el cumplimiento normativo de registro de uso de explosivos."
+                                data-en="<strong>Resource control:</strong> Records and monitors the management of personnel, equipment, and materials to guarantee productivity, safety, as well as regulatory compliance of explosives use logs.">
                                 <strong>Control de recursos:</strong> Registra y monitorea la gestión de personal,
                                 equipos y materiales para garantizar la productividad, seguridad así como el
                                 cumplimiento normativo de registro de uso de explosivos.
                             </li>
-                            <li>
+                            <li data-es="<strong>Visibilidad de tiempos de inactividad:</strong> Documenta la causa y duración de las paradas operativas para identificar cuellos de botella y minimizar la inactividad."
+                                data-en="<strong>Downtime visibility:</strong> Documents the cause and duration of operational stops to identify bottlenecks and minimize downtime.">
                                 <strong>Visibilidad de tiempos de inactividad:</strong> Documenta la causa y duración de
                                 las paradas operativas para identificar cuellos de botella y minimizar la inactividad.
                             </li>
@@ -160,22 +203,25 @@
 
             <!-- Módulo 3: Monitoreo de obra -->
             <div class="module-block fade-in-up delay-2">
-                <h3 class="module-title">Monitoreo de obra</h3>
+                <h3 class="module-title" data-es="Monitoreo de obra" data-en="Site Monitoring">Monitoreo de obra</h3>
                 <div class="module-grid">
                     <div class="module-icon-large-container">
                         <i class="fas fa-chart-line module-large-icon"></i>
                     </div>
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
+                            <li data-es="<strong>Recolección de datos precisa:</strong> Control exhaustivo de los registros de levantamientos topográficos para asegurar datos actualizados en la planificación."
+                                data-en="<strong>Accurate data collection:</strong> Exhaustive control of topographic survey records to ensure updated data in planning.">
                                 <strong>Recolección de datos precisa:</strong> Control exhaustivo de los registros de
                                 levantamientos topográficos para asegurar datos actualizados en la planificación.
                             </li>
-                            <li>
+                            <li data-es="<strong>Parámetros diarios:</strong> Acceso a métricas operativas clave, incluyendo eficiencia de voladura y factores de carga."
+                                data-en="<strong>Daily parameters:</strong> Access to key operational metrics, including blasting efficiency and load factors.">
                                 <strong>Parámetros diarios:</strong> Acceso a métricas operativas clave, incluyendo
                                 eficiencia de voladura y factores de carga.
                             </li>
-                            <li>
+                            <li data-es="<strong>Estimaciones precisas:</strong> Genera proyecciones de progreso y futuras para una gestión proactiva de recursos."
+                                data-en="<strong>Accurate estimates:</strong> Generates progress and future projections for proactive resource management.">
                                 <strong>Estimaciones precisas:</strong> Genera proyecciones de progreso y futuras para
                                 una gestión proactiva de recursos.
                             </li>
@@ -186,19 +232,23 @@
 
             <!-- Módulo 4: Control de parámetros -->
             <div class="module-block fade-in-up delay-1">
-                <h3 class="module-title">Control de parámetros</h3>
+                <h3 class="module-title" data-es="Control de parámetros" data-en="Parameter Control">Control de
+                    parámetros</h3>
                 <div class="module-grid">
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li>
+                            <li data-es="<strong>Análisis de rendimiento integral:</strong> Analiza parámetros clave por trabajador, equipo y lugar de trabajo para optimizar recursos."
+                                data-en="<strong>Comprehensive performance analysis:</strong> Analyzes key parameters per worker, equipment, and workplace to optimize resources.">
                                 <strong>Análisis de rendimiento integral:</strong> Analiza parámetros clave por
                                 trabajador, equipo y lugar de trabajo para optimizar recursos.
                             </li>
-                            <li>
+                            <li data-es="<strong>Gestión estratégica de paradas:</strong> Analiza la frecuencia y duración de las interrupciones para implementar acciones preventivas."
+                                data-en="<strong>Strategic downtime management:</strong> Analyzes the frequency and duration of interruptions to implement preventive actions.">
                                 <strong>Gestión estratégica de paradas:</strong> Analiza la frecuencia y duración
                                 de las interrupciones para implementar acciones preventivas.
                             </li>
-                            <li>
+                            <li data-es="<strong>Plan de acción sobre corrección de parámetros:</strong> Genera las medidas tomadas directamente sobre los parámetros críticos para mantener la calidad y el alineamiento con los objetivos."
+                                data-en="<strong>Action plan for parameter correction:</strong> Generates the measures taken directly on critical parameters to maintain quality and alignment with objectives.">
                                 <strong>Plan de acción sobre corrección de parámetros:</strong> Genera las
                                 medidas tomadas directamente sobre los parámetros críticos
                                 para mantener la calidad y el alineamiento con los objetivos.
@@ -217,9 +267,9 @@
     <!-- Sección de Contacto -->
     <section class="cta form-section" id="contacto">
         <div class="container cta-container fade-in-up">
-            <h2 class="contact-title">Contáctanos</h2>
+            <h2 class="contact-title" data-es="Contáctanos" data-en="Contact Us">Contáctanos</h2>
             <a href="https://wa.me/526182922284?text=Hola,%20quisiera%20agendar%20una%20demostración%20de%20Mining%20Operations"
-                target="_blank" class="btn btn-primary btn-large">
+                target="_blank" class="btn btn-primary btn-large" data-es="Solicita una Demo" data-en="Request a Demo">
                 Solicita una Demo
             </a>
         </div>
@@ -228,12 +278,43 @@
     <!-- Footer Simplificado -->
     <footer class="simple-footer">
         <div class="container footer-centered">
-            <div class="footer-copy-centered">
+            <div class="footer-copy-centered" data-es="&reg; AGL Latinoamérica 2026. Todos los derechos reservados."
+                data-en="&reg; AGL Latin America 2026. All rights reserved.">
                 &reg; AGL Latinoamérica 2026. Todos los derechos reservados.
             </div>
         </div>
     </footer>
 
+    <!-- Script de Traducción -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const langBtns = [document.getElementById('lang-toggle-desktop')];
+            let currentLang = 'es';
+
+            langBtns.forEach(btn => {
+                if (btn) {
+                    btn.addEventListener('click', () => {
+                        currentLang = currentLang === 'es' ? 'en' : 'es';
+
+                        // Actualizar estilo visual del Switch
+                        document.querySelectorAll('.lang-es').forEach(el => {
+                            el.style.fontWeight = currentLang === 'es' ? '700' : '400';
+                            el.style.opacity = currentLang === 'es' ? '1' : '0.5';
+                        });
+                        document.querySelectorAll('.lang-en').forEach(el => {
+                            el.style.fontWeight = currentLang === 'en' ? '700' : '400';
+                            el.style.opacity = currentLang === 'en' ? '1' : '0.5';
+                        });
+
+                        // Traducir todos los elementos de texto
+                        document.querySelectorAll('[data-en]').forEach(el => {
+                            el.innerHTML = el.getAttribute(`data-${currentLang}`);
+                        });
+                    });
+                }
+            });
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 

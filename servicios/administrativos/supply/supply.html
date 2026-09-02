@@ -22,33 +22,52 @@
 </head>
 
 <body>
-    <!-- Navbar Simplificado -->
+    <!-- Navbar -->
     <nav class="navbar">
-        <div class="container nav-container">
+        <div class="container nav-container"
+            style="display: flex; justify-content: space-between; align-items: center;">
             <a href="../../../index.html" class="logo">
                 <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="nav-logo">
             </a>
+            <div class="nav-actions">
+                <!-- BOTÓN IDIOMA DESKTOP (Tipo Switch) -->
+                <button class="theme-toggle-btn" id="lang-toggle-desktop" aria-label="Cambiar idioma"
+                    title="Cambiar idioma"
+                    style="width: auto; padding: 5px 12px; border-radius: 20px; font-family: 'Inter', sans-serif; font-size: 0.9rem; background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; cursor: pointer;">
+                    <span class="lang-es" style="font-weight: 700; transition: 0.3s;">ES</span>
+                    <span style="margin: 0 3px; font-weight: 300;">/</span>
+                    <span class="lang-en" style="font-weight: 400; opacity: 0.5; transition: 0.3s;">EN</span>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section: ¿Qué es Supply Management? -->
     <section class="hero detail-hero">
         <div class="container">
-            <a href="../../../index.html#ecosistema" class="back-link"><i class="fas fa-arrow-left"></i> Volver al
+            <a href="../../../index.html#ecosistema" class="back-link"
+                data-es="<i class='fas fa-arrow-left'></i> Volver al Ecosistema"
+                data-en="<i class='fas fa-arrow-left'></i> Back to Ecosystem"><i class="fas fa-arrow-left"></i> Volver
+                al
                 Ecosistema</a>
 
             <div class="section-title-large fade-in-up">
-                <h1>¿Qué es Supply Management?</h1>
+                <h1 data-es="¿Qué es Supply Management?" data-en="What is Supply Management?">¿Qué es Supply Management?
+                </h1>
             </div>
 
             <div class="mining-intro-grid fade-in-up delay-1">
                 <div class="mining-intro-text">
-                    <p class="intro-lead">
+                    <p class="intro-lead"
+                        data-es="<strong class='highlight-green-text'>AGL Supply Management</strong> es una solución tecnológica integrada diseñada para supervisar eficazmente todos los procesos operativos y estratégicos dentro de tu cadena de suministro."
+                        data-en="<strong class='highlight-green-text'>AGL Supply Management</strong> is an integrated technological solution designed to effectively oversee all operational and strategic processes within your supply chain.">
                         <strong class="highlight-green-text">AGL Supply Management</strong> es una solución tecnológica
                         integrada diseñada para supervisar eficazmente todos los procesos operativos y estratégicos
                         dentro de tu cadena de suministro.
                     </p>
-                    <p class="intro-sub">
+                    <p class="intro-sub"
+                        data-es="De las requisiciones a los almacenes. Consolida y automatiza cada fase en una plataforma unificada, garantizando trazabilidad y control de costos."
+                        data-en="From requisitions to warehouses. It consolidates and automates each phase in a unified platform, ensuring traceability and cost control.">
                         De las requisiciones a los almacenes. Consolida y automatiza cada fase en una plataforma
                         unificada, garantizando trazabilidad y control de costos.
                     </p>
@@ -68,26 +87,53 @@
                             <div class="screen-body">
                                 <div class="app-sidebar">
                                     <div class="app-logo-small"><i class="fas fa-box"></i> AGL</div>
-                                    <div class="app-nav-item active"><i class="fas fa-clipboard-list"></i> Requisiciones
+                                    <div class="app-nav-item active"
+                                        data-es="<i class='fas fa-clipboard-list'></i> Requisiciones"
+                                        data-en="<i class='fas fa-clipboard-list'></i> Requisitions"><i
+                                            class="fas fa-clipboard-list"></i> Requisiciones
                                     </div>
-                                    <div class="app-nav-item"><i class="fas fa-shopping-cart"></i> Compras</div>
-                                    <div class="app-nav-item"><i class="fas fa-warehouse"></i> Almacén</div>
+                                    <div class="app-nav-item" data-es="<i class='fas fa-shopping-cart'></i> Compras"
+                                        data-en="<i class='fas fa-shopping-cart'></i> Purchases"><i
+                                            class="fas fa-shopping-cart"></i> Compras</div>
+                                    <div class="app-nav-item" data-es="<i class='fas fa-warehouse'></i> Almacén"
+                                        data-en="<i class='fas fa-warehouse'></i> Warehouse"><i
+                                            class="fas fa-warehouse"></i> Almacén</div>
                                 </div>
                                 <div class="app-content">
-                                    <div class="app-section-title">Estatus de Solicitudes</div>
+                                    <div class="app-section-title" data-es="Estatus de Solicitudes"
+                                        data-en="Request Status">Estatus de Solicitudes</div>
                                     <div class="app-cards-grid">
-                                        <div class="app-card"><i class="fas fa-check-circle"></i> Aprobadas (12)</div>
-                                        <div class="app-card"><i class="fas fa-clock"></i> En Proceso (5)</div>
-                                        <div class="app-card"><i class="fas fa-file-invoice-dollar"></i> Cotizando (3)
+                                        <div class="app-card"
+                                            data-es="<i class='fas fa-check-circle'></i> Aprobadas (12)"
+                                            data-en="<i class='fas fa-check-circle'></i> Approved (12)"><i
+                                                class="fas fa-check-circle"></i> Aprobadas (12)</div>
+                                        <div class="app-card" data-es="<i class='fas fa-clock'></i> En Proceso (5)"
+                                            data-en="<i class='fas fa-clock'></i> In Process (5)"><i
+                                                class="fas fa-clock"></i> En Proceso (5)</div>
+                                        <div class="app-card"
+                                            data-es="<i class='fas fa-file-invoice-dollar'></i> Cotizando (3)"
+                                            data-en="<i class='fas fa-file-invoice-dollar'></i> Quoting (3)"><i
+                                                class="fas fa-file-invoice-dollar"></i> Cotizando (3)
                                         </div>
-                                        <div class="app-card"><i class="fas fa-truck"></i> En Tránsito (8)</div>
+                                        <div class="app-card" data-es="<i class='fas fa-truck'></i> En Tránsito (8)"
+                                            data-en="<i class='fas fa-truck'></i> In Transit (8)"><i
+                                                class="fas fa-truck"></i> En Tránsito (8)</div>
                                     </div>
-                                    <div class="app-section-title">Inventario Crítico</div>
+                                    <div class="app-section-title" data-es="Inventario Crítico"
+                                        data-en="Critical Inventory">Inventario Crítico</div>
                                     <div class="app-cards-grid">
-                                        <div class="app-card small"><i class="fas fa-exclamation-triangle"
-                                                style="color: #ef4444;"></i> Refacciones B.</div>
-                                        <div class="app-card small"><i class="fas fa-exclamation-triangle"
-                                                style="color: #f59e0b;"></i> Lubricantes</div>
+                                        <div class="app-card small"
+                                            data-es="<i class='fas fa-exclamation-triangle' style='color: #ef4444;'></i> Refacciones B."
+                                            data-en="<i class='fas fa-exclamation-triangle' style='color: #ef4444;'></i> Spare Parts B.">
+                                            <i class="fas fa-exclamation-triangle" style="color: #ef4444;"></i>
+                                            Refacciones B.
+                                        </div>
+                                        <div class="app-card small"
+                                            data-es="<i class='fas fa-exclamation-triangle' style='color: #f59e0b;'></i> Lubricantes"
+                                            data-en="<i class='fas fa-exclamation-triangle' style='color: #f59e0b;'></i> Lubricants">
+                                            <i class="fas fa-exclamation-triangle" style="color: #f59e0b;"></i>
+                                            Lubricantes
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -107,25 +153,36 @@
     <section class="modules-section">
         <div class="container">
             <div class="section-header fade-in-up">
-                <h2 class="modules-main-title">Módulos del sistema</h2>
+                <h2 class="modules-main-title" data-es="Módulos del sistema" data-en="System Modules">Módulos del
+                    sistema</h2>
             </div>
 
             <!-- Módulo 1 -->
             <div class="module-block fade-in-up">
-                <h3 class="module-title">Pre-requisiciones operativas</h3>
+                <h3 class="module-title" data-es="Pre-requisiciones operativas" data-en="Operational pre-requisitions">
+                    Pre-requisiciones operativas</h3>
                 <div class="module-grid">
                     <div class="module-icon-large-container">
                         <i class="fas fa-clipboard-check module-large-icon"></i>
                     </div>
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li><strong>Cumplimiento Operativo Basado en Políticas:</strong> Garantiza que cada
+                            <li data-es="<strong>Cumplimiento Operativo Basado en Políticas:</strong> Garantiza que cada pre-requisición operativa se adhiera a los estándares internos mediante un robusto sistema de autorización."
+                                data-en="<strong>Policy-Based Operational Compliance:</strong> Ensures every operational pre-requisition adheres to internal standards through a robust authorization system.">
+                                <strong>Cumplimiento Operativo Basado en Políticas:</strong> Garantiza que cada
                                 pre-requisición operativa se adhiera a los estándares internos mediante un robusto
-                                sistema de autorización.</li>
-                            <li><strong>Asignación Estratégica de Inventario:</strong> Ofrece verificaciones de estado
-                                granulares por proyecto o perfil, permitiendo a la operación priorizar eficazmente.</li>
-                            <li><strong>Trazabilidad Logística Integrada:</strong> Logra una visibilidad total desde el
-                                folio operativo inicial hasta la nota de entrega final.</li>
+                                sistema de autorización.
+                            </li>
+                            <li data-es="<strong>Asignación Estratégica de Inventario:</strong> Ofrece verificaciones de estado granulares por proyecto o perfil, permitiendo a la operación priorizar eficazmente."
+                                data-en="<strong>Strategic Inventory Allocation:</strong> Offers granular status checks by project or profile, enabling operations to prioritize effectively.">
+                                <strong>Asignación Estratégica de Inventario:</strong> Ofrece verificaciones de estado
+                                granulares por proyecto o perfil, permitiendo a la operación priorizar eficazmente.
+                            </li>
+                            <li data-es="<strong>Trazabilidad Logística Integrada:</strong> Logra una visibilidad total desde el folio operativo inicial hasta la nota de entrega final."
+                                data-en="<strong>Integrated Logistical Traceability:</strong> Achieves full visibility from the initial operational folio to the final delivery note.">
+                                <strong>Trazabilidad Logística Integrada:</strong> Logra una visibilidad total desde el
+                                folio operativo inicial hasta la nota de entrega final.
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -133,19 +190,28 @@
 
             <!-- Módulo 2 -->
             <div class="module-block fade-in-up delay-1">
-                <h3 class="module-title">Requisiciones de almacén</h3>
+                <h3 class="module-title" data-es="Requisiciones de almacén" data-en="Warehouse requisitions">
+                    Requisiciones de almacén</h3>
                 <div class="module-grid">
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li><strong>Cumplimiento de Políticas:</strong> Cada solicitud se apega a las normas
+                            <li data-es="<strong>Cumplimiento de Políticas:</strong> Cada solicitud se apega a las normas internas de la empresa mediante un sistema de autorización robusto y personalizable."
+                                data-en="<strong>Policy Compliance:</strong> Each request adheres to the company's internal regulations through a robust and customizable authorization system.">
+                                <strong>Cumplimiento de Políticas:</strong> Cada solicitud se apega a las normas
                                 internas de la empresa mediante un sistema de autorización robusto y personalizable.
                             </li>
-                            <li><strong>Seguimiento de Estatus Granular:</strong> Incluye revisiones detalladas por
+                            <li data-es="<strong>Seguimiento de Estatus Granular:</strong> Incluye revisiones detalladas por perfil o proyecto, garantizando un control preciso de cada material o servicio solicitado."
+                                data-en="<strong>Granular Status Tracking:</strong> Includes detailed reviews by profile or project, ensuring precise control of each requested material or service.">
+                                <strong>Seguimiento de Estatus Granular:</strong> Incluye revisiones detalladas por
                                 perfil o proyecto, garantizando un control preciso de cada material o servicio
-                                solicitado.</li>
-                            <li><strong>Trazabilidad Total:</strong> Logra una trazabilidad continua desde el folio de
+                                solicitado.
+                            </li>
+                            <li data-es="<strong>Trazabilidad Total:</strong> Logra una trazabilidad continua desde el folio de solicitud inicial hasta la nota de entrega final, optimizando la conciliación de pedidos."
+                                data-en="<strong>Total Traceability:</strong> Achieves continuous traceability from the initial request folio to the final delivery note, optimizing order reconciliation.">
+                                <strong>Trazabilidad Total:</strong> Logra una trazabilidad continua desde el folio de
                                 solicitud inicial hasta la nota de entrega final, optimizando la conciliación de
-                                pedidos.</li>
+                                pedidos.
+                            </li>
                         </ul>
                     </div>
                     <div class="module-icon-large-container">
@@ -156,20 +222,29 @@
 
             <!-- Módulo 3 -->
             <div class="module-block fade-in-up delay-2">
-                <h3 class="module-title">Cotizaciones a proveedor</h3>
+                <h3 class="module-title" data-es="Cotizaciones a proveedor" data-en="Supplier quotes">Cotizaciones a
+                    proveedor</h3>
                 <div class="module-grid">
                     <div class="module-icon-large-container">
                         <i class="fas fa-file-invoice-dollar module-large-icon"></i>
                     </div>
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li><strong>Eliminación de Duplicados:</strong> Optimiza el proceso al vincular las
+                            <li data-es="<strong>Eliminación de Duplicados:</strong> Optimiza el proceso al vincular las cotizaciones directamente con las requisiciones originales, garantizando consistencia."
+                                data-en="<strong>Duplicate Elimination:</strong> Optimizes the process by linking quotes directly to the original requisitions, ensuring consistency.">
+                                <strong>Eliminación de Duplicados:</strong> Optimiza el proceso al vincular las
                                 cotizaciones directamente con las requisiciones originales, garantizando consistencia.
                             </li>
-                            <li><strong>Compras Estratégicas:</strong> Potencia la toma de decisiones mediante cuadros
-                                comparativos por artículo, asegurando costos competitivos y eficiencia financiera.</li>
-                            <li><strong>Precisión Organizativa:</strong> Gestiona cada cotización de forma individual a
-                                través de un folio único, permitiendo un seguimiento ágil y excepcional.</li>
+                            <li data-es="<strong>Compras Estratégicas:</strong> Potencia la toma de decisiones mediante cuadros comparativos por artículo, asegurando costos competitivos y eficiencia financiera."
+                                data-en="<strong>Strategic Purchasing:</strong> Empowers decision-making through item-by-item comparison charts, ensuring competitive costs and financial efficiency.">
+                                <strong>Compras Estratégicas:</strong> Potencia la toma de decisiones mediante cuadros
+                                comparativos por artículo, asegurando costos competitivos y eficiencia financiera.
+                            </li>
+                            <li data-es="<strong>Precisión Organizativa:</strong> Gestiona cada cotización de forma individual a través de un folio único, permitiendo un seguimiento ágil y excepcional."
+                                data-en="<strong>Organizational Precision:</strong> Manages each quote individually through a unique folio, allowing agile and exceptional tracking.">
+                                <strong>Precisión Organizativa:</strong> Gestiona cada cotización de forma individual a
+                                través de un folio único, permitiendo un seguimiento ágil y excepcional.
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -177,17 +252,25 @@
 
             <!-- Módulo 4 -->
             <div class="module-block fade-in-up delay-1">
-                <h3 class="module-title">Compras a proveedor</h3>
+                <h3 class="module-title" data-es="Compras a proveedor" data-en="Supplier purchases">Compras a proveedor
+                </h3>
                 <div class="module-grid">
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li><strong>Autorización Basada en Proyectos:</strong> Optimiza las aprobaciones mediante un
+                            <li data-es="<strong>Autorización Basada en Proyectos:</strong> Optimiza las aprobaciones mediante un sistema configurable por proyecto, validando cada compra de acuerdo con los requerimientos."
+                                data-en="<strong>Project-Based Authorization:</strong> Optimizes approvals through a project-configurable system, validating each purchase according to requirements.">
+                                <strong>Autorización Basada en Proyectos:</strong> Optimiza las aprobaciones mediante un
                                 sistema configurable por proyecto, validando cada compra de acuerdo con los
-                                requerimientos.</li>
-                            <li><strong>Toma de Decisiones Informada:</strong> Utiliza consultas adaptables para filtrar
+                                requerimientos.
+                            </li>
+                            <li data-es="<strong>Toma de Decisiones Informada:</strong> Utiliza consultas adaptables para filtrar y examinar los datos de compra, facilitando análisis ágil para decisiones estratégicas."
+                                data-en="<strong>Informed Decision Making:</strong> Uses adaptable queries to filter and examine purchase data, facilitating agile analysis for strategic decisions.">
+                                <strong>Toma de Decisiones Informada:</strong> Utiliza consultas adaptables para filtrar
                                 y examinar los datos de compra, facilitando análisis ágil para decisiones estratégicas.
                             </li>
-                            <li><strong>Visibilidad del Ciclo de Vida:</strong> Proporciona una visión integral del
+                            <li data-es="<strong>Visibilidad del Ciclo de Vida:</strong> Proporciona una visión integral del ciclo de vida de cada adquisición, desde su origen hasta la entrega final de materiales."
+                                data-en="<strong>Lifecycle Visibility:</strong> Provides a comprehensive view of each acquisition's lifecycle, from origin to final material delivery.">
+                                <strong>Visibilidad del Ciclo de Vida:</strong> Proporciona una visión integral del
                                 ciclo de vida de cada adquisición, desde su origen hasta la entrega final de materiales.
                             </li>
                         </ul>
@@ -200,20 +283,28 @@
 
             <!-- Módulo 5 -->
             <div class="module-block fade-in-up delay-2">
-                <h3 class="module-title">Almacenes</h3>
+                <h3 class="module-title" data-es="Almacenes" data-en="Warehouses">Almacenes</h3>
                 <div class="module-grid">
                     <div class="module-icon-large-container">
                         <i class="fas fa-warehouse module-large-icon"></i>
                     </div>
                     <div class="module-info">
                         <ul class="module-bullets">
-                            <li><strong>Flujo de Compras Integrado:</strong> Se conecta directamente con el módulo de
+                            <li data-es="<strong>Flujo de Compras Integrado:</strong> Se conecta directamente con el módulo de compras para facilitar el referenciamiento automático de pedidos y una gestión de inventario sincronizada."
+                                data-en="<strong>Integrated Purchasing Flow:</strong> Connects directly with the purchasing module to facilitate automatic order referencing and synchronized inventory management.">
+                                <strong>Flujo de Compras Integrado:</strong> Se conecta directamente con el módulo de
                                 compras para facilitar el referenciamiento automático de pedidos y una gestión de
-                                inventario sincronizada.</li>
-                            <li><strong>Redirección de Costos Operativos:</strong> Establece una conexión directa con
+                                inventario sincronizada.
+                            </li>
+                            <li data-es="<strong>Redirección de Costos Operativos:</strong> Establece una conexión directa con los servicios operativos de AGL para envíos de salida, asignando costos a equipos específicos."
+                                data-en="<strong>Operational Cost Redirection:</strong> Establishes a direct connection with AGL's operational services for outbound shipments, assigning costs to specific equipment.">
+                                <strong>Redirección de Costos Operativos:</strong> Establece una conexión directa con
                                 los servicios operativos de AGL para envíos de salida, asignando costos a equipos
-                                específicos.</li>
-                            <li><strong>Optimización de Tendencias y Niveles:</strong> Analiza las entradas y salidas de
+                                específicos.
+                            </li>
+                            <li data-es="<strong>Optimización de Tendencias y Niveles:</strong> Analiza las entradas y salidas de productos para reconocer patrones de consumo, mejorando la planeación de requerimientos."
+                                data-en="<strong>Trend and Level Optimization:</strong> Analyzes product inflows and outflows to recognize consumption patterns, improving requirements planning.">
+                                <strong>Optimización de Tendencias y Niveles:</strong> Analiza las entradas y salidas de
                                 productos para reconocer patrones de consumo, mejorando la planeación de requerimientos.
                             </li>
                         </ul>
@@ -226,9 +317,9 @@
     <!-- Sección de Contacto -->
     <section class="cta form-section" id="contacto">
         <div class="container cta-container fade-in-up">
-            <h2 class="contact-title">Contáctanos</h2>
+            <h2 class="contact-title" data-es="Contáctanos" data-en="Contact Us">Contáctanos</h2>
             <a href="https://wa.me/526182922284?text=Hola,%20quisiera%20solicitar%20una%20Demo%20de%20Supply%20Management"
-                target="_blank" class="btn btn-primary btn-large">
+                target="_blank" class="btn btn-primary btn-large" data-es="Solicita una Demo" data-en="Request a Demo">
                 Solicita una Demo
             </a>
         </div>
@@ -237,13 +328,43 @@
     <!-- Footer Simplificado -->
     <footer class="simple-footer">
         <div class="container footer-centered">
-            <div class="footer-copy-centered">
+            <div class="footer-copy-centered" data-es="&reg; AGL Latinoamérica 2026. Todos los derechos reservados."
+                data-en="&reg; AGL Latin America 2026. All rights reserved.">
                 &reg; AGL Latinoamérica 2026. Todos los derechos reservados.
             </div>
         </div>
     </footer>
 
-    <!-- Enlazado al JS maestro de Risk Management -->
+    <!-- Script de Traducción -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const langBtns = [document.getElementById('lang-toggle-desktop')];
+            let currentLang = 'es';
+
+            langBtns.forEach(btn => {
+                if (btn) {
+                    btn.addEventListener('click', () => {
+                        currentLang = currentLang === 'es' ? 'en' : 'es';
+
+                        // Actualizar estilo visual del Switch
+                        document.querySelectorAll('.lang-es').forEach(el => {
+                            el.style.fontWeight = currentLang === 'es' ? '700' : '400';
+                            el.style.opacity = currentLang === 'es' ? '1' : '0.5';
+                        });
+                        document.querySelectorAll('.lang-en').forEach(el => {
+                            el.style.fontWeight = currentLang === 'en' ? '700' : '400';
+                            el.style.opacity = currentLang === 'en' ? '1' : '0.5';
+                        });
+
+                        // Traducir todos los elementos de texto
+                        document.querySelectorAll('[data-en]').forEach(el => {
+                            el.innerHTML = el.getAttribute(`data-${currentLang}`);
+                        });
+                    });
+                }
+            });
+        });
+    </script>
     <script src="script_risk.js"></script>
 </body>
 
