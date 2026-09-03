@@ -564,6 +564,73 @@ ul {
     margin: 0;
 }
 
+/* ==========================================================================
+   Sectors Section - Grid & Cards
+   ========================================================================== */
+.sectors-section {
+    padding: 2rem 0 6rem;
+}
+
+.sectors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+}
+
+.sector-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 2.2rem;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.sector-card:hover {
+    border-color: var(--card-border-hover);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.sector-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: var(--badge-bg);
+    border: 1px solid var(--badge-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-bottom: 1.25rem;
+    transition: var(--transition);
+}
+
+.sector-card:hover .sector-icon {
+    background: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+}
+
+.sector-card-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.sector-card-desc {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
 /* Módulos del Sistema (Alineación con Ícono Grande al lado) */
 .modules-section {
     padding: 2rem 0 6rem;
@@ -794,12 +861,14 @@ footer {
         padding: 4rem 0;
     }
 
-    .problem-grid {
+    .problem-grid,
+    .sectors-grid {
         grid-template-columns: 1fr;
         gap: 1.2rem;
     }
 
-    .problem-card {
+    .problem-card,
+    .sector-card {
         padding: 1.5rem;
     }
 

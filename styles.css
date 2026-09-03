@@ -971,7 +971,7 @@ section {
     transform: translateX(3px);
 }
 
-/* Propuesta de Valor Grid (Ajustado para 4 tarjetas equilibradas 2x2) */
+/* Propuesta de Valor Grid */
 .value-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1056,13 +1056,89 @@ section {
     background: transparent;
 }
 
+/* ==========================================================================
+   Contact Section - Split Grid & Deliverables
+   ========================================================================== */
+.contact-split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.deliverables-side {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.deliverables-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+.deliverable-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.deliverable-item {
+    background: var(--bg-alt);
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+
+.deliverable-item:hover {
+    border-color: var(--card-border-hover);
+    transform: translateX(6px);
+}
+
+.deliverable-badge {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--badge-bg);
+    border: 1px solid var(--badge-border);
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(101, 158, 80, 0.15);
+}
+
+.deliverable-text h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.35rem;
+}
+
+.deliverable-text p {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
 .form-wrapper {
     background: var(--form-wrapper-bg);
     border: 1px solid var(--glass-border);
     border-radius: 16px;
-    padding: 3rem;
-    max-width: 700px;
-    margin: 0 auto;
+    padding: 2.5rem;
+    width: 100%;
     box-shadow: var(--form-shadow);
     transition: var(--theme-transition);
 }
@@ -1073,7 +1149,7 @@ section {
 }
 
 .form-header h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
@@ -1424,6 +1500,11 @@ footer {
 
     .ecosystem-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-split-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
     }
 }
 
