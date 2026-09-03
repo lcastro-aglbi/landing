@@ -32,11 +32,23 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="container nav-container nav-container-centered">
+        <div class="container nav-container">
             <a href="../../../index.html#ecosistema" class="logo" title="Volver al inicio">
                 <img src="../../../Logos/logo blanco.png" alt="AGL" class="logo-img theme-logo" id="nav-logo">
             </a>
             <div class="nav-actions">
+                <button class="theme-toggle-btn" id="lang-toggle-desktop" aria-label="Cambiar idioma"
+                    title="Cambiar idioma"
+                    style="width: auto; padding: 0 12px; border-radius: 20px; font-family: 'Inter', sans-serif; font-size: 0.9rem;">
+                    <span class="lang-es" style="font-weight: 700; transition: 0.3s;">ES</span>
+                    <span style="margin: 0 3px; font-weight: 300;">/</span>
+                    <span class="lang-en" style="font-weight: 400; opacity: 0.5; transition: 0.3s;">EN</span>
+                </button>
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Cambiar tema claro/oscuro"
+                    title="Cambiar tema">
+                    <i class="fas fa-sun theme-icon theme-icon-sun"></i>
+                    <i class="fas fa-moon theme-icon theme-icon-moon"></i>
+                </button>
             </div>
         </div>
     </nav>
@@ -349,32 +361,41 @@
     <!-- Script de Traducción -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const langBtns = [document.getElementById('lang-toggle-desktop')];
-            let currentLang = 'es';
+            const langBtns = [document.getElementById('lang-toggle-desktop')].filter(Boolean);
+            let currentLang = localStorage.getItem('agl-lang') || 'es';
+
+            function applyLanguage(lang) {
+                currentLang = lang;
+                localStorage.setItem('agl-lang', currentLang);
+
+                // Actualizar estilo visual del Switch
+                document.querySelectorAll('.lang-es').forEach(el => {
+                    el.style.fontWeight = currentLang === 'es' ? '700' : '400';
+                    el.style.opacity = currentLang === 'es' ? '1' : '0.5';
+                });
+                document.querySelectorAll('.lang-en').forEach(el => {
+                    el.style.fontWeight = currentLang === 'en' ? '700' : '400';
+                    el.style.opacity = currentLang === 'en' ? '1' : '0.5';
+                });
+
+                // Traducir todos los elementos de texto
+                document.querySelectorAll('[data-en]').forEach(el => {
+                    const txt = el.getAttribute(`data-${currentLang}`);
+                    if (txt !== null) el.innerHTML = txt;
+                });
+            }
+
+            if (currentLang !== 'es') {
+                applyLanguage(currentLang);
+            }
 
             langBtns.forEach(btn => {
-                if (btn) {
-                    btn.addEventListener('click', () => {
-                        currentLang = currentLang === 'es' ? 'en' : 'es';
-
-                        // Actualizar estilo visual del Switch
-                        document.querySelectorAll('.lang-es').forEach(el => {
-                            el.style.fontWeight = currentLang === 'es' ? '700' : '400';
-                            el.style.opacity = currentLang === 'es' ? '1' : '0.5';
-                        });
-                        document.querySelectorAll('.lang-en').forEach(el => {
-                            el.style.fontWeight = currentLang === 'en' ? '700' : '400';
-                            el.style.opacity = currentLang === 'en' ? '1' : '0.5';
-                        });
-
-                        // Traducir todos los elementos de texto
-                        document.querySelectorAll('[data-en]').forEach(el => {
-                            el.innerHTML = el.getAttribute(`data-${currentLang}`);
-                        });
-                    });
-                }
+                btn.addEventListener('click', () => {
+                    const nextLang = currentLang === 'es' ? 'en' : 'es';
+                    applyLanguage(nextLang);
+                });
             });
         });
     </script>
-    <script src="script_risk.js"></script>
+    <script src="script__pf.js"></script>
 </body>
