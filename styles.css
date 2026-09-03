@@ -971,10 +971,13 @@ section {
     transform: translateX(3px);
 }
 
+/* Propuesta de Valor Grid (Ajustado para 4 tarjetas equilibradas 2x2) */
 .value-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    max-width: 950px;
+    margin: 0 auto;
 }
 
 .value-card {
@@ -1431,6 +1434,10 @@ footer {
 
     .hero h1 {
         font-size: 2.5rem;
+    }
+
+    .value-grid {
+        grid-template-columns: 1fr;
     }
 
     .form-row {
