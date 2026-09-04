@@ -757,6 +757,26 @@ footer {
     transition: var(--theme-transition);
 }
 
+.simple-footer {
+    border-top: 1px solid var(--glass-border);
+    padding: 2.5rem 0;
+    background: transparent;
+}
+
+.footer-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-copy-centered {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
 .footer-container {
     display: flex;
     flex-direction: column;
